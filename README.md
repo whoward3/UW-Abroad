@@ -1,8 +1,6 @@
-# Group Name: 
-  not this name.
+# Study Abroad App
   
-# Group Members:
-Person1, person 2, etc.
+### Sam Blair, Winston Howard, Emily Lukshin, Ethan McGarvey
 
-## Description of the project
-  something about something that does something.
+## Description:
+We are building an application to help entice future students to study abroad and to support students currently studying abroad.
