@@ -13,7 +13,7 @@ The application will have resources for students through all stages of going abr
       *	A list of all available programs and universities with possible filtering by type (study abroad or exchange), location, classes offered, term, etc.
       *	Quiz that ask questions about what ideas the student has in what they are looking for and suggests programs that match what they need
       *	Resources on financial aid, scholarships and cost considerations
-      *	Posts from those who have stuided abroad and what they recommend
+      *	Posts from those who have studied abroad and what they recommend
   2. Preparing
       * A list of what is needed to be completed for the chosen school
       *	Notifications for upcoming deadlines
@@ -47,8 +47,8 @@ Protecting the information of the students and administrative rights will be fun
 *	Flutter
   Uses the Dart language, can be used to develop both Android and iOS applications simultaneously
 *	Azure Web App Service
- 	Will require funding which may be available from the Honors program, the university, or 	cybersecurity
-*	OAuth
-  Can be used for signing into app with Google account
+ 	Will require funding which may be available from the Honors program, the university, or cybersecurity department
+*	Google or Facebook
+  Can be used for signing into app with an exsisting account
 ### Member Roles
-Formal member roles have yet to be decided, we all have a variety of experience and what we believe are our strengths. We are all willing to step up to  contribute to the sucess of the project.
+Formal member roles have yet to be decided, we all have a variety of experience and what we believe are our strengths. We are all willing to step up to contribute to the sucess of the project.
