@@ -48,7 +48,8 @@ Protecting the information of the students and administrative rights will be fun
   Uses the Dart language, can be used to develop both Android and iOS applications simultaneously
 *	Azure Web App Service
  	Will require funding which may be available from the Honors program, the university, or cybersecurity department
+* Utilize Uwyo for login and authentication
 *	Google or Facebook
-  Can be used for signing into app with an exsisting account
+  Can be used for signing into app with an existing account such as OAuth 2.0 Integration
 ### Member Roles
 Formal member roles have yet to be decided, we all have a variety of experience and what we believe are our strengths. We are all willing to step up to contribute to the sucess of the project.
