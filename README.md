@@ -8,23 +8,23 @@ The objective of this project is to provide the University of Wyoming Study Abro
 ### Major tasks and plans
 1.	User interface
 The application will have resources for students through all stages of going abroad. We want to ensure the application is well organized so it can be easily navigated, and the student can find the information that is most pertinent and helpful to them. We will have different tabs in the application, one for those deciding whether to go abroad, one for those who are preparing to go abroad, one for those who are currently abroad, another for who are returning from being abroad, and lastly, a tab for those who are coming to UW for their abroad experience.
-  1.1.	Deciding
+  1. Deciding
     *	A list of all available programs and universities with possible filtering by type (study abroad or exchange), location, classes offered, term, etc.
     *	Quiz that ask questions about what ideas the student has in what they are looking for and suggests programs that match what they need
     *	Resources on financial aid, scholarships and cost considerations
-    *	Posts from
-  1.2.	Preparing
+    *	Posts from those who have stuided abroad and what they recommend
+  2. Preparing
     * A list of what is needed to be completed for the chosen school
     *	Notifications for upcoming deadlines
     *	Contact information for those that have already studied there
     *	Information on what to expect
-  1.3.	Studying
+  3. Studying
     *	Notifications for UW deadlines, such as, advising or course registration
     *	Details on course information that should be saved to help with credit transfer
-  1.4.	Returning
+  4. Returning
     *	Notifications for reconnecting events
     *	Information on submitting credits to be transferred
-  1.5.	Incoming
+  5. Incoming
     *	Information on Laramie
     *	A list of campus clubs and events
     *	Opt-in list of contact information for other incoming students to connect with
