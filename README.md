@@ -45,7 +45,7 @@ Protecting the information of the students and administrative rights will be fun
 
 ### Tools to be used
 *	Flutter
-  Uses the Dart language, can be used to develop both Android and iOS applications simultaneously
+  - Uses the Dart language, can be used to develop both Android and iOS applications simultaneously
 *	Azure Web App Service
  	Will require funding which may be available from the Honors program, the university, or cybersecurity department
 * Utilize Uwyo for login and authentication
