@@ -1,6 +1,8 @@
 ## Mobile Application for the University of Wyoming Study Abroad Office
   
-##### Sam Blair, Winston Howard, Emily Lukshin, Ethan McGarvey, Chance Sweetser
+##### Sam Blair, Winston Howard, Emily Lukshin, Ethan McGarvey, Chance Sweetser 
+ 
+##### [<img src="https://azurecomcdn.azureedge.net/cvt-2d8e3a2e8172743a769eb2cecfbf2e0f1c2aa24b4a48b180b089c87bba51cf45/images/shared/services/devops/boards-icon-80.png">](https://dev.azure.com/uw-senior-design/SAP%20-The%20Study%20Abroad%20Project/_sprints/taskboard/SAP%20-The%20Study%20Abroad%20Project%20Team/SAP%20-The%20Study%20Abroad%20Project/Sprint%201)
  
 ### Project summary
 The objective of this project is to provide the University of Wyoming Study Abroad Office with a mobile application to help students with all stages of participation in education abroad. We hope to deliver an application that can be a central source of resources for those considering applying, already abroad, re-entering, as well as, incoming foreign students. A single application that can offer support to students will benefit the students so that they are able to find information they need and stay connected to both UW and their abroad location with ease. Participating in the University of Wyoming’s education abroad can be a fulfilling experience, but also intimidating so we hope to produce an application which will help guide the student through all stages of the process. 
