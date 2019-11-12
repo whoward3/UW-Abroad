@@ -92,7 +92,7 @@ public class ToDoActivity extends Activity {
         try {
             // Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
-                    "http://sap2019.azurewebsites.net/",
+                    "https://sap-web-app.azurewebsites.net/",
                     this).withFilter(new ProgressFilter());
 
             // Extend timeout from default of 10s to 20s
