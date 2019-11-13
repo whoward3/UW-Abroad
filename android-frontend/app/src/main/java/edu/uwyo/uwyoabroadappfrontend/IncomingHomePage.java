@@ -17,10 +17,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import androidx.fragment.app.Fragment;
 
 
 public class IncomingHomePage extends Fragment {
-
 
     Button about, laramie, degree, nondegree;
 
