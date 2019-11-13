@@ -6,15 +6,15 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-
+    FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.container, new IncomingHomePage())
+                .add(R.id.container, new StartUpPage())
                 .commit();
     }
 }
