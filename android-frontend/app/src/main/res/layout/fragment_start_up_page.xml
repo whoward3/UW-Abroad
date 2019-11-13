@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#482F25"
+    tools:context=".StartUpPage">
+
+
+    <Button
+        android:id="@+id/incomingButton"
+        android:layout_width="230dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="496dp"
+        android:layout_marginEnd="88dp"
+        android:background="#FEC33B"
+        android:fontFamily="cursive"
+        android:text="Incoming"
+        android:textColor="#3f2a14"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/outGoingButton"
+        android:layout_width="230dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="88dp"
+        android:background="#FEC33B"
+        android:fontFamily="cursive"
+        android:text="Outgoing"
+        android:textColor="#3f2a14"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incomingButton"
+        app:layout_constraintVertical_bias="0.376" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="332dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="40dp"
+        android:text="Welcome to the University of Wyoming’s Education Abroad Office! Whether you are arriving to the university or going abroad, we are excited that you are here. We hope to provide you with the resources to support you in your journey and be there for you every step of the way ."
+        android:textColor="#FEC33B"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
