@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.container, new StartUpPage())
+                .add(R.id.container, new IncomingHomePage())
                 .commit();
     }
 }

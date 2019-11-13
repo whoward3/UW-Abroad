@@ -35,7 +35,7 @@ public class IncomingHomePage extends Fragment {
 
 
         //SB: Set Up the View and buttons
-        View view = inflater.inflate(R.layout.fragment_start_up_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_incoming_home_page, container, false);
         about = view.findViewById(R.id.aboutButton);
         laramie = view.findViewById(R.id.laramieButton);
         degree = view.findViewById(R.id.degreeButton);

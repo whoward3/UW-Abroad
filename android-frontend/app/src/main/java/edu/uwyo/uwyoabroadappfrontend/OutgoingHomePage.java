@@ -30,7 +30,7 @@ public class OutgoingHomePage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //SB: Set Up the View
-        View view = inflater.inflate(R.layout.fragment_start_up_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_outgoing_home_page, container, false);
         return view;
     }
 
