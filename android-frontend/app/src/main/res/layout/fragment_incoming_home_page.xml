@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IncomingHomePage">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/degreeButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:background="#FEC33B"
+        android:text="Degree Seeking Students"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/nonDegreeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="421dp"
+        android:layout_marginBottom="12dp"
+        android:background="#FEC33B"
+        android:text="About UW"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/laramieButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/laramieButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:background="#FEC33B"
+        android:text="Laramie, WY"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/degreeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nonDegreeButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FEC33B"
+        android:text="Non-Degree Seeking Students"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="345dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="12dp"
+        android:text="The University of Wyoming can provide an unique national or international abroad experience in Laramie, Wyoming."
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

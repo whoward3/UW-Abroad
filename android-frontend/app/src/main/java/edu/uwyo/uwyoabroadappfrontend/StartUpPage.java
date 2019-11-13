@@ -40,19 +40,18 @@ public class StartUpPage extends Fragment {
         incoming.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Set Up Connection Here
+                //SB: Set Up Connection Here to the incoming home page
             }
         });
 
         outgoing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Set Up Connection Here
+                //SB: Set Up Connection Here to the outgoing home page
             }
         });
 
 
-        // Inflate the layout for this fragment
         return view;
     }
 
