@@ -52,7 +52,7 @@ public class IncomingHomePage extends Fragment {
         laramie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Set Up Connection Here to the laramie map page
+                //SB: Set Up Connection Here to the laramie facts page
             }
         });
         degree.setOnClickListener(new View.OnClickListener() {
