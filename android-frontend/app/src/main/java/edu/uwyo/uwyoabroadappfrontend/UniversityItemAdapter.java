@@ -44,25 +44,25 @@ public class UniversityItemAdapter extends ArrayAdapter<UniversityItem> {
             row = inflater.inflate(mLayoutResourceId, parent, false);
         }
 
-//        row.setTag(currentItem);
-//        final CheckBox checkBox = (CheckBox) row.findViewById(R.id.checkToDoItem);
-//        checkBox.setText(currentItem.getText());
-//        checkBox.setChecked(false);
-//        checkBox.setEnabled(true);
-//
-//        checkBox.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View arg0) {
-//                if (checkBox.isChecked()) {
-//                    checkBox.setEnabled(false);
-//                    if (mContext instanceof MainActivity) {
-//                        MainActivity activity = (MainActivity) mContext;
-//                        activity.checkItem(currentItem);
-//                    }
-//                }
-//            }
- //       });
+        row.setTag(currentItem);
+        final CheckBox checkBox = (CheckBox) row.findViewById(R.id.checkToDoItem);
+        checkBox.setText(currentItem.getText());
+        checkBox.setChecked(false);
+        checkBox.setEnabled(true);
+
+        checkBox.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                if (checkBox.isChecked()) {
+                    checkBox.setEnabled(false);
+                    if (mContext instanceof MainActivity) {
+                        MainActivity activity = (MainActivity) mContext;
+                       // activity.checkItem(currentItem);
+                    }
+                }
+            }
+        });
 
         return row;
     }

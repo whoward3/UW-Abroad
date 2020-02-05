@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.container, new StartUpPage())
+                .add(R.id.container, new UniversityItemTestFragment())
                 .commit();
     }
 }

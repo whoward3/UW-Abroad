@@ -2,16 +2,22 @@ package edu.uwyo.uwyoabroadappfrontend;
 
 public class UniversityItem {
 
+    /**
+     * Item text
+     */
+    @com.google.gson.annotations.SerializedName("text")
     private String mText;
 
     /**
      * Item Id
      */
+    @com.google.gson.annotations.SerializedName("id")
     private String mId;
 
     /**
      * Indicates if the item is completed
      */
+    @com.google.gson.annotations.SerializedName("complete")
     private boolean mComplete;
 
     /**
@@ -91,5 +97,4 @@ public class UniversityItem {
     public boolean equals(Object o) {
         return o instanceof UniversityItem && ((UniversityItem) o).mId == mId;
     }
-
 }
