@@ -3,6 +3,7 @@ package edu.uwyo.uwyoabroadappfrontend;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -10,9 +11,12 @@ import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 
+import java.util.EventListener;
+
 public class UniversityItemAdapter extends ArrayAdapter<UniversityItem> {
 
 
+    EventListener listener;
     /**
      * Adapter context
      */
@@ -36,6 +40,7 @@ public class UniversityItemAdapter extends ArrayAdapter<UniversityItem> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
+        final ViewGroup p = parent;
 
         final UniversityItem currentItem = getItem(position);
 
@@ -57,14 +62,20 @@ public class UniversityItemAdapter extends ArrayAdapter<UniversityItem> {
                 if (checkBox.isChecked()) {
                     checkBox.setEnabled(false);
                     if (mContext instanceof MainActivity) {
-                        MainActivity activity = (MainActivity) mContext;
-                       // activity.checkItem(currentItem);
+                        listener.onEvent(currentItem);
+
                     }
                 }
             }
         });
 
         return row;
+    }
+
+    public interface EventListener{
+        boolean onCreateOptionsMenu(Menu menu);
+
+        void onEvent(UniversityItem item);
     }
 
 }
