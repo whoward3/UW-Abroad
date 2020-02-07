@@ -3,6 +3,7 @@ package edu.uwyo.uwyoabroadappfrontend;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -53,6 +54,7 @@ import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperati
 
 public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
