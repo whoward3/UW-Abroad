@@ -49,10 +49,14 @@ namespace SapWebApp
         }
     }
 
+    /*
+     * TODO: Change Seed to initialize the new database
+     */
     public class SapWebAppInitializer : CreateDatabaseIfNotExists<SapWebAppContext>
     {
         protected override void Seed(SapWebAppContext context)
         {
+            //Seed the database with two entries of the ToDoItem Table
             List<TodoItem> todoItems = new List<TodoItem>
             {
                 new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
