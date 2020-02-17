@@ -56,20 +56,36 @@ namespace SapWebApp
     {
         protected override void Seed(SapWebAppContext context)
         {
-            //Seed the database with two entries of the ToDoItem Table
-            List<TodoItem> todoItems = new List<TodoItem>
-            {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
-            };
 
-            foreach (TodoItem todoItem in todoItems)
-            {
-                context.Set<TodoItem>().Add(todoItem);
-            }
+            /*
+             *  TODO: Below instead of creating a hardcoded list of schools, we will import a file of default information for the db on startup
+             */
+            //List<School> schools = new List<School>
+            //{
+            //    new School { Id = Guid.NewGuid().ToString(), SchoolName = "an Example School Name", Description = "an Example Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
+
+            //    new School { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", Description = "another Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
+            //};
+
+            //List<Major> majors = new List<Major>
+            //{
+            //    new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "COSC" },
+
+            //    new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "STAT" },
+            //};
+
+            //foreach (School school in schools)
+            //{
+            //    context.Set<School>().Add(school);
+            //}
+
+            //foreach (Major major in majors)
+            //{
+            //    context.Set<Major>().Add(major);
+            //}
 
             base.Seed(context);
-        }
+            }
     }
 }
 
