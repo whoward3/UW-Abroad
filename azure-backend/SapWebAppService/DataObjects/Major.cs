@@ -9,8 +9,12 @@ namespace SapWebApp.DataObjects
 {
     public class Major
     {
-        public string SchoolName { get; set; }
+        public Major()
+        {
+            this.Schools = new HashSet<School>();
+        }
         public string MajorName { get; set; }
         public string Id { get; internal set; }
+        public virtual ICollection<School> Schools { get; set; }
     }
 }

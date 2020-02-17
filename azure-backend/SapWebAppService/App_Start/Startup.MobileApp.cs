@@ -57,29 +57,29 @@ namespace SapWebApp
             /*
              *  TODO: Below instead of creating a hardcoded list of schools, we will import a file of default information for the db on startup
              */
-            List<School> schools = new List<School>
-            {
-                new School { Id = Guid.NewGuid().ToString(), SchoolName = "an Example School Name", Description = "an Example Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
+            //List<School> schools = new List<School>
+            //{
+            //    new School { Id = Guid.NewGuid().ToString(), SchoolName = "an Example School Name", Description = "an Example Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
 
-                new School { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", Description = "another Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
-            };
+            //    new School { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", Description = "another Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
+            //};
 
-            List<Major> majors = new List<Major>
-            {
-                new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "COSC" },
+            //List<Major> majors = new List<Major>
+            //{
+            //    new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "COSC" },
 
-                new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "STAT" },
-            };
+            //    new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "STAT" },
+            //};
 
-            foreach (School school in schools)
-            {
-                context.Set<School>().Add(school);
-            }
+            //foreach (School school in schools)
+            //{
+            //    context.Set<School>().Add(school);
+            //}
 
-            foreach (Major major in majors)
-            {
-                context.Set<Major>().Add(major);
-            }
+            //foreach (Major major in majors)
+            //{
+            //    context.Set<Major>().Add(major);
+            //}
 
             base.Seed(context);
             }
