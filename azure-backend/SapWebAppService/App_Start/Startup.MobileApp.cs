@@ -29,7 +29,7 @@ namespace SapWebApp
             Database.SetInitializer(new SapWebAppInitializer());
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
-            // Database.SetInitializer<ZUMOAPPNAMEContext>(null);
+            // Database.SetInitializer<SAPWEBAPPContext>(null);
 
             MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
