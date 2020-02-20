@@ -53,7 +53,7 @@ import okhttp3.OkHttpClient;
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
 
 
-public class UniversityItemTestFragment extends Fragment implements UniversityItemAdapter.EventListener {
+public class UniversityItemTestFragment extends Fragment {
 
     /**
      * Client reference
@@ -148,11 +148,11 @@ public class UniversityItemTestFragment extends Fragment implements UniversityIt
     /**
      * Initializes the activity menu
      */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getActivity().getMenuInflater().inflate(R.menu.uni_frag, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getActivity().getMenuInflater().inflate(R.menu.uni_frag, menu);
+//        return true;
+//    }
 
     /**
      * Select an option from the menu
@@ -429,10 +429,6 @@ public class UniversityItemTestFragment extends Fragment implements UniversityIt
         }
     }
 
-    @Override
-    public void onEvent(UniversityItem item) {
-        checkItem(item);
-    }
 
     private class ProgressFilter implements ServiceFilter {
 

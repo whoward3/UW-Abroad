@@ -34,4 +34,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.12.1'
     implementation 'com.microsoft.azure:azure-mobile-android:3.5.1@aar'
     implementation 'com.microsoft.azure:azure-notifications-handler:3.5.1@jar'
+    implementation 'androidx.core:core:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
 }

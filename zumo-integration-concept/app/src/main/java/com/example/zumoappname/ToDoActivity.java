@@ -8,14 +8,18 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -31,10 +35,7 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
-import com.microsoft.windowsazure.mobileservices.table.query.Query;
-import com.microsoft.windowsazure.mobileservices.table.query.QueryOperations;
 import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncContext;
-import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncTable;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.ColumnDataType;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.MobileServiceLocalStoreException;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLocalStore;
@@ -43,7 +44,10 @@ import okhttp3.OkHttpClient;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.*;
 
-public class ToDoActivity extends Activity {
+public class ToDoActivity extends Fragment {
+
+
+
 
     /**
      * Client reference
@@ -80,11 +84,11 @@ public class ToDoActivity extends Activity {
      * Initializes the activity
      */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_to_do);
+    public View  onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_to_do, container, false);
 
-        mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
+        mProgressBar = (ProgressBar) view.findViewById(R.id.loadingProgressBar);
 
         // Initialize the progress bar
         mProgressBar.setVisibility(ProgressBar.GONE);
@@ -93,7 +97,7 @@ public class ToDoActivity extends Activity {
             // Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
                     "https://sap-web-app.azurewebsites.net/",
-                    this).withFilter(new ProgressFilter());
+                    getContext()).withFilter(new ProgressFilter());
 
             // Extend timeout from default of 10s to 20s
             mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
@@ -117,11 +121,11 @@ public class ToDoActivity extends Activity {
             //Init local storage
             initLocalStore().get();
 
-            mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
+            mTextNewToDo = view.findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
-            mAdapter = new ToDoItemAdapter(this, R.layout.row_list_to_do);
-            ListView listViewToDo = (ListView) findViewById(R.id.listViewToDo);
+            mAdapter = new ToDoItemAdapter(getContext(), R.layout.row_list_to_do, this);
+            ListView listViewToDo = (ListView) view.findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the mobile app backend.
@@ -132,16 +136,18 @@ public class ToDoActivity extends Activity {
         } catch (Exception e){
             createAndShowDialog(e, "Error");
         }
+        return view;
+        
     }
 
-    /**
-     * Initializes the activity menu
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
+//    /**
+//     * Initializes the activity menu
+//     */
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getActivity().getMenuInflater().inflate(R.menu.activity_main, menu);
+//        return true;
+//    }
 
     /**
      * Select an option from the menu
@@ -175,7 +181,7 @@ public class ToDoActivity extends Activity {
                 try {
 
                     checkItemInTable(item);
-                    runOnUiThread(new Runnable() {
+                    getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             if (item.isComplete()) {
@@ -229,7 +235,7 @@ public class ToDoActivity extends Activity {
                 try {
                     final ToDoItem entity = addItemInTable(item);
 
-                    runOnUiThread(new Runnable() {
+                    getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             if(!entity.isComplete()){
@@ -278,7 +284,7 @@ public class ToDoActivity extends Activity {
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 
-                    runOnUiThread(new Runnable() {
+                    getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             mAdapter.clear();
@@ -396,7 +402,7 @@ public class ToDoActivity extends Activity {
      *            The dialog title
      */
     private void createAndShowDialogFromTask(final Exception exception, String title) {
-        runOnUiThread(new Runnable() {
+        getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 createAndShowDialog(exception, "Error");
@@ -430,7 +436,7 @@ public class ToDoActivity extends Activity {
      *            The dialog title
      */
     private void createAndShowDialog(final String message, final String title) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
         builder.setMessage(message);
         builder.setTitle(title);
@@ -458,7 +464,7 @@ public class ToDoActivity extends Activity {
             final SettableFuture<ServiceFilterResponse> resultFuture = SettableFuture.create();
 
 
-            runOnUiThread(new Runnable() {
+            getActivity().runOnUiThread(new Runnable() {
 
                 @Override
                 public void run() {
@@ -476,7 +482,7 @@ public class ToDoActivity extends Activity {
 
                 @Override
                 public void onSuccess(ServiceFilterResponse response) {
-                    runOnUiThread(new Runnable() {
+                    getActivity().runOnUiThread(new Runnable() {
 
                         @Override
                         public void run() {

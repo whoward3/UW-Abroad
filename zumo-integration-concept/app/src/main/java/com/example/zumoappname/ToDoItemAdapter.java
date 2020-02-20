@@ -13,6 +13,10 @@ import android.widget.CheckBox;
  */
 public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
 
+    EventListener listener;
+
+    ToDoActivity mTDA;
+
     /**
      * Adapter context
      */
@@ -23,11 +27,12 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
      */
     int mLayoutResourceId;
 
-    public ToDoItemAdapter(Context context, int layoutResourceId) {
+    public ToDoItemAdapter(Context context, int layoutResourceId, ToDoActivity TDA) {
         super(context, layoutResourceId);
 
         mContext = context;
         mLayoutResourceId = layoutResourceId;
+        mTDA = TDA;
     }
 
     /**
@@ -56,15 +61,20 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
             public void onClick(View arg0) {
                 if (checkBox.isChecked()) {
                     checkBox.setEnabled(false);
-                    if (mContext instanceof ToDoActivity) {
-                        ToDoActivity activity = (ToDoActivity) mContext;
-                        activity.checkItem(currentItem);
-                    }
+                    mTDA.checkItem(currentItem);
+//                    if (mContext instanceof MainActivity) {
+//                        //ToDoActivity activity = (ToDoActivity) mContext;
+//                        mTDA.checkItem(currentItem);
+//                    }
                 }
             }
         });
 
         return row;
+    }
+
+    public interface EventListener{
+        void onEvent(ToDoItem item);
     }
 
 }
