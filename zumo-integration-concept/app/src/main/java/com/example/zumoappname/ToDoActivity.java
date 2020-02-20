@@ -137,7 +137,7 @@ public class ToDoActivity extends Fragment {
             createAndShowDialog(e, "Error");
         }
         return view;
-        
+
     }
 
 //    /**
