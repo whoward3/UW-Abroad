@@ -35,6 +35,7 @@ dependencies {
     implementation 'com.microsoft.azure:azure-mobile-android:3.5.1@aar'
     implementation 'com.microsoft.azure:azure-notifications-handler:3.5.1@jar'
     implementation 'androidx.core:core:1.0.0'
+    implementation "com.github.barteksc:android-pdf-viewer:2.8.2"
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

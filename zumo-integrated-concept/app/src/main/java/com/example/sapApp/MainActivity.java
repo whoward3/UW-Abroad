@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     OutgoingHomePage mOut;
     IncomingHomePage mIn;
     LaramieFacts mLf;
+    laramieMapFragment mLMF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -24,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
         mOut= new OutgoingHomePage();
         mIn = new IncomingHomePage();
         mLf = new LaramieFacts();
+        mLMF = new laramieMapFragment();
 
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.container, mLf)
+                .add(R.id.container, mLMF)
                 .commit();
 
 
