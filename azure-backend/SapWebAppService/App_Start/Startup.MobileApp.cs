@@ -56,6 +56,8 @@ namespace SapWebApp
     {
         protected override void Seed(SapWebAppContext context)
         {
+            //Ref: https://www.newtonsoft.com/json/help/html/SerializingJSON.htm
+            /// var schoolTable = Newtonsoft.Json.
 
             /*
              *  TODO: Below instead of creating a hardcoded list of schools, we will import a file of default information for the db on startup
