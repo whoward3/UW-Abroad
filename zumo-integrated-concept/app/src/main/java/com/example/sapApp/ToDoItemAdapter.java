@@ -1,4 +1,4 @@
-package com.example.zumoappname;
+package com.example.sapApp;
 
 import android.app.Activity;
 import android.content.Context;

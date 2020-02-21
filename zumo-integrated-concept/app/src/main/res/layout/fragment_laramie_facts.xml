@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaramieFacts">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/DescriptionOfLaramie"
+        android:layout_width="308dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="280dp"
+        android:text="The historical town of Laramie, WY is located in the foothills of the Snowy Range in the Rocky Mountains and is central to many scenic outdoor recreational destinations."
+        android:textColor="#3f2a14"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Pop"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="494dp"
+        android:text="Population: 30,000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#3f2a14"
+        android:textSize="20dp"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/Dist1"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="554dp"
+        android:text="2 hour drive north from Denver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#3f2a14"
+        android:textSize="20dp"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/Dist2"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="614dp"
+        android:text="45 minute drive west of Cheyenne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#3f2a14"
+        android:textSize="20dp"
+        android:textStyle="normal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

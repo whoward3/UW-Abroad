@@ -5,10 +5,10 @@
 
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId "com.example.zumoappname"
+        applicationId "com.example.appApp"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
@@ -36,4 +36,5 @@ dependencies {
     implementation 'com.microsoft.azure:azure-notifications-handler:3.5.1@jar'
     implementation 'androidx.core:core:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

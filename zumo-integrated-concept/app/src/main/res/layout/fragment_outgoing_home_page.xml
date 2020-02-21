@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".OutgoingHomePage">
+
+    <Button
+        android:id="@+id/considerButton"
+
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="#FEC33B"
+        android:text="What To Consider"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/exploreButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/prepareButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="#FEC33B"
+        android:text="How To Prepare"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/whileAbroadButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exploreButton" />
+
+    <Button
+        android:id="@+id/whileAbroadButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="#FEC33B"
+        android:text="While You Are Abroad"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/return2UWButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prepareButton" />
+
+    <Button
+        android:id="@+id/return2UWButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="#FEC33B"
+        android:text="Returning To UW"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whileAbroadButton" />
+
+    <Button
+        android:id="@+id/exploreButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="#FEC33B"
+        android:text="Explore Your Options"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/prepareButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/considerButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="284dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="309dp"
+        android:layout_marginBottom="331dp"
+        android:text="The University of Wyoming partners with third party organizations and universities around the world to allow the students as many opportunities as possible. Our office is here to help to provide information for every part of your experience."
+        android:textColor="#3f2a14"
+        android:textSize="14dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="284dp"
+        android:layout_height="46dp"
+        android:text="Start here and go… ANYWHERE"
+        android:textColor="#3f2a14"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
