@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.container, mLMF)
+                .add(R.id.container, mToDoActivity)
                 .commit();
 
 

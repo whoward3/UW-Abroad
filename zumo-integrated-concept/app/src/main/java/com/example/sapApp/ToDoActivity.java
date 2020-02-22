@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -74,6 +75,8 @@ public class ToDoActivity extends Fragment {
      */
     private EditText mTextNewToDo;
 
+    private Button adddButton;
+
     /**
      * Progress spinner to use for table operations
      */
@@ -88,6 +91,15 @@ public class ToDoActivity extends Fragment {
         View view = inflater.inflate(R.layout.activity_to_do, container, false);
 
         mProgressBar = (ProgressBar) view.findViewById(R.id.loadingProgressBar);
+        adddButton = view.findViewById(R.id.buttonAddToDo);
+
+        adddButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+
+               addItem(getView());
+            }
+
+        });
 
         // Initialize the progress bar
         mProgressBar.setVisibility(ProgressBar.GONE);
