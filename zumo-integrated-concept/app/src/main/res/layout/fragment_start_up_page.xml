@@ -5,62 +5,68 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#482F25"
+    android:background="#643327"
     tools:context=".StartUpFragment">
 
 
     <Button
         android:id="@+id/incomingButton"
-        android:layout_width="230dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="457dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="199dp"
-        android:background="#FEC33B"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:background="#FDC82F"
         android:fontFamily="cursive"
         android:text="Incoming"
-        android:textColor="#3f2a14"
+        android:textColor="#643327"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/outGoingButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <Button
         android:id="@+id/outGoingButton"
-        android:layout_width="230dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="576dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="80dp"
-        android:background="#FEC33B"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:background="#FDC82F"
         android:fontFamily="cursive"
         android:text="Outgoing"
-        android:textColor="#3f2a14"
+        android:textColor="#643327"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/incomingButton" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="332dp"
-        android:layout_height="197dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:gravity="center"
         android:text="Welcome to the University of Wyoming’s Education Abroad Office! Whether you are arriving to the university or going abroad, we are excited that you are here. We hope to provide you with the resources to support you in your journey and be there for you every step of the way ."
-        android:textColor="#FEC33B"
+        android:textColor="#FDC82F"
         android:textSize="20dp"
         android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/incomingButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/startUpPageImg" />
+
+    <ImageView
+        android:id="@+id/startUpPageImg"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
