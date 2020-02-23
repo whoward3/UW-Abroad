@@ -5,80 +5,96 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".IncomingHomePage">
 
     <Button
         android:id="@+id/degreeButton"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="12dp"
-        android:background="#FEC33B"
-        android:text="Degree Seeking Students"
-        android:textColor="#3f2a14"
+        android:layout_margin="5dp"
+        android:background="#FDC82F"
+        android:text="Degrees Offered"
+        android:textColor="#643327"
         android:textSize="16dp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/nonDegreeButton"
+        app:layout_constraintBottom_toTopOf="@+id/campusMap"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laramieButton" />
 
     <Button
         android:id="@+id/aboutButton"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="316dp"
-        android:background="#FEC33B"
+        android:layout_margin="5dp"
+        android:background="#FDC82F"
         android:text="About UW"
-        android:textColor="#3f2a14"
+        android:textColor="#643327"
         android:textSize="16dp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/laramieButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/laramieButton"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="12dp"
-        android:background="#FEC33B"
+        android:layout_margin="5dp"
+        android:background="#FDC82F"
         android:text="Laramie, WY"
-        android:textColor="#3f2a14"
+        android:textColor="#643327"
         android:textSize="16dp"
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/degreeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
 
     <Button
-        android:id="@+id/nonDegreeButton"
-        android:layout_width="250dp"
+        android:id="@+id/campusMap"
+        android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="#FEC33B"
-        android:text="Non-Degree Seeking Students"
-        android:textColor="#3f2a14"
+        android:layout_margin="5dp"
+        android:background="#FDC82F"
+        android:text="Campus Map"
+        android:textColor="#643327"
         android:textSize="16dp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/degreeButton" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="345dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="396dp"
-        android:text="The University of Wyoming can provide an unique national or international abroad experience in Laramie, Wyoming."
-        android:textColor="#3f2a14"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+
+        android:gravity="center"
+        android:text="@string/incoming_home_page"
+        android:textColor="#643327"
         android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/aboutButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/incomingHomePageImg" />
+
+    <ImageView
+        android:id="@+id/incomingHomePageImg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

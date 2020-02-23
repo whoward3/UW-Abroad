@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 
 public class IncomingHomePage extends Fragment {
 
-    Button about, laramie, degree, nondegree;
+    Button about, laramie, degree, laramieMap;
 
     public IncomingHomePage() {} // SB:Required empty public constructor
 
@@ -27,7 +27,7 @@ public class IncomingHomePage extends Fragment {
         about = view.findViewById(R.id.aboutButton);
         laramie = view.findViewById(R.id.laramieButton);
         degree = view.findViewById(R.id.degreeButton);
-        nondegree = view.findViewById(R.id.nonDegreeButton);
+        laramieMap = view.findViewById(R.id.campusMap);
 
 
         about.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +50,7 @@ public class IncomingHomePage extends Fragment {
             }
         });
 
-        nondegree.setOnClickListener(new View.OnClickListener() {
+        laramieMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
