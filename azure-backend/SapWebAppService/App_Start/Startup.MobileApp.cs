@@ -56,22 +56,22 @@ namespace SapWebApp
     {
         protected override void Seed(SapWebAppContext context)
         {
-            List<JSchool> schools;
-            List<TodoItem> todoItems = new List<TodoItem> { };
+            List<JSchool> jschools;
+            List<School> schools = new List<School> { };
             using (StreamReader r = new StreamReader("seeder.json"))
             {
                 string json = r.ReadToEnd();
-                schools = JsonConvert.DeserializeObject<List<JSchool>>(json);
+                jschools = JsonConvert.DeserializeObject<List<JSchool>>(json);
             }
 
-            foreach (var school in schools)
+            foreach (var school in jschools)
             {
-                todoItems.Add(new TodoItem { Id = Guid.NewGuid().ToString(), Text = school.PageURL, Complete = true });
+                schools.Add(new School { Id = Guid.NewGuid().ToString(), PageURL = school.PageURL, Country = school.Country, ImageURL = school.ImageURL, SchoolName = school.SchoolName });
             }
 
-            foreach (TodoItem todoItem in todoItems)
+            foreach (School s in schools)
             {
-                context.Set<TodoItem>().Add(todoItem);
+                context.Set<School>().Add(s);
             }
 
             base.Seed(context);

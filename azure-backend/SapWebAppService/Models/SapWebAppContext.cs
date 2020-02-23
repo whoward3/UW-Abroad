@@ -22,7 +22,7 @@ namespace SapWebApp.Models
         {
         } 
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<School> Schools { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
