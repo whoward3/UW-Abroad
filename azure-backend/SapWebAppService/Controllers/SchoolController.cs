@@ -9,42 +9,42 @@ using SapWebApp.Models;
 
 namespace SapWebApp.Controllers
 {
-    public class TodoItemController : TableController<TodoItem>
+    public class SchoolController : TableController<School>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
             SapWebAppContext context = new SapWebAppContext();
-            DomainManager = new EntityDomainManager<TodoItem>(context, Request);
+            DomainManager = new EntityDomainManager<School>(context, Request);
         }
 
-        // GET tables/TodoItem
-        public IQueryable<TodoItem> GetAllTodoItems()
+        // GET tables/School
+        public IQueryable<School> GetAllSchools()
         {
             return Query();
         }
 
-        // GET tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<TodoItem> GetTodoItem(string id)
+        // GET tables/School/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public SingleResult<School> GetSchool(string id)
         {
             return Lookup(id);
         }
 
-        // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<TodoItem> PatchTodoItem(string id, Delta<TodoItem> patch)
+        // PATCH tables/School/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task<School> PatchSchool(string id, Delta<School> patch)
         {
             return UpdateAsync(id, patch);
         }
 
-        // POST tables/TodoItem
-        public async Task<IHttpActionResult> PostTodoItem(TodoItem item)
+        // POST tables/School
+        public async Task<IHttpActionResult> PostSchool(School item)
         {
-            TodoItem current = await InsertAsync(item);
+            School current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
-        // DELETE tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteTodoItem(string id)
+        // DELETE tables/School/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task DeleteSchool(string id)
         {
             return DeleteAsync(id);
         }
