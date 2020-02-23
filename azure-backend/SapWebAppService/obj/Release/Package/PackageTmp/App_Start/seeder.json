@@ -1,0 +1,206 @@
+﻿[
+  {
+    "Country": "Australia",
+    "SchoolName": "Exchange: Queensland University of Technology (QUT)",
+    "ImageURL": "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=284226",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=23391"
+  },
+  {
+    "Country": "Australia",
+    "SchoolName": "Exchange: University of New England",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23393"
+  },
+  {
+    "Country": "Australia",
+    "SchoolName": "Exchange: University of Queensland",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23393"
+  },
+  {
+    "Country": "Australia",
+    "SchoolName": "Exchange: University of the Sunshine Coast",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23394"
+  },
+  {
+    "Country": "Australia",
+    "SchoolName": "Exchange: University of South Australia",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=37264"
+  },
+  {
+    "Country": "Austria",
+    "SchoolName": "Exchange: Alpen-Adria Universitaet Klagenfurt",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=23397"
+  },
+  {
+    "Country": "China•",
+    "SchoolName": "Exchange: Shanghai Normal University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23380"
+  },
+  {
+    "Country": "Denmark",
+    "SchoolName": "Exchange: University of Southern Denmark",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23399"
+  },
+  {
+    "Country": "France",
+    "SchoolName": "Exchange: EM Strasbourg Business School",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23401"
+  },
+  {
+    "Country": "France",
+    "SchoolName": "Exchange: Sciences Po Strasbourg",
+    "ImageURL": "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=205205",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=37610"
+  },
+  {
+    "Country": "Germany",
+    "SchoolName": "Exchange: Hochschule Pforzheim",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23405"
+  },
+  {
+    "Country": "Germany",
+    "SchoolName": "Exchange: Hochschule Mannheim",
+    "ImageURL": "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=329650",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=29880"
+  },
+  {
+    "Country": "Germany",
+    "SchoolName": "Exchange: University of Oldenburg",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23408"
+  },
+  {
+    "Country": "Germany",
+    "SchoolName": "Exchange: Zeppelin University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23411"
+  },
+  {
+    "Country": "Guatemala",
+    "SchoolName": "Exchange: Universidad del Valle de Guatemala",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23420"
+  },
+  {
+    "Country": "Japan",
+    "SchoolName": "Exchange: Asia Pacific University (APU)",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23382"
+  },
+  {
+    "Country": "Japan",
+    "SchoolName": "Exchange: Kobe College",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23383"
+  },
+  {
+    "Country": "Japan",
+    "SchoolName": "Exchange: Saitama University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23384"
+  },
+  {
+    "Country": "Japan",
+    "SchoolName": "Exchange: Tohoku University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23385"
+  },
+  {
+    "Country": "Mexico",
+    "SchoolName": "Exchange: Universidad Autonoma de Yucatan (UADY)",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23423"
+  },
+  {
+    "Country": "Mexico",
+    "SchoolName": "Exchange: Universidad de las Americas Puebla (UDLAP)",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23422"
+  },
+  {
+    "Country": "Morocco",
+    "SchoolName": "Exchange: Al Akhawayn University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23425"
+  },
+  {
+    "Country": "Netherlands",
+    "SchoolName": "Exchange: Utrecht University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23414"
+  },
+  {
+    "Country": "Peru",
+    "SchoolName": "Exchange: Pontifica Universidad Catolica del Peru",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23424"
+  },
+  {
+    "Country": "Singapore",
+    "SchoolName": "Exchange: Nanyang Technological University (NTU)",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23389"
+  },
+  {
+    "Country": "South Korea",
+    "SchoolName": "Exchange: Sungkyunkwan University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23387"
+  },
+  {
+    "Country": "Sweden",
+    "SchoolName": "Exchange: Linnaeus University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23416"
+  },
+  {
+    "Country": "Taiwan",
+    "SchoolName": "Exchange: National Dong Hwa University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23390"
+  },
+  {
+    "Country": "United Kingdom",
+    "SchoolName": "Exchange: Swansea University",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=24071"
+  },
+  {
+    "Country": "United Kingdom",
+    "SchoolName": "Exchange: University of Birmingham",
+    "ImageURL": "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=329640",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=23417"
+  },
+  {
+    "Country": "United Kingdom",
+    "SchoolName": "Exchange: University of East Anglia",
+    "ImageURL": "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=179842",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=35599"
+  },
+  {
+    "Country": "United Kingdom",
+    "SchoolName": "Exchange: University of Essex",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=32715"
+  },
+  {
+    "Country": "United Kingdom",
+    "SchoolName": "Exchange: University of Stirling",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23373"
+  },
+  {
+    "Country": "United Kingdom",
+    "SchoolName": "Exchange: University of Hull",
+    "ImageURL": "null",
+    "PageURL": "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=23418"
+  }
+] 

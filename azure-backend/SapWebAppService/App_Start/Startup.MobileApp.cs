@@ -9,6 +9,9 @@ using Microsoft.Azure.Mobile.Server.Config;
 using SapWebApp.DataObjects;
 using SapWebApp.Models;
 using Owin;
+using Newtonsoft.Json.Linq;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace SapWebApp
 {
@@ -29,7 +32,7 @@ namespace SapWebApp
             Database.SetInitializer(new SapWebAppInitializer());
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
-            // Database.SetInitializer<SAPWEBAPPContext>(null);
+            // Database.SetInitializer<ZUMOAPPNAMEContext>(null);
 
             MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
@@ -49,45 +52,36 @@ namespace SapWebApp
         }
     }
 
-    /*
-     * TODO: Change Seed to initialize the new database
-     */
     public class SapWebAppInitializer : CreateDatabaseIfNotExists<SapWebAppContext>
     {
         protected override void Seed(SapWebAppContext context)
         {
-            //Ref: https://www.newtonsoft.com/json/help/html/SerializingJSON.htm
-            /// var schoolTable = Newtonsoft.Json.
+            List<JSchool> schools;
+            List<TodoItem> todoItems = new List<TodoItem> { };
+            using (StreamReader r = new StreamReader("seeder.json"))
+            {
+                string json = r.ReadToEnd();
+                schools = JsonConvert.DeserializeObject<List<JSchool>>(json);
+            }
 
-            /*
-             *  TODO: Below instead of creating a hardcoded list of schools, we will import a file of default information for the db on startup
-             */
-            //List<School> schools = new List<School>
-            //{
-            //    new School { Id = Guid.NewGuid().ToString(), SchoolName = "an Example School Name", Description = "an Example Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
+            foreach (var school in schools)
+            {
+                todoItems.Add(new TodoItem { Id = Guid.NewGuid().ToString(), Text = school.PageURL, Complete = true });
+            }
 
-            //    new School { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", Description = "another Description" , OfferedDate = "date/time", Region = "region", PrimaryLanguage = "a language"},
-            //};
-
-            //List<Major> majors = new List<Major>
-            //{
-            //    new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "COSC" },
-
-            //    new Major { Id = Guid.NewGuid().ToString(), SchoolName = "another School Name", MajorName = "STAT" },
-            //};
-
-            //foreach (School school in schools)
-            //{
-            //    context.Set<School>().Add(school);
-            //}
-
-            //foreach (Major major in majors)
-            //{
-            //    context.Set<Major>().Add(major);
-            //}
+            foreach (TodoItem todoItem in todoItems)
+            {
+                context.Set<TodoItem>().Add(todoItem);
+            }
 
             base.Seed(context);
-            }
+        }
     }
 }
-
+public class JSchool
+{
+    public string Country { get; set; }
+    public string SchoolName { get; set; }
+    public string ImageURL { get; set; }
+    public string PageURL { get; set; }
+}

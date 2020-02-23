@@ -22,14 +22,13 @@ namespace SapWebApp.Models
         {
         } 
 
-        public DbSet<School> Schools { get; set; }
-        public DbSet<Major> Majors { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Conventions.Add(
-            //    new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
-            //        "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
+            modelBuilder.Conventions.Add(
+                new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
+                    "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
     }
 
