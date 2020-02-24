@@ -8,57 +8,72 @@
     tools:context=".LaramieFacts">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/laramieFactsImg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/DescriptionOfLaramie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
     <TextView
-        android:id="@+id/DescriptionOfLaramie"
-        android:layout_width="308dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="280dp"
-        android:text="The historical town of Laramie, WY is located in the foothills of the Snowy Range in the Rocky Mountains and is central to many scenic outdoor recreational destinations."
+        android:id="@+id/Dist2"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:text="45 minute drive west of Cheyenne"
         android:textColor="#3f2a14"
         android:textSize="20dp"
         android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Dist1" />
+
+    <TextView
+        android:id="@+id/Dist1"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:text="2 hour drive north from Denver"
+        android:textColor="#3f2a14"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/Dist2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pop" />
 
     <TextView
         android:id="@+id/Pop"
         android:layout_width="308dp"
         android:layout_height="60dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="494dp"
         android:text="Population: 30,000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:textColor="#3f2a14"
         android:textSize="20dp"
-        android:textStyle="normal"/>
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/Dist1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionOfLaramie" />
 
     <TextView
-        android:id="@+id/Dist1"
-        android:layout_width="308dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="554dp"
-        android:text="2 hour drive north from Denver"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/DescriptionOfLaramie"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:text="The historical town of Laramie, WY is located in the foothills of the Snowy Range in the Rocky Mountains and is central to many scenic outdoor recreational destinations."
         android:textColor="#3f2a14"
         android:textSize="20dp"
-        android:textStyle="normal"/>
-
-    <TextView
-        android:id="@+id/Dist2"
-        android:layout_width="308dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="614dp"
-        android:text="45 minute drive west of Cheyenne"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/Pop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#3f2a14"
-        android:textSize="20dp"
-        android:textStyle="normal"/>
+        app:layout_constraintTop_toBottomOf="@+id/laramieFactsImg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
