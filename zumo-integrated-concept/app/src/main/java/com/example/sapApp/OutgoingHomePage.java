@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class OutgoingHomePage extends Fragment {
 
@@ -48,12 +50,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Set Up Connection Here to a recycler view of what ethan made
-                //Frag nextFrag= new Frag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                ToDoActivity nextFrag= new ToDoActivity();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "_ Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

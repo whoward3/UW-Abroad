@@ -52,7 +52,7 @@ public class IncomingHomePage extends Fragment {
                 LaramieFacts nextFrag= new LaramieFacts();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout2, nextFrag, "Laramie Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag, "Laramie Fragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -77,7 +77,7 @@ public class IncomingHomePage extends Fragment {
                 laramieMapFragment nextFrag= new laramieMapFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout2, nextFrag, "UWYO Map Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag, "UWYO Map Fragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
