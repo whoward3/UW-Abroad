@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class IncomingHomePage extends Fragment {
 
@@ -34,26 +36,50 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Set Up Connection Here to a page that auto-fills using ethan's college page
+//                Frag nextFrag= new Frag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 
         laramie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Set Up Connection Here to the laramie facts page
+                //CS: Connection to the laramie Facts fragment
+                LaramieFacts nextFrag= new LaramieFacts();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frameLayout2, nextFrag, "Laramie Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
         degree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
+                //CS: Connection to the Degree Fragment
+//                DegreeFrag nextFrag= new DegreeFrag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "Degree Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 
         laramieMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
+                //CS: Connection to the Laramie Map Fragment
+                laramieMapFragment nextFrag= new laramieMapFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frameLayout2, nextFrag, "UWYO Map Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

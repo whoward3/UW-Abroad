@@ -35,6 +35,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
+                //Frag nextFrag= new Frag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 
@@ -42,6 +48,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Set Up Connection Here to a recycler view of what ethan made
+                //Frag nextFrag= new Frag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 
@@ -49,12 +61,24 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
+                //Frag nextFrag= new Frag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
         whileAbd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
+                //Frag nextFrag= new Frag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 
@@ -62,6 +86,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
+                //Frag nextFrag= new Frag();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
         return view;

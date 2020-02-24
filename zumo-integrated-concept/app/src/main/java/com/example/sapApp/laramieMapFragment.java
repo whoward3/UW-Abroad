@@ -29,6 +29,11 @@ public class laramieMapFragment extends Fragment {
         //SB: Set Up the View
         View view = inflater.inflate(R.layout.laramie_map, container, false);
 
+        //CS: To prevent fragments from being displayed over each other
+        if (container != null) {
+            container.removeAllViews();
+        }
+
         pdfView = view.findViewById(R.id.pdfView);
         pdfView.fromAsset("gatewaycampusmap.pdf").load();
 
