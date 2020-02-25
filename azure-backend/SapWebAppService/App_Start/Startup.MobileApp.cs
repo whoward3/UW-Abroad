@@ -56,19 +56,16 @@ namespace SapWebApp
     {
         protected override void Seed(SapWebAppContext context)
         {
-            List<JSchool> jschools = new List<JSchool>
-            {
-                new JSchool {  Country = "Australia", SchoolName = "Exchange: Queensland University of Technology (QUT)", ImageURL = "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=284226", PageURL = "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=23391" },
-                new JSchool {  Country = "Australia", SchoolName = "Exchange: Queensland University of Technology (QUT)", ImageURL = "https://uwyo-sa.terradotta.com/_customtags/ct_Image.cfm?Image_ID=284226", PageURL = "https://uwyo-sa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=23391" }
-            };
-
+            
+            List<JSchool> jschools;
+          
             List<School> schools = new List<School> { };
 
-            //using (StreamReader r = new StreamReader("seeder.json"))
-            //{
-            //    string json = r.ReadToEnd();
-            //    jschools = JsonConvert.DeserializeObject<List<JSchool>>(json);
-            //}
+            using (StreamReader r = new StreamReader("D:\\home\\site\\wwwroot\\App_start\\seeder.json"))
+            {
+                string json = r.ReadToEnd();
+                jschools = JsonConvert.DeserializeObject<List<JSchool>>(json);
+            }
 
             foreach (var school in jschools)
             {
@@ -82,6 +79,7 @@ namespace SapWebApp
 
             base.Seed(context);
         }
+
     }
 }
 public class JSchool
