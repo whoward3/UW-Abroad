@@ -27,4 +27,5 @@ azure-backend/SapWebAppService/obj/Debug/SapWebAppService.csprojAssemblyReferenc
 *.pdb
 azure-backend/SapWebAppService/obj/
 azure-backend/SapWebAppService/bin/
+azure-backend/SapWebAppService/.vs/
 
