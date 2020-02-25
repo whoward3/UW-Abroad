@@ -11,6 +11,7 @@
 *.cache
 *.cache
 *.cache
+.gitignore
 azure-backend/.vs/SapWebAppService/v15/.suo
 azure-backend/.vs/SapWebAppService/v16/.suo
 azure-backend/SapWebAppService/obj/Debug/SapWebAppService.csproj.CoreCompileInputs.cache
