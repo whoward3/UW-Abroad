@@ -4,11 +4,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
-    ToDoActivity mToDoActivity;
+    SchoolActivity mSchoolActivity;
     StartUpFragment mStart;
     OutgoingHomePage mOut;
     IncomingHomePage mIn;
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
 
-        mToDoActivity = new ToDoActivity();
+        mSchoolActivity = new SchoolActivity();
         mStart= new StartUpFragment();
         mOut= new OutgoingHomePage();
         mIn = new IncomingHomePage();

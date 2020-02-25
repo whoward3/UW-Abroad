@@ -44,10 +44,7 @@ import okhttp3.OkHttpClient;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.*;
 
-public class ToDoActivity extends Fragment {
-
-
-
+public class SchoolActivity extends Fragment {
 
     /**
      * Client reference
@@ -57,18 +54,18 @@ public class ToDoActivity extends Fragment {
     /**
      * Table used to access data from the mobile app backend.
      */
-    private MobileServiceTable<ToDoItem> mToDoTable;
+    private MobileServiceTable<School> mToDoTable;
 
     //Offline Sync
     /**
      * Table used to store data locally sync with the mobile app backend.
      */
-    //private MobileServiceSyncTable<ToDoItem> mToDoTable;
+    //private MobileServiceSyncTable<School> mToDoTable;
 
     /**
      * Adapter to sync the items list with the view
      */
-    private ToDoItemAdapter mAdapter;
+    private SchoolAdapter mAdapter;
 
     /**
      * EditText containing the "New To Do" text
@@ -124,10 +121,10 @@ public class ToDoActivity extends Fragment {
             });
 
             // Get the remote table instance to use.
-            mToDoTable = mClient.getTable(ToDoItem.class);
+            mToDoTable = mClient.getTable(School.class);
 
             // Offline sync table instance.
-            //mToDoTable = mClient.getSyncTable("ToDoItem", ToDoItem.class);
+            //mToDoTable = mClient.getSyncTable("School", School.class);
 
             //Init local storage
             initLocalStore().get();
@@ -135,7 +132,7 @@ public class ToDoActivity extends Fragment {
             mTextNewToDo = view.findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
-            mAdapter = new ToDoItemAdapter(getContext(), R.layout.row_list_to_do, this);
+            mAdapter = new SchoolAdapter(getContext(), R.layout.row_list_to_do, this);
             ListView listViewToDo = (ListView) view.findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
@@ -173,52 +170,12 @@ public class ToDoActivity extends Fragment {
     }
 
     /**
-     * Mark an item as completed
-     *
-     * @param item
-     *            The item to mark
-     */
-    public void checkItem(final ToDoItem item) {
-        if (mClient == null) {
-            return;
-        }
-
-        // Set the item as completed and update it in the table
-        item.setComplete(true);
-
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-
-                    checkItemInTable(item);
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (item.isComplete()) {
-                                mAdapter.remove(item);
-                            }
-                        }
-                    });
-                } catch (final Exception e) {
-                    createAndShowDialogFromTask(e, "Error");
-                }
-
-                return null;
-            }
-        };
-
-        runAsyncTask(task);
-
-    }
-
-    /**
      * Mark an item as completed in the Mobile Service Table
      *
      * @param item
      *            The item to mark
      */
-    public void checkItemInTable(ToDoItem item) throws ExecutionException, InterruptedException {
+    public void checkItemInTable(School item) throws ExecutionException, InterruptedException {
         mToDoTable.update(item).get();
     }
 
@@ -234,24 +191,21 @@ public class ToDoActivity extends Fragment {
         }
 
         // Create a new item
-        final ToDoItem item = new ToDoItem();
+        final School item = new School();
 
-        item.setText(mTextNewToDo.getText().toString());
-        item.setComplete(false);
+        item.setCountry(mTextNewToDo.getText().toString());
 
         // Insert the new item
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    final ToDoItem entity = addItemInTable(item);
+                    final School entity = addItemInTable(item);
 
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            if(!entity.isComplete()){
                                 mAdapter.add(entity);
-                            }
                         }
                     });
                 } catch (final Exception e) {
@@ -272,8 +226,8 @@ public class ToDoActivity extends Fragment {
      * @param item
      *            The item to Add
      */
-    public ToDoItem addItemInTable(ToDoItem item) throws ExecutionException, InterruptedException {
-        ToDoItem entity = mToDoTable.insert(item).get();
+    public School addItemInTable(School item) throws ExecutionException, InterruptedException {
+        School entity = mToDoTable.insert(item).get();
         return entity;
     }
 
@@ -290,18 +244,19 @@ public class ToDoActivity extends Fragment {
             protected Void doInBackground(Void... params) {
 
                 try {
-                    final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                    final List<School> results = refreshItemsFromMobileServiceTable();
 
                     //Offline Sync
-                    //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
+                    //final List<School> results = refreshItemsFromMobileServiceTableSyncTable();
 
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             mAdapter.clear();
 
-                            for (ToDoItem item : results) {
+                            for (School item : results) {
                                 mAdapter.add(item);
+
                             }
                         }
                     });
@@ -320,16 +275,15 @@ public class ToDoActivity extends Fragment {
      * Refresh the list with the items in the Mobile Service Table
      */
 
-    private List<ToDoItem> refreshItemsFromMobileServiceTable() throws ExecutionException, InterruptedException {
-        return mToDoTable.where().field("complete").
-                eq(val(false)).execute().get();
+    private List<School> refreshItemsFromMobileServiceTable() throws ExecutionException, InterruptedException {
+        return mToDoTable.where().execute().get();
     }
 
     //Offline Sync
     /**
      * Refresh the list with the items in the Mobile Service Sync Table
      */
-    /*private List<ToDoItem> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
+    /*private List<School> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
         //sync the data
         sync().get();
         Query query = QueryOperations.field("complete").
@@ -363,7 +317,7 @@ public class ToDoActivity extends Fragment {
                     tableDefinition.put("text", ColumnDataType.String);
                     tableDefinition.put("complete", ColumnDataType.Boolean);
 
-                    localStore.defineTable("ToDoItem", tableDefinition);
+                    localStore.defineTable("School", tableDefinition);
 
                     SimpleSyncHandler handler = new SimpleSyncHandler();
 

@@ -9,13 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 
 /**
- * Adapter to bind a ToDoItem List to a view
+ * Adapter to bind a School List to a view
  */
-public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
+public class SchoolAdapter extends ArrayAdapter<School> {
 
     EventListener listener;
 
-    ToDoActivity mTDA;
+    SchoolActivity mTDA;
 
     /**
      * Adapter context
@@ -27,7 +27,7 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
      */
     int mLayoutResourceId;
 
-    public ToDoItemAdapter(Context context, int layoutResourceId, ToDoActivity TDA) {
+    public SchoolAdapter(Context context, int layoutResourceId, SchoolActivity TDA) {
         super(context, layoutResourceId);
 
         mContext = context;
@@ -42,7 +42,7 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
 
-        final ToDoItem currentItem = getItem(position);
+        final School currentItem = getItem(position);
 
         if (row == null) {
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
@@ -51,7 +51,7 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
 
         row.setTag(currentItem);
         final CheckBox checkBox = (CheckBox) row.findViewById(R.id.checkToDoItem);
-        checkBox.setText(currentItem.getText());
+        checkBox.setText(currentItem.getCountry());
         checkBox.setChecked(false);
         checkBox.setEnabled(true);
 
@@ -61,9 +61,8 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
             public void onClick(View arg0) {
                 if (checkBox.isChecked()) {
                     checkBox.setEnabled(false);
-                    mTDA.checkItem(currentItem);
 //                    if (mContext instanceof MainActivity) {
-//                        //ToDoActivity activity = (ToDoActivity) mContext;
+//                        //SchoolActivity activity = (SchoolActivity) mContext;
 //                        mTDA.checkItem(currentItem);
 //                    }
                 }
@@ -74,7 +73,7 @@ public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
     }
 
     public interface EventListener{
-        void onEvent(ToDoItem item);
+        void onEvent(School item);
     }
 
 }
