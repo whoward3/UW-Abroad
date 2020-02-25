@@ -51,7 +51,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
 
         row.setTag(currentItem);
         final CheckBox checkBox = (CheckBox) row.findViewById(R.id.checkToDoItem);
-        checkBox.setText(currentItem.getCountry());
+        checkBox.setText(currentItem.getSchoolName());
         checkBox.setChecked(false);
         checkBox.setEnabled(true);
 

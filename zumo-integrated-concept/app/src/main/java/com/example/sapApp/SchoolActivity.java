@@ -193,7 +193,7 @@ public class SchoolActivity extends Fragment {
         // Create a new item
         final School item = new School();
 
-        item.setCountry(mTextNewToDo.getText().toString());
+        item.setSchoolName(mTextNewToDo.getText().toString());
 
         // Insert the new item
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){

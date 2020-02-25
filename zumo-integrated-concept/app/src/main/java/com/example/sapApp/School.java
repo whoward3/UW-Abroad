@@ -11,19 +11,19 @@ public class School {
      * Private Values
      */
 
-    @com.google.gson.annotations.SerializedName("Country")
+    @com.google.gson.annotations.SerializedName("country")
     private String mCountry;
 
-    @com.google.gson.annotations.SerializedName("SchoolName")
+    @com.google.gson.annotations.SerializedName("schoolName")
     private String mSchoolName;
 
-    @com.google.gson.annotations.SerializedName("ImageURL")
+    @com.google.gson.annotations.SerializedName("imageURL")
     private String mImageURL;
 
-    @com.google.gson.annotations.SerializedName("PageURL")
+    @com.google.gson.annotations.SerializedName("pageURL")
     private String mPageURL;
 
-    @com.google.gson.annotations.SerializedName("Id")
+    @com.google.gson.annotations.SerializedName("id")
     private String mId;
 
     /**
@@ -33,13 +33,25 @@ public class School {
 
     }
 
+    @Override
+    public String toString() {
+        return getSchoolName();
+    }
+
     /**
      * Initializes a new School
      *
-     * @param text
+     * @param schoolName
      *            The item text
      * @param id
      *            The item id
+     *
+     * @param country
+     *            The item country
+     *
+     * @param imageURL
+     *
+     * @param pageURL
      */
     public School(String id, String country, String schoolName, String imageURL, String pageURL) {
         this.setId(id);
@@ -76,7 +88,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param text
+     * @param country
      *            text to set
      */
     public final void setCountry(String country) {
@@ -93,7 +105,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param text
+     * @param schoolName
      *            text to set
      */
     public final void setSchoolName(String schoolName) {
@@ -110,7 +122,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param text
+     * @param imageURL
      *            text to set
      */
     public final void setImageURL(String imageURL) {
@@ -127,7 +139,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param text
+     * @param pageURL
      *            text to set
      */
     public final void setPageURL(String pageURL) {
