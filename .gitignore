@@ -23,3 +23,8 @@ azure-backend/.vs/SapWebAppService/v16/.suo
 azure-backend/.vs/SapWebAppService/v16/Server/sqlite3/storage.ide-shm
 azure-backend/.vs/SapWebAppService/v16/Server/sqlite3/storage.ide-wal
 azure-backend/SapWebAppService/obj/Debug/SapWebAppService.csprojAssemblyReference.cache
+*.dll
+*.pdb
+azure-backend/SapWebAppService/obj/
+azure-backend/SapWebAppService/bin/
+
