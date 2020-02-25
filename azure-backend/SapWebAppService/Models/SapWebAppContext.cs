@@ -20,7 +20,7 @@ namespace SapWebApp.Models
 
         public SapWebAppContext() : base(connectionStringName)
         {
-        } 
+        }
 
         public DbSet<School> Schools { get; set; }
 
