@@ -54,7 +54,7 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/incomingButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startUpPageImg" />
 
@@ -68,6 +68,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        tools:src="@drawable/uwyoabroad" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

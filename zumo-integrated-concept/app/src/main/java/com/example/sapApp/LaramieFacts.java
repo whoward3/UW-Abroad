@@ -20,11 +20,6 @@ public class LaramieFacts extends Fragment {
         //SB: Set Up the View
         View view = inflater.inflate(R.layout.fragment_laramie_facts, container, false);
 
-        //CS: To prevent fragments from being displayed over each other
-        if (container != null) {
-            container.removeAllViews();
-        }
-
         return view;
     }
 
