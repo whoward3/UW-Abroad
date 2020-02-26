@@ -1,0 +1,38 @@
+Things I'd like to accomplish in the next fifty minutes: 
+- Start to download the tools required by Prof. Brov. ✔
+- If you can't figure out how to download one for like 7 minutes, go on... ✔
+- Take a snapshot after you've downloaded/instaled all tools ✔
+
+– PEiD (do NOT go to PEiD.info) ✔
+– md5deep (Hash tool) ✔
+– WinMD5 (Hash tool) ✔
+– WireShark ✔
+– Process Monitor ✔
+– Process Explorer ✔
+– Reg Shot ✔ 
+- 7zip ✔ 
+– ApateDNS (FireEye) ✔
+– NetCat (nmap.org) ✔
+– Strings (http://bit.ly/ic4plL) ✔
+– DependencyWalker ✔
+– PEView ✔
+– UPX (https://upx.github.io/) ✔
+– Resource Hacker ✔
+
+
+Things I'd like to accomplish in the next twenty minutes: 
+Roughly figure out what I'm going to say at the presentation today! ✔
+
+Current Status Slide:
+- Shortly go over what our main goals are for the front-end (Ethan will cover the back-end)
+
+Demo Slide:
+Quickly go over the front-end fragments that exist so far, incoming/outgoing section, map, 
+part that uses the database!!
+
+Successes, Roadblocks, & Changes Slide:
+Successes: Integrating the database.
+Roadblocks: No real roadblocks, just unexpected challenges... took nearly three times as long as we had originally scheduled time for. 
+Changes: We originally had the idea of using Flutter, which is a software that would allow us
+to program an app for iOS and Android at the same time, but we decided that due to time constraints
+it would be best to just work on Android and leave iOS open as an opportunity for next year's Senior Design Groups.
