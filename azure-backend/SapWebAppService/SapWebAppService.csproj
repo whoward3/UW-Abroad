@@ -169,7 +169,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Start\seeder.json" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Properties\PublishProfiles\sap-web-app-dev - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\sap-web-app-prod - Web Deploy.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
