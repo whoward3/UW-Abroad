@@ -87,19 +87,17 @@ public class SchoolActivity extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_to_do, container, false);
 
-        mProgressBar = (ProgressBar) view.findViewById(R.id.loadingProgressBar);
-        adddButton = view.findViewById(R.id.buttonAddToDo);
-
-        adddButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-
-               addItem(getView());
-            }
-
-        });
+       // mProgressBar = (ProgressBar) view.findViewById(R.id.loadingProgressBar);
+        //adddButton.setOnClickListener(new View.OnClickListener(){
+//            public void onClick(View v) {
+//
+//               addItem(getView());
+//            }
+//
+//        });
 
         // Initialize the progress bar
-        mProgressBar.setVisibility(ProgressBar.GONE);
+        //mProgressBar.setVisibility(ProgressBar.GONE);
 
         try {
             // Create the client instance, using the provided mobile app URL.
@@ -129,7 +127,7 @@ public class SchoolActivity extends Fragment {
             //Init local storage
             initLocalStore().get();
 
-            mTextNewToDo = view.findViewById(R.id.textNewToDo);
+           // mTextNewToDo = view.findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
             mAdapter = new SchoolAdapter(getContext(), R.layout.row_list_to_do, this);

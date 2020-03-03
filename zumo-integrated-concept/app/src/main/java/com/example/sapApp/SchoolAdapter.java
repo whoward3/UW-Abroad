@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
 
 /**
  * Adapter to bind a School List to a view
@@ -50,22 +53,23 @@ public class SchoolAdapter extends ArrayAdapter<School> {
         }
 
         row.setTag(currentItem);
-        final CheckBox checkBox = (CheckBox) row.findViewById(R.id.checkToDoItem);
+        final TextView checkBox =  row.findViewById(R.id.checkToDoItem);
+
         checkBox.setText(currentItem.getSchoolName());
-        checkBox.setChecked(false);
+        //checkBox.setChecked(false);
         checkBox.setEnabled(true);
 
         checkBox.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                if (checkBox.isChecked()) {
-                    checkBox.setEnabled(false);
-//                    if (mContext instanceof MainActivity) {
-//                        //SchoolActivity activity = (SchoolActivity) mContext;
-//                        mTDA.checkItem(currentItem);
-//                    }
-                }
+//                if (checkBox.isChecked()) {
+//                    checkBox.setEnabled(false);
+////                    if (mContext instanceof MainActivity) {
+////                        //SchoolActivity activity = (SchoolActivity) mContext;
+////                        mTDA.checkItem(currentItem);
+////                    }
+//                }
             }
         });
 
