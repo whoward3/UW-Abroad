@@ -30,38 +30,11 @@
         tools:src="@drawable/uwyoabroad" />
 
     <TextView
-        android:id="@+id/Dist2"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:text="45 minute drive west of Cheyenne"
-        android:textColor="#3f2a14"
-        android:textSize="20dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Dist1" />
-
-    <TextView
-        android:id="@+id/Dist1"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:text="2 hour drive north from Denver"
-        android:textColor="#3f2a14"
-        android:textSize="20dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/Dist2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pop" />
-
-    <TextView
-        android:id="@+id/Pop"
-        android:layout_width="308dp"
-        android:layout_height="60dp"
-        android:text="Population: 30,000"
+        android:id="@+id/DescriptionOfLaramie"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:text="Nestled between mountain ranges at 7,200 feet, this 1860s railroad town is now home to nearly 32,000 residents, a number of respected museums and countless one-of-a-kind shops and restaurants. A dozen vibrant murals, painted by local artists, bring the historic Laramie downtown to life, while the rumble of trains reminds this Western town of its roots. Whether you’re heading to the Laramie River or lakes of the Snowy Range to fish, or utilizing the 2.9 million acres of nearby national forest to hike, bike, camp or ski, epic adventure awaits in all directions."
+        android:gravity="left"
         android:textColor="#3f2a14"
         android:textSize="20dp"
         android:textStyle="normal"
@@ -69,22 +42,51 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescriptionOfLaramie" />
+        app:layout_constraintTop_toBottomOf="@+id/laramieFactsImg" />
 
     <TextView
-        android:id="@+id/DescriptionOfLaramie"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:text="The historical town of Laramie, WY is located in the foothills of the Snowy Range in the Rocky Mountains and is central to many scenic outdoor recreational destinations."
+        android:id="@+id/Dist1"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:text="2 hour drive north from Denver,
+                      45 minutes west of Cheyenne"
+        android:gravity="center"
         android:textColor="#3f2a14"
         android:textSize="20dp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/Pop"
+        app:layout_constraintBottom_toTopOf="@+id/Explore1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/laramieFactsImg" />
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionOfLaramie" />
 
+    <TextView
+        android:id="@+id/Explore1"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:text="EXPLORE OUR COMMUNITY"
+        android:gravity="center"
+        android:textColor="#3f2a14"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/Explore2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Dist1" />
+
+    <TextView
+        android:id="@+id/Explore2"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:text="Visit Laramie"
+        android:textColor="#3f2a14"
+        android:textSize="17dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Explore1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
