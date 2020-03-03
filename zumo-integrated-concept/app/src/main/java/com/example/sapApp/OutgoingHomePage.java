@@ -63,12 +63,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                //Frag nextFrag= new Frag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                HTMLfrag nextFrag= new HTMLfrag("https://www.uwyo.edu/");
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "_ Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
         whileAbd.setOnClickListener(new View.OnClickListener() {
