@@ -6,18 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
+import androidx.annotation.NonNull;
 
-/**
- * Adapter to bind a School List to a view
- */
-public class SchoolAdapter extends ArrayAdapter<School> {
+public class MajorAdapter extends ArrayAdapter<MajorItem> {
 
-
-    SchoolActivity mTDA;
+    MajorFragment mMF;
 
     /**
      * Adapter context
@@ -29,12 +24,12 @@ public class SchoolAdapter extends ArrayAdapter<School> {
      */
     int mLayoutResourceId;
 
-    public SchoolAdapter(Context context, int layoutResourceId, SchoolActivity TDA) {
+    public MajorAdapter(Context context, int layoutResourceId, MajorFragment MF) {
         super(context, layoutResourceId);
 
         mContext = context;
         mLayoutResourceId = layoutResourceId;
-        mTDA = TDA;
+        mMF = MF;
     }
 
     /**
@@ -44,7 +39,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
 
-        final School currentItem = getItem(position);
+        final MajorItem currentItem = getItem(position);
 
         if (row == null) {
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
@@ -54,7 +49,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
         row.setTag(currentItem);
         final TextView checkBox =  row.findViewById(R.id.checkToDoItem);
 
-        checkBox.setText(currentItem.getSchoolName());
+        checkBox.setText(currentItem.getMajorName());
 
 
         return row;
