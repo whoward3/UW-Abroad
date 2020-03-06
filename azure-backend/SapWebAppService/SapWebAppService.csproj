@@ -148,9 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\MajorController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\SchoolController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataObjects\Major.cs" />
+    <Compile Include="DataObjects\Post.cs" />
     <Compile Include="DataObjects\School.cs" />
     <Compile Include="Models\SapWebAppContext.cs" />
     <Compile Include="Startup.cs" />
@@ -173,7 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\sap-web-app-dev - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\sap-web-app-prod - Web Deploy.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
