@@ -75,12 +75,11 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
-        android:layout_height="120dp"
-
+        android:layout_height="180dp"
         android:gravity="center"
         android:text="@string/incoming_home_page"
         android:textColor="#FDC82F"
-        android:textSize="16dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/aboutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

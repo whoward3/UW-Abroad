@@ -16,13 +16,13 @@ card_view:cardCornerRadius="5dp">
         android:id="@+id/checkToDoItem"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:background="#FDC82F"
         android:layout_centerInParent="true"
-        android:background="?android:selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"/>
+        android:textColor="#643327"
+        android:textSize="24sp" />
 
 </RelativeLayout>
 </androidx.cardview.widget.CardView>
