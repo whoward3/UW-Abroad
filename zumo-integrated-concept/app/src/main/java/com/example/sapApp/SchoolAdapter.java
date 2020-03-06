@@ -9,7 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * Adapter to bind a School List to a view
@@ -37,6 +40,9 @@ public class SchoolAdapter extends ArrayAdapter<School> {
         mTDA = TDA;
     }
 
+
+
+
     /**
      * Returns the view for a specific item on the list
      */
@@ -55,6 +61,19 @@ public class SchoolAdapter extends ArrayAdapter<School> {
         final TextView checkBox =  row.findViewById(R.id.checkToDoItem);
 
         checkBox.setText(currentItem.getSchoolName());
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HTMLfrag nextFrag= new HTMLfrag(currentItem.getPageURL());
+                FragmentManager fragmentManager = ((AppCompatActivity)mContext).getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "HTML Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+
 
 
         return row;

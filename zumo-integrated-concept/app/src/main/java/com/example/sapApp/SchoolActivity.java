@@ -35,7 +35,10 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+import com.microsoft.windowsazure.mobileservices.table.query.Query;
+import com.microsoft.windowsazure.mobileservices.table.query.QueryOperations;
 import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncContext;
+import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncTable;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.ColumnDataType;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.MobileServiceLocalStoreException;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLocalStore;
@@ -60,7 +63,7 @@ public class SchoolActivity extends Fragment {
     /**
      * Table used to store data locally sync with the mobile app backend.
      */
-    //private MobileServiceSyncTable<School> mToDoTable;
+    private MobileServiceSyncTable<School> mToDoTableOffline;
 
     /**
      * Adapter to sync the items list with the view
@@ -87,18 +90,6 @@ public class SchoolActivity extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_to_do, container, false);
 
-       // mProgressBar = (ProgressBar) view.findViewById(R.id.loadingProgressBar);
-        //adddButton.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v) {
-//
-//               addItem(getView());
-//            }
-//
-//        });
-
-        // Initialize the progress bar
-        //mProgressBar.setVisibility(ProgressBar.GONE);
-
         try {
             // Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
@@ -122,12 +113,10 @@ public class SchoolActivity extends Fragment {
             mToDoTable = mClient.getTable(School.class);
 
             // Offline sync table instance.
-            //mToDoTable = mClient.getSyncTable("School", School.class);
+            mToDoTableOffline = mClient.getSyncTable("School", School.class);
 
             //Init local storage
             initLocalStore().get();
-
-           // mTextNewToDo = view.findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
             mAdapter = new SchoolAdapter(getContext(), R.layout.row_list_to_do, this);
@@ -145,15 +134,6 @@ public class SchoolActivity extends Fragment {
         return view;
 
     }
-
-//    /**
-//     * Initializes the activity menu
-//     */
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getActivity().getMenuInflater().inflate(R.menu.activity_main, menu);
-//        return true;
-//    }
 
     /**
      * Select an option from the menu
@@ -281,13 +261,13 @@ public class SchoolActivity extends Fragment {
     /**
      * Refresh the list with the items in the Mobile Service Sync Table
      */
-    /*private List<School> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
+    private List<School> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
         //sync the data
         sync().get();
         Query query = QueryOperations.field("complete").
                 eq(val(false));
-        return mToDoTable.read(query).get();
-    }*/
+        return mToDoTableOffline.read(query).get();
+    }
 
     /**
      * Initialize local storage
@@ -337,7 +317,7 @@ public class SchoolActivity extends Fragment {
      * Sync the current context and the Mobile Service Sync Table
      * @return
      */
-    /*
+
     private AsyncTask<Void, Void, Void> sync() {
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
@@ -345,7 +325,7 @@ public class SchoolActivity extends Fragment {
                 try {
                     MobileServiceSyncContext syncContext = mClient.getSyncContext();
                     syncContext.push().get();
-                    mToDoTable.pull(null).get();
+                    mToDoTableOffline.pull(null).get();
                 } catch (final Exception e) {
                     createAndShowDialogFromTask(e, "Error");
                 }
@@ -354,7 +334,7 @@ public class SchoolActivity extends Fragment {
         };
         return runAsyncTask(task);
     }
-    */
+
 
     /**
      * Creates a dialog and shows it
