@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#643327"
     tools:context=".IncomingHomePage">
 
     <Button
@@ -79,7 +79,7 @@
 
         android:gravity="center"
         android:text="@string/incoming_home_page"
-        android:textColor="#643327"
+        android:textColor="#FDC82F"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/aboutButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,5 +96,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        android:src="@drawable/uwyoabroad" />
 </androidx.constraintlayout.widget.ConstraintLayout>

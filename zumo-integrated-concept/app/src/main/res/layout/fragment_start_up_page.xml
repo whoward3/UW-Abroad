@@ -15,7 +15,7 @@
         android:layout_height="80dp"
         android:layout_margin="10dp"
         android:background="#FDC82F"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif-black"
         android:text="Incoming"
         android:textColor="#643327"
         android:textSize="30dp"
@@ -32,7 +32,7 @@
         android:layout_height="80dp"
         android:layout_margin="10dp"
         android:background="#FDC82F"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif-black"
         android:text="Outgoing"
         android:textColor="#643327"
         android:textSize="30dp"
@@ -61,13 +61,9 @@
     <ImageView
         android:id="@+id/startUpPageImg"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toTopOf="@+id/description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
-        tools:src="@drawable/uwyoabroad" />
+        android:src="@drawable/uwyoabroad" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
