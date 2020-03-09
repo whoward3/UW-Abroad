@@ -1,740 +1,741 @@
-{
-    "Accounting (CB)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "African and American Diaspora Studies (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Agricultural Business (AG)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Agricultural Communications (AG)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Agriculture and Applied Economics (AG)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Agricultural Economics/Water Resources (AG)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Agricultural Education (ED)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Agronomy (AG)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "African American and Diaspora Studies (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "American Indian Studies (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "American Studies (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Animal and Veterinary Sciences (AG)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Anthropology (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Architectural Engineering (EN)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Art (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Art History (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Astronomy/Astrophysics (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Atmospheric Science (EN)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Biology (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Biomedical Sciences (AG, EN, AS, HS)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Botany (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Botany/ Water Resources (AS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Business Administration (CB)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Business Economics (CB)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Chemical Engineering (EN)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Chemistry (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Chemistry (ACS Approved) (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Civil Engineering (EN)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Civil Engineering/Water Resources (EN)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Communication (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Computer Engineering (EN)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Computer Science (EN)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Counseling (ED)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Counselor Education and Supervision (ED)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Creative Writing (AS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Criminal Justice (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Curriculum and Instruction (ED)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Dental Hygiene (HS) (at Sheridan College)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Ecology (UW)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Economics (CB)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Economics and Finance (CB)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Economics/Water Resources (CB)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Education (ED)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": true
-    },
-    "Education Specialist (ED)": {
-        "B": false,
-        "M": false,
-        "D": false,
-        "O": true
-    },
-    "Electrical Engineering (EN)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Elementary Education (ED)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Energy management (CB)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Energy Resource Management and Development (SER)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Energy Systems Engineering": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "English (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Entomology (AG)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Environment and Natural Resources (affiliated major) (HN)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Environmental Engineering (EN)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Environmental Geology/Geohydrology (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Environmental systems science (HN)": {
-        "B": true,
-        "M": "",
-        "D": "",
-        "O": ""
-    },
-    "Family and Consumer Sciences (AG)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Finance (CB)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Food Science and Human Nutrition (AG)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "French (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Gender and Women's Studies (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Geography (AS) *under review": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Geography/Water Resources (AS) *under review": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Geology (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Geology and Earth Sciences (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Geology/Water Resources (AS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Geophysics (AS)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "German (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Health services administration (HS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "History (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Hydrological Sciences (UW)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "International Studies (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Journalism (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Juris Doctor (LAW)": {
-        "B": false,
-        "M": false,
-        "D": false,
-        "O": true
-    },
-    "Kinesiology and Health (HS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Kinesiology and Health Promotion (HS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Management (CB)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Management and Marketing (CB)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Marketing (CB)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Mathematics (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Mechanical Engineering (EN)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Medical Laboratory Science (HS) (through UW-Casper)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Microbiology (AG)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Molecular Biology (AG)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Molecular and Cellular Life Sciences (UW)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Music (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Music Education (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Music Performance (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": true
-    },
-    "Natural Science (Inter)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Neuroscience (AS and UW)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Nursing (HS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Nursing Practice (HS)": {
-        "B": false,
-        "M": false,
-        "D": true,
-        "O": false
-    },
-    "Organizational Leadership (Bachelor of Applied Science) (AG)": {
-        "B": false,
-        "M": false,
-        "D": false,
-        "O": true
-    },
-    "Petroleum Engineering (EN)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Pharmacy (Professional) (HS)": {
-        "B": false,
-        "M": false,
-        "D": false,
-        "O": true
-    },
-    "Philosophy (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Physical Education Teaching (HS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Physics (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Physiology (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Planning (Community and Regional) (AS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Plant Sciences (AG)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Political Science (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Psychology (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Public Administration (AS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": true
-    },
-    "Rangeland Ecology and Watershed Management (AG)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Rangeland Ecology and Watershed Management/Water Resources (AG)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Religious Studies (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Reproductive Biology (AG and AS)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Secondary Education (ED)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Social Science (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Social Work (HS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Sociology (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Soil Science (AG)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Soil Science/Water Resources (AG)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Spanish (AS)": {
-        "B": true,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Speech, Language and Hearing Sciences (HS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Speech-Language Pathology (HS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Statistics (AS)": {
-        "B": true,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Theatre and Dance (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Theatre and Dance-Professional (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Wildlife and Fisheries Biology and Management - Professional (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
-    },
-    "Zoology and Physiology (AS)": {
-        "B": false,
-        "M": true,
-        "D": true,
-        "O": false
-    },
-    "Zoology and Physiology/Water Resources (AS)": {
-        "B": false,
-        "M": true,
-        "D": false,
-        "O": false
-    },
-    "Zoology (AS)": {
-        "B": true,
-        "M": false,
-        "D": false,
-        "O": false
+[
+    {
+        "MajorName": "Accounting (CB)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "African and American Diaspora Studies (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Agricultural Business (AG)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Agricultural Communications (AG)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Agriculture and Applied Economics (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Agricultural Economics/Water Resources (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Agricultural Education (ED)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Agronomy (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "African American and Diaspora Studies (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "American Indian Studies (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "American Studies (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Animal and Veterinary Sciences (AG)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Anthropology (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Architectural Engineering (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Art (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Art History (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Astronomy/Astrophysics (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Atmospheric Science (EN)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Biology (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Biomedical Sciences (AG, EN, AS, HS)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Botany (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Botany/ Water Resources (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Business Administration (CB)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Business Economics (CB)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Chemical Engineering (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Chemistry (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Chemistry (ACS Approved) (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Civil Engineering (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Civil Engineering/Water Resources (EN)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Communication (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Computer Engineering (EN)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Computer Science (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Counseling (ED)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Counselor Education and Supervision (ED)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Creative Writing (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Criminal Justice (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Curriculum and Instruction (ED)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Dental Hygiene (HS) (at Sheridan College)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Ecology (UW)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Economics (CB)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Economics and Finance (CB)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Economics/Water Resources (CB)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Education (ED)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": true
+    },{
+    "MajorName": "Education Specialist (ED)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": true
+    },{
+    "MajorName": "Electrical Engineering (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Elementary Education (ED)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Energy management (CB)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Energy Resource Management and Development (SER)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Energy Systems Engineering",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "English (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Entomology (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Environment and Natural Resources (affiliated major) (HN)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Environmental Engineering (EN)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Environmental Geology/Geohydrology (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Environmental systems science (HN)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Family and Consumer Sciences (AG)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Finance (CB)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Food Science and Human Nutrition (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "French (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Gender and Women's Studies (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Geography (AS) *under review",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Geography/Water Resources (AS) *under review",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Geology (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Geology and Earth Sciences (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Geology/Water Resources (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Geophysics (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "German (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Health services administration (HS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "History (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Hydrological Sciences (UW)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "International Studies (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Journalism (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Juris Doctor (LAW)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": true
+    },{
+    "MajorName": "Kinesiology and Health (HS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Kinesiology and Health Promotion (HS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Management (CB)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Management and Marketing (CB)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Marketing (CB)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Mathematics (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Mechanical Engineering (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Medical Laboratory Science (HS) (through UW-Casper)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Microbiology (AG)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Molecular Biology (AG)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Molecular and Cellular Life Sciences (UW)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Music (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Music Education (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Music Performance (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": true
+    },{
+    "MajorName": "Natural Science (Inter)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Neuroscience (AS and UW)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Nursing (HS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Nursing Practice (HS)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Organizational Leadership (Bachelor of Applied Science) (AG)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": true
+    },{
+    "MajorName": "Petroleum Engineering (EN)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Pharmacy (Professional) (HS)",
+        "Bachelors": false,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": true
+    },{
+    "MajorName": "Philosophy (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Physical Education Teaching (HS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Physics (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Physiology (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Planning (Community and Regional) (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Plant Sciences (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Political Science (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Psychology (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Public Administration (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": true
+    },{
+    "MajorName": "Rangeland Ecology and Watershed Management (AG)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Rangeland Ecology and Watershed Management/Water Resources (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Religious Studies (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Reproductive Biology (AG and AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Secondary Education (ED)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Social Science (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Social Work (HS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Sociology (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Soil Science (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Soil Science/Water Resources (AG)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Spanish (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Speech, Language and Hearing Sciences (HS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Speech-Language Pathology (HS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Statistics (AS)",
+        "Bachelors": true,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Theatre and Dance (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Theatre and Dance-Professional (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Wildlife and Fisheries Biology and Management - Professional (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Zoology and Physiology (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": true,
+        "Other": false
+    },{
+    "MajorName": "Zoology and Physiology/Water Resources (AS)",
+        "Bachelors": false,
+        "Masters": true,
+        "Doctorate": false,
+        "Other": false
+    },{
+    "MajorName": "Zoology (AS)",
+        "Bachelors": true,
+        "Masters": false,
+        "Doctorate": false,
+        "Other": false
     }
-}
+]

@@ -172,7 +172,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Start\seeder.json" />
+    <Content Include="App_Start\majors-seed.json" />
+    <Content Include="App_Start\schools-seed.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\sap-web-app-dev - Web Deploy.pubxml" />

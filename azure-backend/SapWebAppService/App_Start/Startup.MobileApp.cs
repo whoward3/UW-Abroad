@@ -55,19 +55,20 @@ namespace SapWebApp
     public class SapWebAppInitializer : CreateDatabaseIfNotExists<SapWebAppContext>
     {
         protected override void Seed(SapWebAppContext context)
-        {
-            
-            List<JSchool> jschools;
-          
+        {          
+            List<School> jSchools = new List<School> { };
             List<School> schools = new List<School> { };
 
-            using (StreamReader r = new StreamReader("D:\\home\\site\\wwwroot\\App_start\\seeder.json"))
+            List<Major> jMajors = new List<Major> { };
+            List<Major> majors = new List<Major> { };
+
+            using (StreamReader r = new StreamReader("D:\\home\\site\\wwwroot\\App_start\\schools-seed.json"))
             {
                 string json = r.ReadToEnd();
-                jschools = JsonConvert.DeserializeObject<List<JSchool>>(json);
+                jSchools = JsonConvert.DeserializeObject<List<School>>(json);
             }
 
-            foreach (var school in jschools)
+            foreach (var school in jSchools)
             {
                 schools.Add(new School { Id = Guid.NewGuid().ToString(), PageURL = school.PageURL, Country = school.Country, ImageURL = school.ImageURL, SchoolName = school.SchoolName });
             }
@@ -75,6 +76,22 @@ namespace SapWebApp
             foreach (School s in schools)
             {
                 context.Set<School>().Add(s);
+            }           
+
+            using (StreamReader r = new StreamReader("D:\\home\\site\\wwwroot\\App_start\\majors-seed.json"))
+            {
+                string json = r.ReadToEnd();
+                jMajors = JsonConvert.DeserializeObject<List<Major>>(json);
+            }
+
+            foreach (var major in jMajors)
+            {
+                majors.Add(new Major { Id = Guid.NewGuid().ToString(), MajorName = major.MajorName, Bachelors = major.Bachelors, Masters = major.Masters, Doctorate = major.Doctorate, Other = major.Other });
+            }
+
+            foreach (Major m in majors)
+            {
+                context.Set<Major>().Add(m);
             }
 
             base.Seed(context);
@@ -82,11 +99,3 @@ namespace SapWebApp
 
     }
 }
-public class JSchool
-{
-    public string Country { get; set; }
-    public string SchoolName { get; set; }
-    public string ImageURL { get; set; }
-    public string PageURL { get; set; }
-}
-

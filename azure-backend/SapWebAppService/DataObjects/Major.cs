@@ -7,6 +7,7 @@ namespace SapWebApp.DataObjects
         public string MajorName { get; set; }
         public bool Bachelors { get; set; }
         public bool Masters { get; set; }
-        public bool PhD { get; set; }
+        public bool Doctorate { get; set; }
+        public bool Other { get; set; }
     }
 }
