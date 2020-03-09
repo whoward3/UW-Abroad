@@ -23,6 +23,8 @@ namespace SapWebApp.Models
         }
 
         public DbSet<School> Schools { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Major> Majors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

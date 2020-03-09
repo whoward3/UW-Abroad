@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#643327"
     tools:context=".IncomingHomePage">
 
     <Button
@@ -75,12 +75,11 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
-        android:layout_height="120dp"
-
+        android:layout_height="180dp"
         android:gravity="center"
         android:text="@string/incoming_home_page"
-        android:textColor="#643327"
-        android:textSize="16dp"
+        android:textColor="#FDC82F"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/aboutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -96,5 +95,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        android:src="@drawable/uwyoabroad" />
 </androidx.constraintlayout.widget.ConstraintLayout>

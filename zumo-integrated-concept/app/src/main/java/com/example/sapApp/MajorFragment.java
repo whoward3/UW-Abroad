@@ -1,20 +1,9 @@
 package com.example.sapApp;
 
-
-import java.net.MalformedURLException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-
 import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+
+import androidx.fragment.app.Fragment;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -43,11 +34,19 @@ import com.microsoft.windowsazure.mobileservices.table.sync.localstore.ColumnDat
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.MobileServiceLocalStoreException;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLocalStore;
 import com.microsoft.windowsazure.mobileservices.table.sync.synchandler.SimpleSyncHandler;
+
+import java.net.MalformedURLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 
-import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.*;
+import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
 
-public class SchoolActivity extends Fragment {
+public class MajorFragment extends Fragment {
 
     /**
      * Client reference
@@ -57,38 +56,28 @@ public class SchoolActivity extends Fragment {
     /**
      * Table used to access data from the mobile app backend.
      */
-    private MobileServiceTable<School> mToDoTable;
+    private MobileServiceTable<MajorItem> mMajorList;
 
     //Offline Sync
     /**
      * Table used to store data locally sync with the mobile app backend.
      */
-    private MobileServiceSyncTable<School> mToDoTableOffline;
+    private MobileServiceSyncTable<MajorItem> mOfflineMajorList;
 
     /**
      * Adapter to sync the items list with the view
      */
-    private SchoolAdapter mAdapter;
-
-    /**
-     * EditText containing the "New To Do" text
-     */
-    private EditText mTextNewToDo;
-
-    private Button adddButton;
-
-    /**
-     * Progress spinner to use for table operations
-     */
-    private ProgressBar mProgressBar;
+    private MajorAdapter mAdapter;
+;
 
     /**
      * Initializes the activity
      */
     @Override
-    public View  onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_to_do, container, false);
+
 
         try {
             // Create the client instance, using the provided mobile app URL.
@@ -110,16 +99,17 @@ public class SchoolActivity extends Fragment {
             });
 
             // Get the remote table instance to use.
-            mToDoTable = mClient.getTable(School.class);
+            mMajorList = mClient.getTable(MajorItem.class);
 
             // Offline sync table instance.
-            mToDoTableOffline = mClient.getSyncTable("School", School.class);
+            mOfflineMajorList = mClient.getSyncTable("Major", MajorItem.class);
+
 
             //Init local storage
             initLocalStore().get();
 
             // Create an adapter to bind the items with the view
-            mAdapter = new SchoolAdapter(getContext(), R.layout.row_list_to_do, this);
+            mAdapter = new MajorAdapter(getContext(), R.layout.row_list_to_do, this);
             ListView listViewToDo = (ListView) view.findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
@@ -153,8 +143,8 @@ public class SchoolActivity extends Fragment {
      * @param item
      *            The item to mark
      */
-    public void checkItemInTable(School item) throws ExecutionException, InterruptedException {
-        mToDoTable.update(item).get();
+    public void checkItemInTable(MajorItem item) throws ExecutionException, InterruptedException {
+        mMajorList.update(item).get();
     }
 
     /**
@@ -169,21 +159,20 @@ public class SchoolActivity extends Fragment {
         }
 
         // Create a new item
-        final School item = new School();
+        final MajorItem item = new MajorItem();
 
-        item.setSchoolName(mTextNewToDo.getText().toString());
 
         // Insert the new item
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    final School entity = addItemInTable(item);
+                    final MajorItem entity = addItemInTable(item);
 
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                                mAdapter.add(entity);
+                            mAdapter.add(entity);
                         }
                     });
                 } catch (final Exception e) {
@@ -195,7 +184,6 @@ public class SchoolActivity extends Fragment {
 
         runAsyncTask(task);
 
-        mTextNewToDo.setText("");
     }
 
     /**
@@ -204,8 +192,8 @@ public class SchoolActivity extends Fragment {
      * @param item
      *            The item to Add
      */
-    public School addItemInTable(School item) throws ExecutionException, InterruptedException {
-        School entity = mToDoTable.insert(item).get();
+    public MajorItem addItemInTable(MajorItem item) throws ExecutionException, InterruptedException {
+        MajorItem entity = mMajorList.insert(item).get();
         return entity;
     }
 
@@ -222,7 +210,7 @@ public class SchoolActivity extends Fragment {
             protected Void doInBackground(Void... params) {
 
                 try {
-                    final List<School> results = refreshItemsFromMobileServiceTable();
+                    final List<MajorItem> results = refreshItemsFromMobileServiceTable();
 
                     //Offline Sync
                     //final List<School> results = refreshItemsFromMobileServiceTableSyncTable();
@@ -232,7 +220,7 @@ public class SchoolActivity extends Fragment {
                         public void run() {
                             mAdapter.clear();
 
-                            for (School item : results) {
+                            for (MajorItem item : results) {
                                 mAdapter.add(item);
 
                             }
@@ -253,20 +241,20 @@ public class SchoolActivity extends Fragment {
      * Refresh the list with the items in the Mobile Service Table
      */
 
-    private List<School> refreshItemsFromMobileServiceTable() throws ExecutionException, InterruptedException {
-        return mToDoTable.where().execute().get();
+    private List<MajorItem> refreshItemsFromMobileServiceTable() throws ExecutionException, InterruptedException {
+        return mMajorList.where().execute().get();
     }
 
     //Offline Sync
     /**
      * Refresh the list with the items in the Mobile Service Sync Table
      */
-    private List<School> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
+    private List<MajorItem> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
         //sync the data
         sync().get();
         Query query = QueryOperations.field("complete").
                 eq(val(false));
-        return mToDoTableOffline.read(query).get();
+        return mOfflineMajorList.read(query).get();
     }
 
     /**
@@ -317,7 +305,6 @@ public class SchoolActivity extends Fragment {
      * Sync the current context and the Mobile Service Sync Table
      * @return
      */
-
     private AsyncTask<Void, Void, Void> sync() {
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
@@ -325,7 +312,7 @@ public class SchoolActivity extends Fragment {
                 try {
                     MobileServiceSyncContext syncContext = mClient.getSyncContext();
                     syncContext.push().get();
-                    mToDoTableOffline.pull(null).get();
+                    mOfflineMajorList.pull(null).get();
                 } catch (final Exception e) {
                     createAndShowDialogFromTask(e, "Error");
                 }
@@ -407,13 +394,7 @@ public class SchoolActivity extends Fragment {
             final SettableFuture<ServiceFilterResponse> resultFuture = SettableFuture.create();
 
 
-            getActivity().runOnUiThread(new Runnable() {
 
-                @Override
-                public void run() {
-                    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
-                }
-            });
 
             ListenableFuture<ServiceFilterResponse> future = nextServiceFilterCallback.onNext(request);
 
@@ -425,14 +406,6 @@ public class SchoolActivity extends Fragment {
 
                 @Override
                 public void onSuccess(ServiceFilterResponse response) {
-                    getActivity().runOnUiThread(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
-                        }
-                    });
-
                     resultFuture.set(response);
                 }
             });
@@ -440,4 +413,5 @@ public class SchoolActivity extends Fragment {
             return resultFuture;
         }
     }
+
 }
