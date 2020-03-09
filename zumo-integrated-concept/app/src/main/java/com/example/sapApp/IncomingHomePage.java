@@ -61,12 +61,12 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //CS: Connection to the Degree Fragment
-//                DegreeFrag nextFrag= new DegreeFrag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "Degree Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                MajorFragment nextFrag= new MajorFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "Degree Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
