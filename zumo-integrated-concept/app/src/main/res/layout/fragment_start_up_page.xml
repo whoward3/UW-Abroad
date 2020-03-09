@@ -8,17 +8,38 @@
     android:background="#643327"
     tools:context=".StartUpFragment">
 
+    <ImageView
+        android:id="@+id/startUpPageImg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/uwyoabroad" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:text="Welcome to the University of Wyoming’s Education Abroad Office! Whether you are arriving to the university or going abroad, we are excited that you are here. We hope to provide you with the resources to support you in your journey and be there for you every step of the way."
+        android:textColor="#FDC82F"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/incomingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startUpPageImg" />
 
     <Button
         android:id="@+id/incomingButton"
         android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:layout_margin="10dp"
+        android:layout_height="90dp"
+        android:layout_margin="1dp"
         android:background="#FDC82F"
-        android:fontFamily="sans-serif-black"
         android:text="Incoming"
         android:textColor="#643327"
-        android:textSize="30dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/outGoingButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,41 +50,17 @@
     <Button
         android:id="@+id/outGoingButton"
         android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:layout_margin="10dp"
+        android:layout_height="90dp"
+        android:layout_margin="1dp"
         android:background="#FDC82F"
-        android:fontFamily="sans-serif-black"
         android:text="Outgoing"
         android:textColor="#643327"
-        android:textSize="30dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/incomingButton" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:gravity="center"
-        android:text="Welcome to the University of Wyoming’s Education Abroad Office! Whether you are arriving to the university or going abroad, we are excited that you are here. We hope to provide you with the resources to support you in your journey and be there for you every step of the way ."
-        android:textColor="#FDC82F"
-        android:textSize="20dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/incomingButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startUpPageImg" />
-
-    <ImageView
-        android:id="@+id/startUpPageImg"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/description"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/uwyoabroad" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

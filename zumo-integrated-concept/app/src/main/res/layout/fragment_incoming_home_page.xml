@@ -8,70 +8,16 @@
     android:background="#643327"
     tools:context=".IncomingHomePage">
 
-    <Button
-        android:id="@+id/degreeButton"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_margin="5dp"
-        android:background="#FDC82F"
-        android:text="Degrees Offered"
-        android:textColor="#643327"
-        android:textSize="16dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/campusMap"
+    <ImageView
+        android:id="@+id/incomingHomePageImg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/laramieButton" />
-
-    <Button
-        android:id="@+id/aboutButton"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_margin="5dp"
-        android:background="#FDC82F"
-        android:text="About UW"
-        android:textColor="#643327"
-        android:textSize="16dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/laramieButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/laramieButton"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_margin="5dp"
-        android:background="#FDC82F"
-        android:text="Laramie, WY"
-        android:textColor="#643327"
-        android:textSize="16dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/degreeButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
-
-    <Button
-        android:id="@+id/campusMap"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_margin="5dp"
-        android:background="#FDC82F"
-        android:text="Campus Map"
-        android:textColor="#643327"
-        android:textSize="16dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/degreeButton" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/uwyoabroad" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
@@ -86,14 +32,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/incomingHomePageImg" />
 
-    <ImageView
-        android:id="@+id/incomingHomePageImg"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_margin="1dp"
+        android:background="#FDC82F"
+        android:text="About UW"
+        android:textColor="#643327"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/laramieButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/uwyoabroad" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/laramieButton"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_margin="1dp"
+        android:background="#FDC82F"
+        android:text="Laramie, WY"
+        android:textColor="#643327"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/degreeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
+
+    <Button
+        android:id="@+id/degreeButton"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_margin="1dp"
+        android:background="#FDC82F"
+        android:text="Degrees Offered"
+        android:textColor="#643327"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/campusMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laramieButton" />
+
+    <Button
+        android:id="@+id/campusMap"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_margin="1dp"
+        android:background="#FDC82F"
+        android:text="Campus Map"
+        android:textColor="#643327"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/degreeButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
