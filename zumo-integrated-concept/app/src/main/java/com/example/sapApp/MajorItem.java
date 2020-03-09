@@ -6,29 +6,35 @@ public class MajorItem {
     @com.google.gson.annotations.SerializedName("id")
     private String mId;
 
-    @com.google.gson.annotations.SerializedName("major")
+    @com.google.gson.annotations.SerializedName("majorName")
     private String mMajor;
 
-    @com.google.gson.annotations.SerializedName("bs/ba")
+    @com.google.gson.annotations.SerializedName("bachelors")
     private Boolean mBSBA;
 
-    @com.google.gson.annotations.SerializedName("ms")
+    @com.google.gson.annotations.SerializedName("masters")
     private Boolean mMs;
 
-    @com.google.gson.annotations.SerializedName("phd")
+    @com.google.gson.annotations.SerializedName("doctorate")
     private Boolean mPhd;
+
+    @com.google.gson.annotations.SerializedName("other")
+    private Boolean mOther;
 
     public MajorItem(){} //Default Empty Constructor
 
     @Override
     public String toString() { return getMajorName();}
 
-    public MajorItem (String ID, String Major, Boolean BSBA, Boolean Ms, Boolean Phd)
+    public MajorItem (String ID, String Major, Boolean BSBA, Boolean Ms, Boolean Phd, Boolean Other)
     {
+        this.setID(ID);
         this.setMajor(Major);
         this.setBSBA(BSBA);
         this.setMs(Ms);
         this.setPhd(Phd);
+        this.setmOther(Other);
+
     }
 
     //Simple Getter and Setter methods for the values
@@ -36,6 +42,10 @@ public class MajorItem {
         return mId;
     }
 
+    public void setID(String ID)
+    {
+        mId = ID;
+    }
 
     public String getMajorName()
     {
@@ -76,6 +86,17 @@ public class MajorItem {
     {
         mPhd = item;
     }
+
+    public Boolean getmOther()
+    {
+        return mOther;
+    }
+
+    public final void setmOther(Boolean item)
+    {
+        mOther = item;
+    }
+
 
 }
 
