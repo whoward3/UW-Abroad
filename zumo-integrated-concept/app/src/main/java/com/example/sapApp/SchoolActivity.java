@@ -120,7 +120,7 @@ public class SchoolActivity extends Fragment {
 
             // Create an adapter to bind the items with the view
             mAdapter = new SchoolAdapter(getContext(), R.layout.row_list_to_do, this);
-            ListView listViewToDo = (ListView) view.findViewById(R.id.listViewToDo);
+            ListView listViewToDo = view.findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the mobile app backend.

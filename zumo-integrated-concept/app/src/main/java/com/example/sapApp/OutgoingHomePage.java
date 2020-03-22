@@ -37,12 +37,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                //Frag nextFrag= new Frag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                OutgoingConsider nextFrag= new OutgoingConsider();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Consider Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -53,7 +53,7 @@ public class OutgoingHomePage extends Fragment {
                 SchoolActivity nextFrag= new SchoolActivity();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "_ Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Explore Fragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -66,7 +66,7 @@ public class OutgoingHomePage extends Fragment {
                 HTMLfrag nextFrag= new HTMLfrag("https://www.uwyo.edu/");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "_ Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Prepare Fragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -75,12 +75,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                //Frag nextFrag= new Frag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                OutgoingAbroad nextFrag= new OutgoingAbroad();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Abroad Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -88,12 +88,12 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                //Frag nextFrag= new Frag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                OutgoingReturn nextFrag= new OutgoingReturn();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Return Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
         return view;

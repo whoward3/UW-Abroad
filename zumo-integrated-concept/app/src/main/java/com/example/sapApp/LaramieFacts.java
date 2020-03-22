@@ -11,9 +11,6 @@ public class LaramieFacts extends Fragment {
 
     public LaramieFacts() {} // SB:Required empty public constructor
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

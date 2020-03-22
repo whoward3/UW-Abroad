@@ -68,7 +68,6 @@ public class MajorFragment extends Fragment {
      * Adapter to sync the items list with the view
      */
     private MajorAdapter mAdapter;
-;
 
     /**
      * Initializes the activity
@@ -110,7 +109,7 @@ public class MajorFragment extends Fragment {
 
             // Create an adapter to bind the items with the view
             mAdapter = new MajorAdapter(getContext(), R.layout.row_list_to_do, this);
-            ListView listViewToDo = (ListView) view.findViewById(R.id.listViewToDo);
+            ListView listViewToDo = view.findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the mobile app backend.

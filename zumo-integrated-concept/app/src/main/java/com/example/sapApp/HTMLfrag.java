@@ -20,11 +20,15 @@ public class HTMLfrag extends Fragment {
 
     }
 
+    public HTMLfrag() {
+
+    }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_html, container, false);
 
-        wv1=(WebView)view.findViewById(R.id.Schoolhtmlviewer);
+        wv1= view.findViewById(R.id.Schoolhtmlviewer);
         wv1.setWebViewClient(new SchoolHTMLviewer());
 
         wv1.getSettings().setLoadsImagesAutomatically(true);

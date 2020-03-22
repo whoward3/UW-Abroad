@@ -36,12 +36,12 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Set Up Connection Here to a page that auto-fills using ethan's college page
-//                Frag nextFrag= new Frag();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame, nextFrag, "_ Fragment");
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                UWFacts nextFrag= new UWFacts();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, nextFrag, "UW Facts Fragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

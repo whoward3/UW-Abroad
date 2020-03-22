@@ -6,85 +6,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LaramieFacts"
-    android:background="#ffffff">
+    android:background="#643327">
 
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
-        android:id="@+id/laramieFactsImg"
+        android:id="@+id/startUpPageImg"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/DescriptionOfLaramie"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/WelcomeToLaramie"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/uwyoabroad" />
+        android:src="@drawable/community_mts" />
+
+    <TextView
+        android:id="@+id/WelcomeToLaramie"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:text="WELCOME TO LARAMIE"
+        android:gravity="left"
+        android:textColor="#FDC82F"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/GemCity" />
+
+    <TextView
+        android:id="@+id/GemCity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="THE GEM CITY OF WYOMING"
+        android:gravity="left"
+        android:textColor="#FDC82F"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/DescriptionOfLaramie" />
 
     <TextView
         android:id="@+id/DescriptionOfLaramie"
         android:layout_width="match_parent"
-        android:layout_height="325dp"
-        android:text="Nestled between mountain ranges at 7,200 feet, this 1860s railroad town is now home to nearly 32,000 residents, a number of respected museums and countless one-of-a-kind shops and restaurants. A dozen vibrant murals, painted by local artists, bring the historic Laramie downtown to life, while the rumble of trains reminds this Western town of its roots. Whether you’re heading to the Laramie River or lakes of the Snowy Range to fish, or utilizing the 2.9 million acres of nearby national forest to hike, bike, camp or ski, epic adventure awaits in all directions."
+        android:layout_height="340dp"
         android:gravity="left"
-        android:textColor="#3f2a14"
-        android:textSize="20dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/Dist1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/laramieFactsImg" />
-
-    <TextView
-        android:id="@+id/Dist1"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:text="2 hour drive north from Denver,
-                      45 minutes west of Cheyenne"
-        android:gravity="center"
-        android:textColor="#3f2a14"
+        android:text="Nestled between mountain ranges at 7,200 feet, this 1860s railroad town is now home to nearly 32,000 residents, a number of respected museums and countless one-of-a-kind shops and restaurants. A dozen vibrant murals, painted by local artists, bring the historic Laramie downtown to life, while the rumble of trains reminds this Western town of its roots. Whether you’re heading to the Laramie River or lakes of the Snowy Range to fish, or utilizing the 2.9 million acres of nearby national forest to hike, bike, camp or ski, epic adventure awaits in all directions."
+        android:textColor="#FDC82F"
         android:textSize="20dp"
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/Explore1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescriptionOfLaramie" />
+        app:layout_constraintTop_toBottomOf="parent" />
+
+
 
     <TextView
         android:id="@+id/Explore1"
         android:layout_width="350dp"
         android:layout_height="60dp"
+        android:gravity="left"
         android:text="EXPLORE OUR COMMUNITY"
-        android:gravity="center"
-        android:textColor="#3f2a14"
-        android:textSize="20dp"
-        android:textStyle="normal"
+        android:textColor="#FDC82F"
+        android:textSize="24dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/Explore2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Dist1" />
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionOfLaramie" />
 
     <TextView
         android:id="@+id/Explore2"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:text="Visit Laramie"
-        android:textColor="#3f2a14"
+        android:gravity="left"
+        android:text="[PLACEHOLDER] Hyperlinks here..."
+        android:textColor="#FDC82F"
         android:textSize="17dp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Explore1" />
 
