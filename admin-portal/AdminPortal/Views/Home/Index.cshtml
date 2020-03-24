@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>UW Abroad Administrative Portal</h1>
+    <p class="lead">The UW Abroad Mobile App is a student-friendly android application for both incoming and outgoing students. This portal seeks to provide an easy interface for UW Education Abroad staff to publish changes to the app, make announcements, and conduct other administrative tasks associated with the UW Abroad Application.</p>
+    <p><a href="http://www.uwyo.edu/geo/eda/index.html" class="btn btn-primary btn-lg">Learn more about the UWYO Study Abroad Program &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>UWYO Degree Programs</h2>
+        <p>
+            The University of Wyoming offers a varity of degree programs with multiple degree options available.
+        </p>
+        <p>@Html.ActionLink("View Degree Programs", "Index", "Majors")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Exchange Programs</h2>
+        <p>
+            UW Education Abroad Staff work closely with international schools to offer exceptional exchange opportunities.
+        </p>
+        <p>@Html.ActionLink("View Exchange Programs", "Index", "Majors")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Announcements</h2>
+        <p>
+            The UW Abroad Mobile App supports push notifications from this administrative portal.
+        </p>
+        <p>@Html.ActionLink("Make an Annoucement", "Index", "Majors")</p>
+    </div>
+</div>
+
