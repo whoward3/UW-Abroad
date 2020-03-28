@@ -30,3 +30,4 @@ azure-backend/SapWebAppService/obj/Debug/SapWebAppService.csprojAssemblyReferenc
 **/packages
 **/bin
 **/obj
+admin-portal/AdminPortal/AdminPortal.csproj.user
