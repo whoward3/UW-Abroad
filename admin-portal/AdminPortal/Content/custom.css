@@ -1,0 +1,76 @@
+﻿/*body{
+    background-color: #643327
+}*/
+.jumbotron {
+    background-color: #FDC82F;
+    color: #643327;
+}
+.row {
+    background-color: #FDC82F;
+    color: #643327;
+    border-radius: 5px;
+    margin-right: -0px;
+    margin-left: -0px;
+}
+.navbar-inverse {
+    background-color: #643327;
+}
+.navbar .navbar-brand {
+    color: white;
+}
+    .navbar .navbar-brand:hover {
+        color: #FDC82F;
+        background-color: #522a21;
+    }
+.navbar-inverse .navbar-nav > li > a{
+    color: white;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #FDC82F;
+    background-color: #522a21;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #643327;
+    border-color: #522a21;
+}
+.btn-primary:hover {
+    color: #FDC82F;
+    background-color: #522a21;
+    border-color: #643327;
+}
+.breadcrumb {
+    background-color: #643327;
+    text-align: center;
+    border-radius: 0px;
+}
+.headers {
+    color: #643327;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #FDC82F;
+    border-radius: 4px;
+}
+.content {
+    color: #FDC82F;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #66453c;
+}
+.ced {
+    color: #FDC82F;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #66453c;
+}
+.ced > a {
+    color: white;
+}
+
+.ced > a:hover {
+    color: #FDC82f;
+}

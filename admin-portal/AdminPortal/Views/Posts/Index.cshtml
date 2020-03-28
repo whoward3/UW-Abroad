@@ -28,24 +28,33 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SchoolName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostContent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedAt)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-    </tr>
+<tr>
+    <td class="content">
+        @Html.DisplayFor(modelItem => item.SchoolName)
+    </td>
+    <td class="content">
+        @Html.DisplayFor(modelItem => item.UserName)
+    </td>
+    <td class="content">
+        @Html.DisplayFor(modelItem => item.PostContent)
+    </td>
+    <td class="content">
+        @Html.DisplayFor(modelItem => item.CreatedAt)
+    </td>
+    <td class="ced">
+        <style>
+            a {
+                color: white;
+            }
+
+                a:hover {
+                    color: #FDC82f;
+                }
+        </style>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+</tr>
 }
 </table>
