@@ -11,6 +11,7 @@ using System.Diagnostics;
 
 namespace AdminPortal.Controllers
 {
+    [System.Web.Mvc.Authorize]
     public class PostsController : Controller
     {
         private MyDatabaseContext db = new MyDatabaseContext();

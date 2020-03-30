@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace AdminPortal.Controllers
 {
+    [System.Web.Mvc.Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
