@@ -16,7 +16,7 @@ namespace DotNetAppSqlDb.Controllers
             // Send an OpenID Connect sign-in request.
             if (!Request.IsAuthenticated)
             {
-                HttpContext.GetOwinContext().Authentication.Challenge(new AuthenticationProperties { RedirectUri = "/" },
+                HttpContext.GetOwinContext().Authentication.Challenge(new AuthenticationProperties { RedirectUri = "https://uw-abroad.azurewebsites.net" },
                     OpenIdConnectAuthenticationDefaults.AuthenticationType);
             }
         }
