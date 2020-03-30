@@ -217,6 +217,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+<<<<<<< HEAD
+    <Content Include="Connected Services\AzureAD\ConnectedService.json" />
+    <None Include="Properties\PublishProfiles\uw-abroad - Web Deploy.pubxml" />
+=======
+>>>>>>> c12abbc58076c8dfc00dace44ef9efed141e82bc
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
