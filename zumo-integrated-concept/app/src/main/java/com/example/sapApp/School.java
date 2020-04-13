@@ -29,9 +29,7 @@ public class School {
     /**
      * School constructor
      */
-    public School() {
-
-    }
+    public School() {}
 
     @Override
     public String toString() {

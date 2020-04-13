@@ -18,8 +18,6 @@ import androidx.fragment.app.FragmentTransaction;
  * Adapter to bind a School List to a view
  */
 public class SchoolAdapter extends ArrayAdapter<School> {
-
-
     SchoolActivity mTDA;
 
     /**
@@ -39,10 +37,6 @@ public class SchoolAdapter extends ArrayAdapter<School> {
         mLayoutResourceId = layoutResourceId;
         mTDA = TDA;
     }
-
-
-
-
     /**
      * Returns the view for a specific item on the list
      */
@@ -72,9 +66,6 @@ public class SchoolAdapter extends ArrayAdapter<School> {
                 fragmentTransaction.commit();
             }
         });
-
-
-
 
         return row;
     }

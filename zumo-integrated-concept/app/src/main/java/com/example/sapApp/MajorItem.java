@@ -4,22 +4,22 @@ public class MajorItem {
 
     //Private Values that are for Majors offered
 
-    @com.google.gson.annotations.SerializedName("id")
+    @com.google.gson.annotations.SerializedName("Id")
     private String mId;
 
-    @com.google.gson.annotations.SerializedName("majorName")
-    private String mMajorName;
+    @com.google.gson.annotations.SerializedName("MajorName")
+    private String mMajorName = "";
 
-    @com.google.gson.annotations.SerializedName("bachelors")
+    @com.google.gson.annotations.SerializedName("Bachelors")
     private Boolean mBachelors;
 
-    @com.google.gson.annotations.SerializedName("masters")
+    @com.google.gson.annotations.SerializedName("Masters")
     private Boolean mMasters;
 
-    @com.google.gson.annotations.SerializedName("doctorate")
+    @com.google.gson.annotations.SerializedName("Doctorate")
     private Boolean mDoctorate;
 
-    @com.google.gson.annotations.SerializedName("other")
+    @com.google.gson.annotations.SerializedName("Other")
     private Boolean mOther;
 
 
@@ -65,9 +65,9 @@ public class MajorItem {
     public String getId() {
         return mId;
     }
-    public void setId(String ID)
+    public void setId(String Id)
     {
-        mId = ID;
+        mId = Id;
     }
 
     public String getMajorName()

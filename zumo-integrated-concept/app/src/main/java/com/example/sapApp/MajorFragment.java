@@ -81,7 +81,7 @@ public class MajorFragment extends Fragment {
         try {
             // Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
-                    "https://sap-web-app-prod.azurewebsites.net/",
+                    "https://sap-web-app-dev.azurewebsites.net",
                     getContext()).withFilter(new ProgressFilter());
 
             // Extend timeout from default of 10s to 20s
@@ -101,7 +101,7 @@ public class MajorFragment extends Fragment {
             mMajorList = mClient.getTable(MajorItem.class);
 
             // Offline sync table instance.
-            mOfflineMajorList = mClient.getSyncTable("Major", MajorItem.class);
+            mOfflineMajorList = mClient.getSyncTable("Majors", MajorItem.class);
 
 
             //Init local storage
