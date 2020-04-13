@@ -8,11 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
-public class MajorAdapter extends ArrayAdapter<MajorItem> {
+public class MajorAdapter extends ArrayAdapter<Major> {
 
     MajorFragment mMajorFragment;
     Context mContext;
@@ -30,7 +26,7 @@ public class MajorAdapter extends ArrayAdapter<MajorItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
 
-        final MajorItem currentItem = getItem(position);
+        final Major currentItem = getItem(position);
 
         if (row == null) {
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();

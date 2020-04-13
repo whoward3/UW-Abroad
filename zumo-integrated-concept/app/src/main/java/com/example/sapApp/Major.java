@@ -1,6 +1,6 @@
 package com.example.sapApp;
 
-public class MajorItem {
+public class Major {
 
     //Private Values that are for Majors offered
 //-------------------Pascal Case--------------//
@@ -42,14 +42,14 @@ public class MajorItem {
     private boolean mOther;
 
 
-    public MajorItem(){} //Default Empty Constructor
+    public Major(){} //Default Empty Constructor
 
     @Override
     public String toString() { return getMajorName();}
 
 
     /**
-     * Initializes a new MajorItem
+     * Initializes a new Major
      *
      * @param id
      *            The item id
@@ -68,7 +68,7 @@ public class MajorItem {
      * @param other
      *             If a different thing is offered for that degree
      */
-    public MajorItem (String id, String major , Boolean bachelors, Boolean masters, Boolean doctorate, Boolean other)
+    public Major(String id, String major , Boolean bachelors, Boolean masters, Boolean doctorate, Boolean other)
     {
         this.setId(id);
         this.setmMajorName(major);
