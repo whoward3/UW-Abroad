@@ -4,42 +4,43 @@ public class MajorItem {
 
     //Private Values that are for Majors offered
 //-------------------Pascal Case--------------//
-    @com.google.gson.annotations.SerializedName("Id")
-    private String mId;
-
-    @com.google.gson.annotations.SerializedName("MajorName")
-    private String mMajorName = "";
-
-    @com.google.gson.annotations.SerializedName("Bachelors")
-    private Boolean mBachelors;
-
-    @com.google.gson.annotations.SerializedName("Masters")
-    private Boolean mMasters;
-
-    @com.google.gson.annotations.SerializedName("Doctorate")
-    private Boolean mDoctorate;
-
-    @com.google.gson.annotations.SerializedName("Other")
-    private Boolean mOther;
-
-    //-------------Camel Case-------------//
-//    @com.google.gson.annotations.SerializedName("id")
+//    @com.google.gson.annotations.SerializedName("Id")
 //    private String mId;
 //
-//    @com.google.gson.annotations.SerializedName("majorName")
+//    @com.google.gson.annotations.SerializedName("MajorName")
 //    private String mMajorName = "";
 //
-//    @com.google.gson.annotations.SerializedName("bachelors")
-//    private Boolean mBachelors;
+//    @com.google.gson.annotations.SerializedName("Bachelors")
+//    private boolean mBachelors;
 //
-//    @com.google.gson.annotations.SerializedName("masters")
-//    private Boolean mMasters;
+//    @com.google.gson.annotations.SerializedName("Masters")
+//    private boolean mMasters;
 //
-//    @com.google.gson.annotations.SerializedName("doctorate")
-//    private Boolean mDoctorate;
+//    @com.google.gson.annotations.SerializedName("Doctorate")
+//    private boolean mDoctorate;
 //
-//    @com.google.gson.annotations.SerializedName("other")
-//    private Boolean mOther;
+//    @com.google.gson.annotations.SerializedName("Other")
+//    private boolean mOther;
+
+    //-------------Camel Case-------------//
+    @com.google.gson.annotations.SerializedName("id")
+    private String mId;
+
+    @com.google.gson.annotations.SerializedName("majorName")
+    private String mMajorName = "";
+
+    @com.google.gson.annotations.SerializedName("bachelors")
+    private boolean mBachelors;
+
+    @com.google.gson.annotations.SerializedName("masters")
+    private boolean mMasters;
+
+    @com.google.gson.annotations.SerializedName("doctorate")
+    private boolean mDoctorate;
+
+    @com.google.gson.annotations.SerializedName("other")
+    private boolean mOther;
+
 
     public MajorItem(){} //Default Empty Constructor
 
@@ -96,38 +97,38 @@ public class MajorItem {
         mMajorName = item;
     }
 
-    public Boolean getmBachelors()
+    public boolean getmBachelors()
     {
         return mBachelors;
     }
-    public final void setmBachelors(Boolean item)
+    public final void setmBachelors(boolean item)
     {
         mBachelors = item;
     }
 
-    public Boolean getmMasters()
+    public boolean getmMasters()
     {
         return mMasters;
     }
-    public final void setmMasters(Boolean item)
+    public final void setmMasters(boolean item)
     {
         mMasters = item;
     }
 
-    public Boolean getmDoctorate()
+    public boolean getmDoctorate()
     {
         return mDoctorate;
     }
-    public final void setmDoctorate(Boolean item)
+    public final void setmDoctorate(boolean item)
     {
         mDoctorate = item;
     }
 
-    public Boolean getmOther()
+    public boolean getmOther()
     {
         return mOther;
     }
-    public final void setmOther(Boolean item)
+    public final void setmOther(boolean item)
     {
         mOther = item;
     }
