@@ -30,6 +30,12 @@
             android:textSize="24dp"
             android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/ConnectedImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/connected" />
+
         <TextView
             android:id="@+id/ConnectedDescription"
             android:layout_width="match_parent"
@@ -65,12 +71,6 @@
             android:textColor="#FDC82F"
             android:textSize="20dp"
             android:textStyle="normal" />
-
-        <ImageView
-            android:id="@+id/ConnectedImage"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/connected" />
 
     </LinearLayout>
 </ScrollView>
