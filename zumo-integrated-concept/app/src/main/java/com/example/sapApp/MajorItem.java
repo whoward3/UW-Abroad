@@ -3,7 +3,7 @@ package com.example.sapApp;
 public class MajorItem {
 
     //Private Values that are for Majors offered
-
+//-------------------Pascal Case--------------//
     @com.google.gson.annotations.SerializedName("Id")
     private String mId;
 
@@ -22,7 +22,24 @@ public class MajorItem {
     @com.google.gson.annotations.SerializedName("Other")
     private Boolean mOther;
 
-
+    //-------------Camel Case-------------//
+//    @com.google.gson.annotations.SerializedName("id")
+//    private String mId;
+//
+//    @com.google.gson.annotations.SerializedName("majorName")
+//    private String mMajorName = "";
+//
+//    @com.google.gson.annotations.SerializedName("bachelors")
+//    private Boolean mBachelors;
+//
+//    @com.google.gson.annotations.SerializedName("masters")
+//    private Boolean mMasters;
+//
+//    @com.google.gson.annotations.SerializedName("doctorate")
+//    private Boolean mDoctorate;
+//
+//    @com.google.gson.annotations.SerializedName("other")
+//    private Boolean mOther;
 
     public MajorItem(){} //Default Empty Constructor
 

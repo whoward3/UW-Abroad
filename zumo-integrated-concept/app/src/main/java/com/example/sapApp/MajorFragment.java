@@ -108,7 +108,7 @@ public class MajorFragment extends Fragment {
             initLocalStore().get();
 
             // Create an adapter to bind the items with the view
-            mAdapter = new MajorAdapter(getContext(), R.layout.row_list_to_do, this);
+            mAdapter = new MajorAdapter(getContext(), R.layout.fragment_major_item, this);
             ListView listViewToDo = view.findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
