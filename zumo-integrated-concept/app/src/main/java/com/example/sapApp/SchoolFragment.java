@@ -47,7 +47,7 @@ import okhttp3.OkHttpClient;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.*;
 
-public class SchoolActivity extends Fragment {
+public class SchoolFragment extends Fragment {
 
     /**
      * Client reference
@@ -93,7 +93,7 @@ public class SchoolActivity extends Fragment {
         try {
             // Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
-                    "https://sap-web-app-dev.azurewebsites.net/",
+                    "https://sap-web-app-prod.azurewebsites.net/",
                     getContext()).withFilter(new ProgressFilter());
 
             // Extend timeout from default of 10s to 20s

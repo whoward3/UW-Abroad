@@ -6,11 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -18,7 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
  * Adapter to bind a School List to a view
  */
 public class SchoolAdapter extends ArrayAdapter<School> {
-    SchoolActivity mTDA;
+    SchoolFragment mTDA;
 
     /**
      * Adapter context
@@ -30,7 +28,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
      */
     int mLayoutResourceId;
 
-    public SchoolAdapter(Context context, int layoutResourceId, SchoolActivity TDA) {
+    public SchoolAdapter(Context context, int layoutResourceId, SchoolFragment TDA) {
         super(context, layoutResourceId);
 
         mContext = context;

@@ -50,7 +50,7 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Set Up Connection Here to a recycler view of what ethan made
-                SchoolActivity nextFrag= new SchoolActivity();
+                SchoolFragment nextFrag= new SchoolFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Explore Fragment");
