@@ -2,73 +2,33 @@
 <ScrollView android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#643327"
     >
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout3"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".UWFacts"
-        android:background="#643327">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/AboutUW"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="ABOUT UW"
             android:gravity="left"
+            android:text="ABOUT UW"
             android:textColor="#FDC82F"
             android:textSize="40dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Authentic" />
-
-        <TextView
-            android:id="@+id/Authentic"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="WE ARE AUTHENTIC"
-            android:gravity="left"
-            android:textColor="#FDC82F"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/AuthenticDescription" />
-
-        <TextView
-            android:id="@+id/AuthenticDescription"
-            android:layout_width="match_parent"
-            android:layout_height="195dp"
-            android:gravity="left"
-            android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
-            android:textColor="#FDC82F"
-            android:textSize="20dp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/AuthenticImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
-
-        <ImageView
-            android:id="@+id/AuthenticImage"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:src="@drawable/authentic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/AuthenticDescription" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Connected"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="WE ARE CONNECTED"
             android:gravity="left"
+            android:text="WE ARE CONNECTED"
             android:textColor="#FDC82F"
             android:textSize="24dp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/AuthenticImage" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ConnectedDescription"
@@ -78,25 +38,39 @@
             android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
             android:textColor="#FDC82F"
             android:textSize="20dp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/ConnectedImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/Authentic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left"
+            android:text="WE ARE AUTHENTIC"
+            android:textColor="#FDC82F"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/AuthenticImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/authentic" />
+
+        <TextView
+            android:id="@+id/AuthenticDescription"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:gravity="left"
+            android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
+            android:textColor="#FDC82F"
+            android:textSize="20dp"
+            android:textStyle="normal" />
 
         <ImageView
             android:id="@+id/ConnectedImage"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:gravity="center"
-            android:src="@drawable/connected"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ConnectedDescription" />
+            android:src="@drawable/connected" />
 
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>
