@@ -8,33 +8,24 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MajorAdapter extends ArrayAdapter<MajorItem> {
 
-    MajorFragment mMF;
-
-    /**
-     * Adapter context
-     */
+    MajorFragment mMajorFragment;
     Context mContext;
-
-    /**
-     * Adapter View layout
-     */
     int mLayoutResourceId;
 
-    public MajorAdapter(Context context, int layoutResourceId, MajorFragment MF) {
-        super(context, layoutResourceId);
 
+    public MajorAdapter(Context context, int layoutResourceId, MajorFragment majorFragment) {
+        super(context, layoutResourceId);
         mContext = context;
         mLayoutResourceId = layoutResourceId;
-        mMF = MF;
+        mMajorFragment = majorFragment;
     }
 
-    /**
-     * Returns the view for a specific item on the list
-     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
@@ -47,13 +38,10 @@ public class MajorAdapter extends ArrayAdapter<MajorItem> {
         }
 
         row.setTag(currentItem);
-        final TextView checkBox =  row.findViewById(R.id.checkToDoItem);
-
-        checkBox.setText(currentItem.getMajorName());
-
-
+        final TextView majorName =  row.findViewById(R.id.majorNameBox);
+        majorName.setText(currentItem.getMajorName());
         return row;
     }
-
-
 }
+
+

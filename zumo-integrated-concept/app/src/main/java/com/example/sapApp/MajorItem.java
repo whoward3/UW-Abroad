@@ -3,37 +3,61 @@ package com.example.sapApp;
 public class MajorItem {
 
     //Private Values that are for Majors offered
+
     @com.google.gson.annotations.SerializedName("id")
     private String mId;
 
     @com.google.gson.annotations.SerializedName("majorName")
-    private String mMajor;
+    private String mMajorName;
 
     @com.google.gson.annotations.SerializedName("bachelors")
-    private Boolean mBSBA;
+    private Boolean mBachelors;
 
     @com.google.gson.annotations.SerializedName("masters")
-    private Boolean mMs;
+    private Boolean mMasters;
 
     @com.google.gson.annotations.SerializedName("doctorate")
-    private Boolean mPhd;
+    private Boolean mDoctorate;
 
     @com.google.gson.annotations.SerializedName("other")
     private Boolean mOther;
+
+
 
     public MajorItem(){} //Default Empty Constructor
 
     @Override
     public String toString() { return getMajorName();}
 
-    public MajorItem (String ID, String Major, Boolean BSBA, Boolean Ms, Boolean Phd, Boolean Other)
+
+    /**
+     * Initializes a new MajorItem
+     *
+     * @param id
+     *            The item id
+     * @param major
+     *            The Major
+     *
+     * @param bachelors
+     *            If a bachelors is offered for that degree
+     *
+     * @param masters
+     *             If a masters is offered for that degree
+     *
+     * @param doctorate
+     *             If a doctorate is offered for that degree
+     *
+     * @param other
+     *             If a different thing is offered for that degree
+     */
+    public MajorItem (String id, String major , Boolean bachelors, Boolean masters, Boolean doctorate, Boolean other)
     {
-        this.setID(ID);
-        this.setMajor(Major);
-        this.setBSBA(BSBA);
-        this.setMs(Ms);
-        this.setPhd(Phd);
-        this.setmOther(Other);
+        this.setId(id);
+        this.setmMajorName(major);
+        this.setmBachelors(bachelors);
+        this.setmMasters(masters);
+        this.setmDoctorate(doctorate);
+        this.setmOther(other);
 
     }
 
@@ -41,57 +65,51 @@ public class MajorItem {
     public String getId() {
         return mId;
     }
-
-    public void setID(String ID)
+    public void setId(String ID)
     {
         mId = ID;
     }
 
     public String getMajorName()
     {
-        return mMajor;
+        return mMajorName;
+    }
+    public final void setmMajorName(String item)
+    {
+        mMajorName = item;
     }
 
-    public final void setMajor(String item)
+    public Boolean getmBachelors()
     {
-        mMajor = item;
+        return mBachelors;
+    }
+    public final void setmBachelors(Boolean item)
+    {
+        mBachelors = item;
     }
 
-    public Boolean getBSBA()
+    public Boolean getmMasters()
     {
-        return mBSBA;
+        return mMasters;
+    }
+    public final void setmMasters(Boolean item)
+    {
+        mMasters = item;
     }
 
-    public final void setBSBA(Boolean item)
+    public Boolean getmDoctorate()
     {
-        mBSBA = item;
+        return mDoctorate;
     }
-
-    public Boolean getMS()
+    public final void setmDoctorate(Boolean item)
     {
-        return mMs;
-    }
-
-    public final void setMs(Boolean item)
-    {
-        mMs = item;
-    }
-
-    public Boolean getmPhd()
-    {
-        return mPhd;
-    }
-
-    public final void setPhd(Boolean item)
-    {
-        mPhd = item;
+        mDoctorate = item;
     }
 
     public Boolean getmOther()
     {
         return mOther;
     }
-
     public final void setmOther(Boolean item)
     {
         mOther = item;
@@ -99,5 +117,4 @@ public class MajorItem {
 
 
 }
-
 
