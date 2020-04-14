@@ -93,7 +93,7 @@ public class SchoolFragment extends Fragment {
         try {
             // Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
-                    "https://sap-web-app-prod.azurewebsites.net/",
+                    "https://sap-web-app-dev.azurewebsites.net/",
                     getContext()).withFilter(new ProgressFilter());
 
             // Extend timeout from default of 10s to 20s
