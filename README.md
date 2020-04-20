@@ -46,8 +46,6 @@ As more information comes to the study abroad office, we want to allow the advis
 Protecting the information of the students and administrative rights will be fundamental. To access the application, the user will be required to log in. Ideally, the sign in would be the same UW credentials used by all students and faculty, however, for the scope of this project coordinating with the UW IT department may be too difficult. Instead, we will ask the students to sign in with another account to access the application and create individual administer accounts for those within the study abroad office who will be editing.
 
 ### Tools to be used
-*	Flutter
-  - Uses the Dart language, can be used to develop both Android and iOS applications simultaneously
 *	Azure Web App Service
  	Will require funding which may be available from the Honors program, the university, or cybersecurity department
 * Utilize Uwyo for login and authentication
