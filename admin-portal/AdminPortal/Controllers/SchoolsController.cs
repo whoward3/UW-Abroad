@@ -11,6 +11,7 @@ using System.Diagnostics;
 
 namespace AdminPortal.Controllers
 {
+    [System.Web.Mvc.Authorize]
     public class SchoolsController : Controller
     {
         private MyDatabaseContext db = new MyDatabaseContext();
@@ -39,6 +40,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Schools/Create
+
         public ActionResult Create()
         {
             Trace.WriteLine("GET /Schools/Create");

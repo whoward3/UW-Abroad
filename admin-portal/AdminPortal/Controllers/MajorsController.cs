@@ -11,6 +11,7 @@ using System.Diagnostics;
 
 namespace AdminPortal.Controllers
 {
+    [System.Web.Mvc.AllowAnonymous]
     public class MajorsController : Controller
     {
         private MyDatabaseContext db = new MyDatabaseContext();
