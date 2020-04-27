@@ -70,7 +70,7 @@
         android:layout_height="60dp"
         android:layout_margin="1dp"
         android:background="#FDC82F"
-        android:text="Degrees Offered"
+        android:text="Areas of Study"
         android:textColor="#643327"
         android:textSize="25dp"
         android:textStyle="bold"
