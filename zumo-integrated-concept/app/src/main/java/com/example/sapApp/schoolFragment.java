@@ -1,28 +1,16 @@
 package com.example.sapApp;
 
 
-import java.net.MalformedURLException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-
 import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.ProgressBar;
+
+import androidx.fragment.app.Fragment;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -43,9 +31,29 @@ import com.microsoft.windowsazure.mobileservices.table.sync.localstore.ColumnDat
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.MobileServiceLocalStoreException;
 import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLocalStore;
 import com.microsoft.windowsazure.mobileservices.table.sync.synchandler.SimpleSyncHandler;
+
+import java.net.MalformedURLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 
-import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.*;
+import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
+
+/*
+    This is the School Fragment which is called in the outgoing home page fragment.
+    This pulls from the database and initializes local storage.
+    This uses the School Adapter and School Item.
+
+    FAIR WARNING TO THOSE LOOKING AT THIS:
+    This code uses a lot of google magic that does not make sense.
+    We got most of this code from Microsoft and Google.
+
+        -Alice Blair April 28, 2020
+ */
 
 public class schoolFragment extends Fragment {
 
@@ -70,17 +78,6 @@ public class schoolFragment extends Fragment {
      */
     private schoolAdapter mAdapter;
 
-    /**
-     * EditText containing the "New To Do" text
-     */
-    private EditText mTextNewToDo;
-
-    private Button adddButton;
-
-    /**
-     * Progress spinner to use for table operations
-     */
-    private ProgressBar mProgressBar;
 
     /**
      * Initializes the activity
@@ -160,8 +157,6 @@ public class schoolFragment extends Fragment {
         // Create a new item
         final School item = new School();
 
-        item.setSchoolName(mTextNewToDo.getText().toString());
-
         // Insert the new item
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
@@ -181,10 +176,7 @@ public class schoolFragment extends Fragment {
                 return null;
             }
         };
-
         runAsyncTask(task);
-
-        mTextNewToDo.setText("");
     }
 
     /**
@@ -205,7 +197,6 @@ public class schoolFragment extends Fragment {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
-
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
             protected Void doInBackground(Void... params) {
@@ -281,8 +272,10 @@ public class schoolFragment extends Fragment {
 
                     Map<String, ColumnDataType> tableDefinition = new HashMap<String, ColumnDataType>();
                     tableDefinition.put("id", ColumnDataType.String);
-                    tableDefinition.put("text", ColumnDataType.String);
-                    tableDefinition.put("complete", ColumnDataType.Boolean);
+                    tableDefinition.put("country", ColumnDataType.String);
+                    tableDefinition.put("schoolName", ColumnDataType.String);
+                    tableDefinition.put("imageURL", ColumnDataType.String);
+                    tableDefinition.put("pageURL", ColumnDataType.String);
 
                     localStore.defineTable("School", tableDefinition);
 
@@ -395,15 +388,6 @@ public class schoolFragment extends Fragment {
 
             final SettableFuture<ServiceFilterResponse> resultFuture = SettableFuture.create();
 
-
-            getActivity().runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
-                }
-            });
-
             ListenableFuture<ServiceFilterResponse> future = nextServiceFilterCallback.onNext(request);
 
             Futures.addCallback(future, new FutureCallback<ServiceFilterResponse>() {
@@ -414,13 +398,6 @@ public class schoolFragment extends Fragment {
 
                 @Override
                 public void onSuccess(ServiceFilterResponse response) {
-                    getActivity().runOnUiThread(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
-                        }
-                    });
 
                     resultFuture.set(response);
                 }

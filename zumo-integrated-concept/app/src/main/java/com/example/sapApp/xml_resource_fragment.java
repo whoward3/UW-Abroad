@@ -7,9 +7,16 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+/*
+    This class is used to view the various XMLs made.
+
+    This class uses a switch statement to figure out which page to use.
+        -Alice Blair April 28, 2020
+ */
+
 public class xml_resource_fragment extends Fragment {
 
-    //An integer for a switch statement where the integer indicates the case
+    //AB: An integer for a switch statement where the integer indicates the case
     private int xmlCase= 0;
 
     public xml_resource_fragment() {} //AB: Required empty public constructor
@@ -33,7 +40,6 @@ public class xml_resource_fragment extends Fragment {
                 view = inflater.inflate(R.layout.fragment_laramie_facts, container, false);
                 break;
         }
-
 
         return view;
     }

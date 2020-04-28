@@ -12,36 +12,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-/**
- * Adapter to bind a School List to a view
+/*
+    This is the School Adapter Class which is called for setting the card-view for the school item.
+    This fills up the list view with all of the school that it receives.
+        -Alice Blair April 28, 2020
  */
+
 public class schoolAdapter extends ArrayAdapter<School> {
-    schoolFragment mTDA;
 
-    /**
-     * Adapter context
-     */
+    schoolFragment schoolFragment;
     Context mContext;
-
-    /**
-     * Adapter View layout
-     */
     int mLayoutResourceId;
 
+    //AB: Simple Constructor to initialize everything.
     public schoolAdapter(Context context, int layoutResourceId, schoolFragment TDA) {
         super(context, layoutResourceId);
 
         mContext = context;
         mLayoutResourceId = layoutResourceId;
-        mTDA = TDA;
+        schoolFragment = TDA;
     }
-    /**
-     * Returns the view for a specific item on the list
-     */
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View row = convertView;
 
+        //AB: Set Up the View and find what position you are currently at
+        View row = convertView;
         final School currentItem = getItem(position);
 
         if (row == null) {
@@ -49,11 +45,13 @@ public class schoolAdapter extends ArrayAdapter<School> {
             row = inflater.inflate(mLayoutResourceId, parent, false);
         }
 
+        //AB: This sets up the card-view. It sets the name
         row.setTag(currentItem);
-        final TextView checkBox =  row.findViewById(R.id.checkToDoItem);
+        final TextView schoolName = row.findViewById(R.id.checkToDoItem);
 
-        checkBox.setText(currentItem.getSchoolName());
-        checkBox.setOnClickListener(new View.OnClickListener() {
+        //AB: Sets Up the on click listener for it which loads an HTML frag
+        schoolName.setText(currentItem.getSchoolName());
+        schoolName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 htmlViewerFragment nextFrag= new htmlViewerFragment(currentItem.getPageURL());

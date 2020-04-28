@@ -25,8 +25,9 @@ public class incomingHomePageFragment extends Fragment {
 
     Button aboutButton, laramieFactsButton, areasOfStudyButton, laramieMapButton;
 
+    //AB: Required empty public constructor
     public incomingHomePageFragment() {
-    } //AB: Required empty public constructor
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -75,7 +76,7 @@ public class incomingHomePageFragment extends Fragment {
             }
         });
 
-        //AB: This creates and a major fragment and displays the area of studies.
+        //AB: This creates a major fragment and displays the area of studies.
         areasOfStudyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
