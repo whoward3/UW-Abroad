@@ -24,7 +24,7 @@ public class htmlViewerFragment extends Fragment {
     private WebView wv1;
 
     //AB: Used a default string which is the University of Wyoming Website Home Page
-    private String URL = String.valueOf(R.string.uwyo_homepage);
+    private String URL = "https://www.uwyo.edu/";
 
     //AB: Basic constructor that takes a string and sets that as the URL.
     public htmlViewerFragment(String url){
@@ -41,7 +41,7 @@ public class htmlViewerFragment extends Fragment {
         wv1= view.findViewById(R.id.htmlViewerLoader);
         wv1.setWebViewClient(new htmlViewerLoaderFragment());
 
-        //AB: These load the actual web-page on the phone
+        //AB: These load the actual web-page properties on the phone
         wv1.getSettings().setLoadsImagesAutomatically(true);
         wv1.getSettings().setJavaScriptEnabled(true);
         wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);

@@ -1,28 +1,22 @@
 package com.example.sapApp;
 
+/*
+    This is the Major item which is called in the majorFragment and majorAdapter.
+    This is the item that is stored in the database.
+    It has the values of:
+            - id
+            - majorName
+            - bachelors
+            - masters
+            - doctorate
+            - other
+    These align with what is on the UWYO Registrar Website.
+        -Alice Blair April 28, 2020
+ */
+
 public class Major {
 
-    //Private Values that are for Majors offered
-//-------------------Pascal Case--------------//
-//    @com.google.gson.annotations.SerializedName("Id")
-//    private String mId;
-//
-//    @com.google.gson.annotations.SerializedName("MajorName")
-//    private String mMajorName = "";
-//
-//    @com.google.gson.annotations.SerializedName("Bachelors")
-//    private boolean mBachelors;
-//
-//    @com.google.gson.annotations.SerializedName("Masters")
-//    private boolean mMasters;
-//
-//    @com.google.gson.annotations.SerializedName("Doctorate")
-//    private boolean mDoctorate;
-//
-//    @com.google.gson.annotations.SerializedName("Other")
-//    private boolean mOther;
-
-    //-------------Camel Case-------------//
+    //-------------Initialization of the Values-------------//
     @com.google.gson.annotations.SerializedName("id")
     private String mId;
 
@@ -42,7 +36,7 @@ public class Major {
     private boolean mOther;
 
 
-    public Major(){} //Default Empty Constructor
+    public Major(){} //AB: Default Empty Constructor
 
     @Override
     public String toString() { return getMajorName();}
@@ -67,6 +61,8 @@ public class Major {
      *
      * @param other
      *             If a different thing is offered for that degree
+     *
+     *      -Alice Blair April 14, 2020
      */
     public Major(String id, String major , Boolean bachelors, Boolean masters, Boolean doctorate, Boolean other)
     {
