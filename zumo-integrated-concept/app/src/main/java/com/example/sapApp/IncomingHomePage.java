@@ -16,9 +16,6 @@ public class IncomingHomePage extends Fragment {
 
     public IncomingHomePage() {} // SB:Required empty public constructor
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,17 +71,24 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //CS: Connection to the Laramie Map Fragment
-                pdfViewerFragment nextFrag= new pdfViewerFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "UWYO Map Fragment");
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                htmlViewerFragment nextFrag= new htmlViewerFragment();
+                //(String.valueOf(R.string.laramie_map_URL)
+                //fragmentTransition(nextFrag, "UWYO Map Fragment");
+                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.container,nextFrag, "hi");
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
             }
         });
 
 
         return view;
     }
+
+public <T> void fragmentTransition(T nextFrag, String tag)
+{
+
+}
 
 }

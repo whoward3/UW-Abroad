@@ -3,9 +3,10 @@
     <string name="app_name">UWYO Study Abroad</string>
     <string name="add_textbox_hint">Add a ToDo item</string>
     <string name="add_button_text">Add</string>
-    <string name="service_title">Mobile Apps </string>
+    <string name="service_title">Mobile Apps</string>
     <string name="menu_refresh">Refresh</string>
     <string name="uwyo_homepage">https://www.uwyo.edu/</string>
+    <string name="laramie_map_URL">https://uwmaps.wygisc.org/CampusViewer/index.html</string>
     <string name="incoming_home_page">Located in Laramie, Wyoming, The University of Wyoming offers 80 undergraduate and more than 90 graduate academic programs through seven colleges and multiple interdisciplinary institutes and schools.</string>
 
 
