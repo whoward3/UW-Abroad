@@ -71,11 +71,11 @@ public class IncomingHomePage extends Fragment {
             public void onClick(View v) {
                 //CS: Connection to the Laramie Map Fragment
                 pdfViewerFragment nextFrag = new pdfViewerFragment(1);
-                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                 fragmentTransaction.replace(R.id.container,nextFrag, "Laramie Map PDF");
-                 fragmentTransaction.addToBackStack(null);
-                 fragmentTransaction.commit();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container,nextFrag, "Laramie Map PDF");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

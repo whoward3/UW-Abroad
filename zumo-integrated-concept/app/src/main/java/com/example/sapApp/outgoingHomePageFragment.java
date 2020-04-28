@@ -37,7 +37,7 @@ public class outgoingHomePageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 htmlViewerFragment nextFrag= new htmlViewerFragment(
-                        String.valueOf(R.string.virtual_info_URL));
+                        "https://vimeo.com/showcase/4410332");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag,
@@ -63,7 +63,8 @@ public class outgoingHomePageFragment extends Fragment {
         prepareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                htmlViewerFragment nextFrag= new htmlViewerFragment("http://www.uwyo.edu/geo/eda/index.html");
+                htmlViewerFragment nextFrag= new htmlViewerFragment(
+                        "http://www.uwyo.edu/uwyoabroad/application-process/index.html");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag,

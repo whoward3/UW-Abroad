@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">UWYO Study Abroad</string>
+    <string name="prep_steps_URL">http://www.uwyo.edu/uwyoabroad/application-process/index.html</string>
     <string name="uwyo_homepage">https://www.uwyo.edu/</string>
     <string name="laramie_map_URL">https://uwmaps.wygisc.org/CampusViewer/index.html</string>
     <string name="virtual_info_URL">https://vimeo.com/showcase/4410332</string>

@@ -52,8 +52,10 @@ public class pdfViewerFragment extends Fragment {
         {
             case 1:
                 pdfView.fromAsset("uw_laramie_campus.pdf").load();
+                break;
             default:
                 pdfView.fromAsset("educationAbroadHandbook.pdf").load();
+                break;
         }
 
         return view;
