@@ -13,12 +13,12 @@
         <TextView
             android:id="@+id/AboutUW"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:gravity="left"
             android:text="ABOUT UW"
             android:textColor="#ffc425"
             android:textSize="40dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/montserratbold" />
 
         <TextView
             android:id="@+id/Connected"
@@ -28,23 +28,23 @@
             android:text="WE ARE CONNECTED"
             android:textColor="#ffc425"
             android:textSize="24dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/montserratbold" />
 
         <ImageView
             android:id="@+id/ConnectedImage"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="260dp"
             android:src="@drawable/connected" />
 
         <TextView
             android:id="@+id/ConnectedDescription"
             android:layout_width="match_parent"
-            android:layout_height="195dp"
+            android:layout_height="223dp"
+            android:fontFamily="@font/montserratbold"
             android:gravity="left"
             android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
             android:textColor="#ffc425"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+            android:textSize="19dp" />
 
         <TextView
             android:id="@+id/Authentic"
@@ -54,23 +54,75 @@
             android:text="WE ARE AUTHENTIC"
             android:textColor="#ffc425"
             android:textSize="24dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/montserratbold" />
 
         <ImageView
             android:id="@+id/AuthenticImage"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/authentic" />
+            android:layout_height="318dp"
+            android:src="@drawable/community_mts" />
 
         <TextView
             android:id="@+id/AuthenticDescription"
             android:layout_width="match_parent"
-            android:layout_height="195dp"
+            android:layout_height="223dp"
+            android:fontFamily="@font/montserratbold"
             android:gravity="left"
             android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
             android:textColor="#ffc425"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/Global"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left"
+            android:text="WE ARE GLOBAL"
+            android:textColor="#ffc425"
+            android:textSize="24dp"
+            android:fontFamily="@font/montserratbold" />
+
+        <ImageView
+            android:id="@+id/GlobalImage"
+            android:layout_width="match_parent"
+            android:layout_height="301dp"
+            android:src="@drawable/global" />
+
+        <TextView
+            android:id="@+id/GlobalDescription"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:fontFamily="@font/montserratbold"
+            android:gravity="left"
+            android:text="Experience the world as your classroom with the largest study-abroad scholarship endowment of any U.S. four-year public land-grant university. UW students study in nearly 50 countries each year at 400+ domestic and study abroad sites."
+            android:textColor="#ffc425"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/Adventurous"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left"
+            android:text="WE ARE ADVENTUROUS"
+            android:textColor="#ffc425"
+            android:textSize="24dp"
+            android:fontFamily="@font/montserratbold" />
+
+        <ImageView
+            android:id="@+id/AdventurousImage"
+            android:layout_width="match_parent"
+            android:layout_height="323dp"
+            android:src="@drawable/adventurous" />
+
+        <TextView
+            android:id="@+id/AdventurousDescription"
+            android:layout_width="match_parent"
+            android:layout_height="244dp"
+            android:fontFamily="@font/montserratbold"
+            android:gravity="left"
+            android:text="Find your Wyoming in the 30 miles of groomed cross-country ski trails, 300 miles of snowmobiling trails and more than 100 miles of mountain bike trails, plus fishing, rock climbing, 2.9 million acres of national forest and more. Outdoor magazine recognized UW as one of the nation’s top outdoor schools."
+            android:textColor="#ffc425"
+            android:textSize="20dp" />
 
     </LinearLayout>
 </ScrollView>

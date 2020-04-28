@@ -89,7 +89,7 @@
         android:background="#ffc425"
         android:text="Campus Map"
         android:textColor="#492f24"
-        android:textSize="25dp"
+        android:textSize="27dp"
         android:fontFamily="@font/montserratbold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
