@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#492f24"
-    tools:context=".IncomingHomePage">
+    tools:context=".incomingHomePageFragment">
 
     <ImageView
         android:id="@+id/incomingHomePageImg"
