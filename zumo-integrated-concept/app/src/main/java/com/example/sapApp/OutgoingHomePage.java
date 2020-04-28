@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class OutgoingHomePage extends Fragment {
 
-    Button consider, explore, prepare, whileAbd, return2Uw;
+    Button virtualInfoButton, exploreOptionButton, prepareButton, educationAbroadHandbookButton;
 
     public OutgoingHomePage() {} // SB: Required empty public constructor
 
@@ -26,72 +26,58 @@ public class OutgoingHomePage extends Fragment {
         //SB: Set Up the View & Buttons
         View view = inflater.inflate(R.layout.fragment_outgoing_home_page, container, false);
 
-        consider = view.findViewById(R.id.considerButton);
-        explore = view.findViewById(R.id.exploreButton);
-        prepare = view.findViewById(R.id.prepareButton);
-        whileAbd = view.findViewById(R.id.whileAbroadButton);
-        return2Uw = view.findViewById(R.id.return2UWButton);
+        virtualInfoButton = view.findViewById(R.id.virtualInfoButton);
+        exploreOptionButton = view.findViewById(R.id.exploreButton);
+        prepareButton = view.findViewById(R.id.prepareButton);
+        educationAbroadHandbookButton = view.findViewById(R.id.educationAbroadHandbookButton);
 
 
-        consider.setOnClickListener(new View.OnClickListener() {
+        virtualInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                OutgoingConsider nextFrag= new OutgoingConsider();
+                htmlViewerFragment nextFrag= new htmlViewerFragment("https://vimeo.com/showcase/4410332");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Consider Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag,
+                        "Virtual Info");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
+        exploreOptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Set Up Connection Here to a recycler view of what ethan made
                 SchoolFragment nextFrag= new SchoolFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Explore Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag,
+                        "Explore Options");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
 
-        prepare.setOnClickListener(new View.OnClickListener() {
+        prepareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                htmlViewerFragment nextFrag= new htmlViewerFragment("https://www.uwyo.edu/");
+                htmlViewerFragment nextFrag= new htmlViewerFragment("http://www.uwyo.edu/uwyoabroad/application-process/index.html");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Prepare Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag,
+                        "Prepare to go abroad");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
-        whileAbd.setOnClickListener(new View.OnClickListener() {
+        educationAbroadHandbookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                OutgoingAbroad nextFrag= new OutgoingAbroad();
+                pdfViewerFragment nextFrag= new pdfViewerFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Abroad Fragment");
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
-
-        return2Uw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                OutgoingReturn nextFrag= new OutgoingReturn();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Return Fragment");
+                fragmentTransaction.replace(R.id.container, nextFrag,
+                        "Education Abroad Handbook");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

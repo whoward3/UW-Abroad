@@ -11,7 +11,7 @@
     tools:context=".OutgoingHomePage">
 
     <Button
-        android:id="@+id/considerButton"
+        android:id="@+id/virtualInfoButton"
 
         android:layout_width="350dp"
         android:layout_height="60dp"
@@ -39,14 +39,14 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/whileAbroadButton"
+        app:layout_constraintBottom_toTopOf="@+id/educationAbroadHandbookButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exploreButton" />
 
     <Button
-        android:id="@+id/whileAbroadButton"
+        android:id="@+id/educationAbroadHandbookButton"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_margin="1dp"
@@ -77,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/considerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/virtualInfoButton" />
 
     <TextView
         android:id="@+id/textView2"
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/considerButton"
+        app:layout_constraintTop_toTopOf="@id/virtualInfoButton"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView

@@ -12,8 +12,8 @@ import com.github.barteksc.pdfviewer.PDFView;
     The owner and source of that code is at:
     https://github.com/barteksc/AndroidPdfViewer
 
-    This classes current implementation only reads and opens one pdf.
-    That pdf is the Education Abroad Handbook.
+    This class's current implementation only reads and opens two PDFs.
+    Those PDFs are the Education Abroad Handbook and the University of Wyoming Laramie Campus map.
         -Alice Blair April 28, 2020
  */
 
@@ -22,12 +22,21 @@ public class pdfViewerFragment extends Fragment {
 
     PDFView pdfView;
 
-    // AB:Required empty public constructor
+    //An integer for a switch statement where the integer indicates the case
+    int pdfCase= 0;
 
+    // AB:Required empty public constructor
     public pdfViewerFragment() {}
+
+    // AB:Constructor to change which PDF is loaded
+    public pdfViewerFragment(int pdfCase)
+    {
+        this.pdfCase = pdfCase;
+    }
 /*
-    In theory this could be expanded if there are multiple PDFs.
+    In theory this could be expanded more, if there are multiple PDFs.
     One could add a switch statement and depending on the value passed it opens a different PDF.
+        - Alice Blair
  */
 
     @Override
@@ -38,8 +47,14 @@ public class pdfViewerFragment extends Fragment {
         pdfView = view.findViewById(R.id.pdfView);
 
         //This line passes the name of the pdf that is desired to be opened.
-        //The file is located in the assets folder.
-        pdfView.fromAsset("educationAbroadHandbook.pdf").load();
+        //The files are located in the assets folder.
+        switch (pdfCase)
+        {
+            case 1:
+                pdfView.fromAsset("uw_laramie_campus.pdf").load();
+            default:
+                pdfView.fromAsset("educationAbroadHandbook.pdf").load();
+        }
 
         return view;
     }

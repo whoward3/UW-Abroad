@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -71,14 +70,12 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //CS: Connection to the Laramie Map Fragment
-                htmlViewerFragment nextFrag= new htmlViewerFragment();
-                //(String.valueOf(R.string.laramie_map_URL)
-                //fragmentTransition(nextFrag, "UWYO Map Fragment");
+                pdfViewerFragment nextFrag = new pdfViewerFragment(1);
                  FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.container,nextFrag, "hi");
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                 fragmentTransaction.replace(R.id.container,nextFrag, "Laramie Map PDF");
+                 fragmentTransaction.addToBackStack(null);
+                 fragmentTransaction.commit();
             }
         });
 
