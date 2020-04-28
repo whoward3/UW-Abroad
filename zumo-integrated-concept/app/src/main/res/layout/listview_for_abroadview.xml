@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffc425">
+
+    <TextView
+        android:id="@+id/AboutUW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratbold"
+        android:gravity="center"
+        android:text="These are not the only opportunities offered. Check out https://uwyo-sa.terradotta.com/ for more options!"
+        android:textColor="#492f24"
+        android:textSize="20dp" />
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:fontFamily="@font/montserratbold"
+        tools:listitem="@layout/fragment_school_item"
+        >
+
+    </ListView>
+
+</LinearLayout>
+
+
