@@ -17,13 +17,13 @@ public class mainActivity extends AppCompatActivity {
     startUpFragment mStart;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         //AB: Set up the view
         super.onCreate((savedInstanceState));
         setContentView(R.layout.main_activity);
 
         //AB: Create the First fragment and run it
-        mStart= new startUpFragment();
+        mStart = new startUpFragment();
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .add(R.id.container, mStart)

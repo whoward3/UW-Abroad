@@ -27,18 +27,19 @@ public class htmlViewerFragment extends Fragment {
     private String URL = "https://www.uwyo.edu/";
 
     //AB: Basic constructor that takes a string and sets that as the URL.
-    public htmlViewerFragment(String url){
+    public htmlViewerFragment(String url) {
         URL = url;
     }
 
     //AB: Required Empty Constructor
-    public htmlViewerFragment() {}
+    public htmlViewerFragment() {
+    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //AB: This sets up the web-viewer by calling a function in a separate class
         View view = inflater.inflate(R.layout.fragment_html_viewer, container, false);
-        wv1= view.findViewById(R.id.htmlViewerLoader);
+        wv1 = view.findViewById(R.id.htmlViewerLoader);
         wv1.setWebViewClient(new htmlViewerLoaderFragment());
 
         //AB: These load the actual web-page properties on the phone

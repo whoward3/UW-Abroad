@@ -52,7 +52,7 @@ public class incomingHomePageFragment extends Fragment {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                xml_resource_fragment nextFrag= new xml_resource_fragment(1);
+                xml_resource_fragment nextFrag = new xml_resource_fragment(1);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "UW Facts Fragment");
@@ -66,7 +66,7 @@ public class incomingHomePageFragment extends Fragment {
         laramieFactsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                xml_resource_fragment nextFrag= new xml_resource_fragment();
+                xml_resource_fragment nextFrag = new xml_resource_fragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Laramie Fragment");
@@ -79,7 +79,7 @@ public class incomingHomePageFragment extends Fragment {
         areasOfStudyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                majorFragment nextFrag= new majorFragment();
+                majorFragment nextFrag = new majorFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Degree Fragment");
@@ -96,7 +96,7 @@ public class incomingHomePageFragment extends Fragment {
                 pdfViewerFragment nextFrag = new pdfViewerFragment(1);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,nextFrag, "Laramie Map PDF");
+                fragmentTransaction.replace(R.id.container, nextFrag, "Laramie Map PDF");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

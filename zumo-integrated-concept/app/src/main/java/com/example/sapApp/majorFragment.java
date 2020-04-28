@@ -23,16 +23,37 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+import com.microsoft.windowsazure.mobileservices.table.query.Query;
+import com.microsoft.windowsazure.mobileservices.table.query.QueryOperations;
 import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncContext;
+import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncTable;
+import com.microsoft.windowsazure.mobileservices.table.sync.localstore.ColumnDataType;
+import com.microsoft.windowsazure.mobileservices.table.sync.localstore.MobileServiceLocalStoreException;
+import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLocalStore;
+import com.microsoft.windowsazure.mobileservices.table.sync.synchandler.SimpleSyncHandler;
 
 import java.net.MalformedURLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
+
+/*
+    This is the Major Fragment which is called in the incoming home page fragment.
+    This pulls from the database and initializes local storage.
+    This uses the Major Adapter and Major Item.
+
+    FAIR WARNING TO THOSE LOOKING AT THIS:
+    This code uses a lot of google magic that does not make sense.
+    We got most of this code from Microsoft and Google.
+    
+        -Alice Blair April 28, 2020
+ */
 
 public class majorFragment extends Fragment {
 
@@ -50,7 +71,7 @@ public class majorFragment extends Fragment {
     /**
      * Table used to store data locally sync with the mobile app backend.
      */
-    //private MobileServiceSyncTable<Major> mOfflineMajorList;
+    private MobileServiceSyncTable<Major> mOfflineMajorList;
 
     /**
      * Adapter to sync the items list with the view
@@ -67,7 +88,7 @@ public class majorFragment extends Fragment {
 
 
         try {
-            // Create the client instance, using the provided mobile app URL.
+            //Create the client instance, using the provided mobile app URL.
             mClient = new MobileServiceClient(
                     "https://sap-web-app-dev.azurewebsites.net",
                     getContext()).withFilter(new ProgressFilter());
@@ -89,11 +110,11 @@ public class majorFragment extends Fragment {
             mMajorList = mClient.getTable(Major.class);
 
             // Offline sync table instance.
-           // mOfflineMajorList = mClient.getSyncTable("Majors", Major.class);
+            mOfflineMajorList = mClient.getSyncTable("Major", Major.class);
 
 
             //Init local storage
-           // initLocalStore().get();
+            initLocalStore().get();
 
             // Create an adapter to bind the items with the view
             mAdapter = new majorAdapter(getContext(), R.layout.fragment_major_item, this);
@@ -188,8 +209,8 @@ public class majorFragment extends Fragment {
                 try {
                     final List<Major> results = refreshItemsFromMobileServiceTable();
 
-                    //Offline Sync
-                    //final List<School> results = refreshItemsFromMobileServiceTableSyncTable();
+                    //Offline Sync --- Might be able to remove this - AB
+                    //final List<Major> results = refreshItemsFromMobileServiceTableSyncTable();
 
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
@@ -225,56 +246,59 @@ public class majorFragment extends Fragment {
     /**
      * Refresh the list with the items in the Mobile Service Sync Table
      */
-//    private List<Major> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
-//        //sync the data
-//        sync().get();
-//        Query query = QueryOperations.field("complete").
-//                eq(val(false));
-//        return mOfflineMajorList.read(query).get();
-//    }
+    private List<Major> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
+        //sync the data
+        sync().get();
+        Query query = QueryOperations.field("complete").
+                eq(val(false));
+        return mOfflineMajorList.read(query).get();
+    }
 
-//    /**
-//     * Initialize local storage
-//     * @return
-//     * @throws MobileServiceLocalStoreException
-//     * @throws ExecutionException
-//     * @throws InterruptedException
-//     */
-//    private AsyncTask<Void, Void, Void> initLocalStore() throws MobileServiceLocalStoreException, ExecutionException, InterruptedException {
-//
-//        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
-//            @Override
-//            protected Void doInBackground(Void... params) {
-//                try {
-//
-//                    MobileServiceSyncContext syncContext = mClient.getSyncContext();
-//
-//                    if (syncContext.isInitialized())
-//                        return null;
-//
-//                    SQLiteLocalStore localStore = new SQLiteLocalStore(mClient.getContext(), "OfflineStore", null, 1);
-//
-//                    Map<String, ColumnDataType> tableDefinition = new HashMap<String, ColumnDataType>();
-//                    tableDefinition.put("id", ColumnDataType.String);
-//                    tableDefinition.put("text", ColumnDataType.String);
-//                    tableDefinition.put("complete", ColumnDataType.Boolean);
-//
-//                    localStore.defineTable("Major", tableDefinition);
-//
-//                    SimpleSyncHandler handler = new SimpleSyncHandler();
-//
-//                    syncContext.initialize(localStore, handler).get();
-//
-//                } catch (final Exception e) {
-//                    createAndShowDialogFromTask(e, "Error");
-//                }
-//
-//                return null;
-//            }
-//        };
-//
-//        return runAsyncTask(task);
-//    }
+    /**
+     * Initialize local storage
+     * @return
+     * @throws MobileServiceLocalStoreException
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
+    private AsyncTask<Void, Void, Void> initLocalStore() throws MobileServiceLocalStoreException, ExecutionException, InterruptedException {
+
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+
+                    MobileServiceSyncContext syncContext = mClient.getSyncContext();
+
+                    if (syncContext.isInitialized())
+                        return null;
+
+                    SQLiteLocalStore localStore = new SQLiteLocalStore(mClient.getContext(), "OfflineStore", null, 1);
+
+                    Map<String, ColumnDataType> tableDefinition = new HashMap<String, ColumnDataType>();
+                    tableDefinition.put("id", ColumnDataType.String);
+                    tableDefinition.put("majorName", ColumnDataType.String);
+                    tableDefinition.put("bachelors", ColumnDataType.Boolean);
+                    tableDefinition.put("masters", ColumnDataType.Boolean);
+                    tableDefinition.put("doctorate", ColumnDataType.Boolean);
+                    tableDefinition.put("other", ColumnDataType.Boolean);
+
+                    localStore.defineTable("Major", tableDefinition);
+
+                    SimpleSyncHandler handler = new SimpleSyncHandler();
+
+                    syncContext.initialize(localStore, handler).get();
+
+                } catch (final Exception e) {
+                    createAndShowDialogFromTask(e, "Error");
+                }
+
+                return null;
+            }
+        };
+
+        return runAsyncTask(task);
+    }
 
     //Offline Sync
     /**
@@ -288,7 +312,7 @@ public class majorFragment extends Fragment {
                 try {
                     MobileServiceSyncContext syncContext = mClient.getSyncContext();
                     syncContext.push().get();
-                    //mOfflineMajorList.pull(null).get();
+                    mOfflineMajorList.pull(null).get();
                 } catch (final Exception e) {
                     createAndShowDialogFromTask(e, "Error");
                 }
