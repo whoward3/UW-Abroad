@@ -2,7 +2,7 @@
 <ScrollView android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#643327"
+    android:background="#492f24"
     >
 
     <LinearLayout
@@ -16,7 +16,7 @@
             android:layout_height="100dp"
             android:gravity="left"
             android:text="ABOUT UW"
-            android:textColor="#FDC82F"
+            android:textColor="#ffc425"
             android:textSize="40dp"
             android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
             android:layout_height="50dp"
             android:gravity="left"
             android:text="WE ARE CONNECTED"
-            android:textColor="#FDC82F"
+            android:textColor="#ffc425"
             android:textSize="24dp"
             android:textStyle="bold" />
 
@@ -42,7 +42,7 @@
             android:layout_height="195dp"
             android:gravity="left"
             android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
-            android:textColor="#FDC82F"
+            android:textColor="#ffc425"
             android:textSize="20dp"
             android:textStyle="normal" />
 
@@ -52,7 +52,7 @@
             android:layout_height="50dp"
             android:gravity="left"
             android:text="WE ARE AUTHENTIC"
-            android:textColor="#FDC82F"
+            android:textColor="#ffc425"
             android:textSize="24dp"
             android:textStyle="bold" />
 
@@ -68,7 +68,7 @@
             android:layout_height="195dp"
             android:gravity="left"
             android:text="Rooted in the traditions of the West and surrounded by the rugged Rocky Mountains, the University of Wyoming was founded in 1886 and is a nationally recognized land-grant research institution with expert faculty, top-ranked academics and world-class facilities."
-            android:textColor="#FDC82F"
+            android:textColor="#ffc425"
             android:textSize="20dp"
             android:textStyle="normal" />
 

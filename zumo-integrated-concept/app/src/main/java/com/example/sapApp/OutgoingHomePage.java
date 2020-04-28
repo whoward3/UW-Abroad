@@ -30,7 +30,6 @@ public class OutgoingHomePage extends Fragment {
         explore = view.findViewById(R.id.exploreButton);
         prepare = view.findViewById(R.id.prepareButton);
         whileAbd = view.findViewById(R.id.whileAbroadButton);
-        return2Uw = view.findViewById(R.id.return2UWButton);
 
 
         consider.setOnClickListener(new View.OnClickListener() {

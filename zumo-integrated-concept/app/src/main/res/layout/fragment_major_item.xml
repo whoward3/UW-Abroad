@@ -18,7 +18,7 @@
             android:id="@+id/majorNameBox"
             android:layout_width="match_parent"
             android:layout_height="174dp"
-            android:background="#643327"
+            android:background="#492f24"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
@@ -35,33 +35,33 @@
                 android:id="@+id/bachelorsCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#643327"
+                android:background="#492f24"
                 android:text="Bachelors"
-                android:textColor="#FDC82F" />
+                android:textColor="#ffc425" />
 
             <CheckBox
                 android:id="@+id/mastersCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#643327"
+                android:background="#492f24"
                 android:text="Masters"
-                android:textColor="#FDC82F" />
+                android:textColor="#ffc425" />
 
             <CheckBox
                 android:id="@+id/doctorateCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#643327"
+                android:background="#492f24"
                 android:text="Doctorate"
-                android:textColor="#FDC82F" />
+                android:textColor="#ffc425" />
 
             <CheckBox
                 android:id="@+id/otherCheck"
                 android:layout_width="103dp"
                 android:layout_height="wrap_content"
-                android:background="#643327"
+                android:background="#492f24"
                 android:text="Other"
-                android:textColor="#FDC82F" />
+                android:textColor="#ffc425" />
 
         </LinearLayout>
     </LinearLayout>
