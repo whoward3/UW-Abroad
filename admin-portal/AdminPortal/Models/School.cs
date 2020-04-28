@@ -9,6 +9,7 @@ namespace AdminPortal.Models
         public string Country { get; set; }       
         public string ImageURL { get; set; }
         public string PageURL { get; set; }
+        public bool Deleted { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
     }

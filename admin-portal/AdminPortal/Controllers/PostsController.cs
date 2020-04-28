@@ -11,12 +11,13 @@ using System.Diagnostics;
 
 namespace AdminPortal.Controllers
 {
-    [System.Web.Mvc.Authorize]
+   
     public class PostsController : Controller
     {
         private MyDatabaseContext db = new MyDatabaseContext();
 
         // GET: Posts
+        [System.Web.Mvc.AllowAnonymous]
         public ActionResult Index()
         {
             Trace.WriteLine("GET /Posts/Index");
@@ -24,6 +25,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Posts/Details/5
+        [System.Web.Mvc.AllowAnonymous]
         public ActionResult Details(string id)
         {
             Trace.WriteLine("GET /Posts/Details/" + id);
@@ -40,6 +42,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Posts/Create
+        [System.Web.Mvc.Authorize]
         public ActionResult Create()
         {
             Trace.WriteLine("GET /Posts/Create");
@@ -49,23 +52,27 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Posts/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserName")] Post post)
+        [System.Web.Mvc.Authorize]
+        public ActionResult Create([Bind(Include = "UserName, Id, SchoolName, PostContent")] Post post)
         {
-            /*
-             * TODO: Allow new post creation to be saved upon AD Authentication
-             * 
+         
             Trace.WriteLine("POST /Posts/Create");
             if (ModelState.IsValid)
             {
+                post.CreatedAt = DateTimeOffset.Now;
+                post.UpdatedAt = DateTimeOffset.Now;
+                post.Id = Guid.NewGuid().ToString();
+                post.Deleted = false;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            */
+            
             return View(post);
         }
 
         // GET: Posts/Edit/5
+        [System.Web.Mvc.Authorize]
         public ActionResult Edit(string id)
         {
             Trace.WriteLine("GET /Posts/Edit/" + id);
@@ -84,23 +91,25 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Posts/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserName")] Post post)
+        [System.Web.Mvc.Authorize]
+        public ActionResult Edit([Bind(Include = "UserName, Id, SchoolName, PostContent")] Post post)
         {
-            /*
-             * TODO: Allow new post creation to be saved upon AD Authentication
-             * 
+           
             Trace.WriteLine("POST /Posts/Edit/" + post);
             if (ModelState.IsValid)
             {
+                post.UpdatedAt = DateTimeOffset.Now;
+                post.CreatedAt = DateTimeOffset.Now;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            */
+            
             return View(post);
         }
 
         // GET: Posts/Delete/5
+        [System.Web.Mvc.Authorize]
         public ActionResult Delete(string id)
         {
             Trace.WriteLine("GET /Posts/Delete/" + id);
@@ -119,16 +128,15 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [System.Web.Mvc.Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
-            /*
-             * TODO: Allow new post creation to be saved upon AD Authentication
-             * 
-             Trace.WriteLine("POST /Posts/Delete/" + id);
+            
+            Trace.WriteLine("POST /Posts/Delete/" + id);
              Post post = db.Posts.Find(id);
              db.Posts.Remove(post);
              db.SaveChanges();
-             */
+             
             return RedirectToAction("Index");
         }
 
