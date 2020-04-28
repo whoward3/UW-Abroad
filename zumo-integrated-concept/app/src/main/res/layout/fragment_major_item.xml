@@ -24,6 +24,7 @@
             android:gravity="center"
             android:padding="25dp"
             android:textColor="#FDC82F"
+            android:fontFamily="@font/montserratbold"
             android:textSize="25dp" />
 
         <LinearLayout
@@ -36,7 +37,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#492f24"
+                android:textSize="13dp"
                 android:text="Bachelors"
+                android:fontFamily="@font/montserratbold"
                 android:textColor="#ffc425" />
 
             <CheckBox
@@ -44,7 +47,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#492f24"
+                android:textSize="13dp"
                 android:text="Masters"
+                android:fontFamily="@font/montserratbold"
                 android:textColor="#ffc425" />
 
             <CheckBox
@@ -52,7 +57,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#492f24"
+                android:textSize="13dp"
                 android:text="Doctorate"
+                android:fontFamily="@font/montserratbold"
                 android:textColor="#ffc425" />
 
             <CheckBox
@@ -60,7 +67,9 @@
                 android:layout_width="103dp"
                 android:layout_height="wrap_content"
                 android:background="#492f24"
+                android:textSize="13dp"
                 android:text="Other"
+                android:fontFamily="@font/montserratbold"
                 android:textColor="#ffc425" />
 
         </LinearLayout>

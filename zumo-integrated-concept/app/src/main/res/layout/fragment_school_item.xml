@@ -25,7 +25,8 @@
         android:focusable="true"
         android:gravity="center"
         android:textColor="#ffc425"
-        android:textSize="25dp"
+        android:textSize="23dp"
+        android:fontFamily="@font/montserratbold"
         android:padding="25dp" />
 
 </RelativeLayout>
