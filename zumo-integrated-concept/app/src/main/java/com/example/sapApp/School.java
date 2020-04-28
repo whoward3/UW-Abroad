@@ -1,7 +1,5 @@
 package com.example.sapApp;
 
-import android.graphics.pdf.PdfDocument;
-
 /**
  * Represents a School in a list
  */
@@ -29,26 +27,16 @@ public class School {
     /**
      * School constructor
      */
-    public School() {}
-
-    @Override
-    public String toString() {
-        return getSchoolName();
+    public School() {
     }
 
     /**
      * Initializes a new School
      *
-     * @param schoolName
-     *            The item text
-     * @param id
-     *            The item id
-     *
-     * @param country
-     *            The item country
-     *
+     * @param schoolName The item text
+     * @param id         The item id
+     * @param country    The item country
      * @param imageURL
-     *
      * @param pageURL
      */
     public School(String id, String country, String schoolName, String imageURL, String pageURL) {
@@ -57,6 +45,11 @@ public class School {
         this.setSchoolName(schoolName);
         this.setImageURL(imageURL);
         this.setPageURL(pageURL);
+    }
+
+    @Override
+    public String toString() {
+        return getSchoolName();
     }
 
     /**
@@ -69,8 +62,7 @@ public class School {
     /**
      * Sets the item id
      *
-     * @param id
-     *            id to set
+     * @param id id to set
      */
     public final void setId(String id) {
         mId = id;
@@ -86,8 +78,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param country
-     *            text to set
+     * @param country text to set
      */
     public final void setCountry(String country) {
         mCountry = country;
@@ -103,8 +94,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param schoolName
-     *            text to set
+     * @param schoolName text to set
      */
     public final void setSchoolName(String schoolName) {
         mSchoolName = schoolName;
@@ -120,8 +110,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param imageURL
-     *            text to set
+     * @param imageURL text to set
      */
     public final void setImageURL(String imageURL) {
         mImageURL = imageURL;
@@ -137,8 +126,7 @@ public class School {
     /**
      * Sets the country
      *
-     * @param pageURL
-     *            text to set
+     * @param pageURL text to set
      */
     public final void setPageURL(String pageURL) {
         mPageURL = pageURL;

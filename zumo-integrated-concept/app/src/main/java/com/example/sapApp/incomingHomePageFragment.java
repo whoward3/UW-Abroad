@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class IncomingHomePage extends Fragment {
+public class incomingHomePageFragment extends Fragment {
 
     Button about, laramie, degree, laramieMap;
 
-    public IncomingHomePage() {} // SB:Required empty public constructor
+    public incomingHomePageFragment() {} // SB:Required empty public constructor
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +32,7 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Set Up Connection Here to a page that auto-fills using ethan's college page
-                UWFacts nextFrag= new UWFacts();
+                xml_resource_fragment nextFrag= new xml_resource_fragment(1);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "UW Facts Fragment");
@@ -45,7 +45,7 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //CS: Connection to the laramie Facts fragment
-                LaramieFacts nextFrag= new LaramieFacts();
+                xml_resource_fragment nextFrag= new xml_resource_fragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Laramie Fragment");

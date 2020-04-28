@@ -23,7 +23,7 @@ public class pdfViewerFragment extends Fragment {
     PDFView pdfView;
 
     //An integer for a switch statement where the integer indicates the case
-    int pdfCase= 0;
+    private int pdfCase= 0;
 
     // AB:Required empty public constructor
     public pdfViewerFragment() {}

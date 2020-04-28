@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class StartUpFragment extends Fragment {
+public class startUpFragment extends Fragment {
 
     Button incoming, outgoing;
 
 
-    public StartUpFragment() {}// SB: Required empty public constructor
+    public startUpFragment() {}// SB: Required empty public constructor
 
 
 
@@ -38,7 +38,7 @@ public class StartUpFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                IncomingHomePage nextFrag= new IncomingHomePage();
+                incomingHomePageFragment nextFrag= new incomingHomePageFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "e");

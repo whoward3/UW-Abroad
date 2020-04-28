@@ -5,9 +5,9 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-public class MainActivity extends AppCompatActivity {
+public class mainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
-    StartUpFragment mStart;
+    startUpFragment mStart;
 
 
     @Override
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate((savedInstanceState));
         setContentView(R.layout.main_activity);
 
-        mStart= new StartUpFragment();
+        mStart= new startUpFragment();
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
