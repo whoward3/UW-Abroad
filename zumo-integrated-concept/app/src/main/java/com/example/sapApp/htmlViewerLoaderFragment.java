@@ -6,7 +6,7 @@ import android.webkit.WebViewClient;
 
 
 
-public class SchoolHTMLviewer extends WebViewClient {
+public class htmlViewerLoaderFragment extends WebViewClient {
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {

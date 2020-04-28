@@ -63,7 +63,7 @@ public class OutgoingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //SB: Directed to a blank page on the wireframe so oyu can ignore this one for now
-                HTMLfrag nextFrag= new HTMLfrag("https://www.uwyo.edu/");
+                htmlViewerFragment nextFrag= new htmlViewerFragment("https://www.uwyo.edu/");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Prepare Fragment");
