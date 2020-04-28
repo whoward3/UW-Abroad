@@ -11,12 +11,13 @@ using System.Diagnostics;
 
 namespace AdminPortal.Controllers
 {
-    [System.Web.Mvc.AllowAnonymous]
+  
     public class MajorsController : Controller
     {
         private MyDatabaseContext db = new MyDatabaseContext();
 
         // GET: Majors
+        [System.Web.Mvc.AllowAnonymous]
         public ActionResult Index()
         {
             Trace.WriteLine("GET /Majors/Index");
@@ -24,6 +25,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Majors/Details/5
+        [System.Web.Mvc.AllowAnonymous]
         public ActionResult Details(string id)
         {
             Trace.WriteLine("GET /Majors/Details/" + id);
@@ -40,6 +42,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Majors/Create
+        [System.Web.Mvc.Authorize]
         public ActionResult Create()
         {
             Trace.WriteLine("GET /Majors/Create");
@@ -49,23 +52,26 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Majors/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MajorName")] Major major)
+        [System.Web.Mvc.Authorize]
+        public ActionResult Create([Bind(Include = "MajorName, Id, Bachelors, Masters, Doctorate, Other")] Major major)
         {
-            /*
-             * TODO: Allow new major creation to be saved upon AD Authentication
-             * 
             Trace.WriteLine("POST /Majors/Create");
             if (ModelState.IsValid)
             {
+                major.Id = Guid.NewGuid().ToString();
+                major.Deleted = false;
+                major.CreatedAt = DateTimeOffset.Now;
+                major.UpdatedAt = DateTimeOffset.Now;
                 db.Majors.Add(major);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            */
+           
             return View(major);
         }
 
         // GET: Majors/Edit/5
+        [System.Web.Mvc.Authorize]
         public ActionResult Edit(string id)
         {
             Trace.WriteLine("GET /Majors/Edit/" + id);
@@ -84,23 +90,25 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Majors/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MajorName")] Major major)
+        [System.Web.Mvc.Authorize]
+        public ActionResult Edit([Bind(Include = "MajorName, Id, Bachelors, Masters, Doctorate, Other")] Major major)
         {
-           /*
-            * TODO: Allow new major creation to be saved upon AD Authentication
-            * 
-           Trace.WriteLine("POST /Majors/Edit/" + major);
+            
+            Trace.WriteLine("POST /Majors/Edit/" + major);
            if (ModelState.IsValid)
            {
+                major.CreatedAt = DateTimeOffset.Now;
+                major.UpdatedAt = DateTimeOffset.Now;
                db.Entry(major).State = EntityState.Modified;
                db.SaveChanges();
                return RedirectToAction("Index");
            }
-           */
+           
             return View(major);
         }
 
         // GET: Majors/Delete/5
+        [System.Web.Mvc.Authorize]
         public ActionResult Delete(string id)
         {
             Trace.WriteLine("GET /Majors/Delete/" + id);
@@ -119,16 +127,15 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Majors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [System.Web.Mvc.Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
-           /*
-            * TODO: Allow new major creation to be saved upon AD Authentication
-            * 
+           
             Trace.WriteLine("POST /Majors/Delete/" + id);
             Major major = db.Majors.Find(id);
             db.Majors.Remove(major);
             db.SaveChanges();
-            */
+            
             return RedirectToAction("Index");
         }
 

@@ -10,6 +10,7 @@ namespace AdminPortal.Models
         public bool Masters { get; set; }
         public bool Doctorate { get; set; }
         public bool Other { get; set; }
+        public bool Deleted { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
     }

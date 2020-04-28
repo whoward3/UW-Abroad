@@ -1,0 +1,79 @@
+{
+	"id": "477cd0ff-a377-4c0e-8a2d-5e4a2c142a8e",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": null,
+	"addIns": [],
+	"allowPublicClient": false,
+	"appId": "caa46ab1-a1a4-409e-9621-1dd98becac01",
+	"appRoles": [],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "2020-04-26T21:30:37Z",
+	"groupMembershipClaims": null,
+	"identifierUris": [
+		"https://uwy.onmicrosoft.com/UWAbroadAdminPortal"
+	],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "UW Abroad Admin Portal",
+	"oauth2AllowIdTokenImplicitFlow": true,
+	"oauth2AllowImplicitFlow": false,
+	"oauth2Permissions": [
+		{
+			"adminConsentDescription": "Allow the application to access UWAbroadAdminPortal on behalf of the signed-in user.",
+			"adminConsentDisplayName": "Access UWAbroadAdminPortal",
+			"id": "4ee23fe0-27e1-484e-9bae-8c589ef86475",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"type": "User",
+			"userConsentDescription": "Allow the application to access UWAbroadAdminPortal on your behalf.",
+			"userConsentDisplayName": "Access UWAbroadAdminPortal",
+			"value": "user_impersonation"
+		}
+	],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [],
+	"preAuthorizedApplications": [],
+	"publisherDomain": "uwy.onmicrosoft.com",
+	"replyUrlsWithType": [
+		{
+			"url": "https://uw-abroad.azurewebsites.net",
+			"type": "Web"
+		}
+	],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "00000002-0000-0000-c000-000000000000",
+			"resourceAccess": [
+				{
+					"id": "311a71cc-e848-46a1-bdf8-97ff7156d8e6",
+					"type": "Scope"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": "https://uw-abroad.azurewebsites.net",
+	"signInAudience": "AzureADMyOrg",
+	"tags": [],
+	"tokenEncryptionKeyId": null,
+	"verifiedPublisher": {
+		"displayName": null,
+		"verifiedPublisherId": null,
+		"addedDateTime": null
+	}
+}

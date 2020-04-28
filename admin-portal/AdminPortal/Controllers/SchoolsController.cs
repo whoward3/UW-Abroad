@@ -11,12 +11,13 @@ using System.Diagnostics;
 
 namespace AdminPortal.Controllers
 {
-    [System.Web.Mvc.Authorize]
+    
     public class SchoolsController : Controller
     {
         private MyDatabaseContext db = new MyDatabaseContext();
 
         // GET: Schools
+        [System.Web.Mvc.AllowAnonymous]
         public ActionResult Index()
         {
             Trace.WriteLine("GET /Schools/Index");
@@ -24,6 +25,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Schools/Details/5
+        [System.Web.Mvc.AllowAnonymous]
         public ActionResult Details(string id)
         {
             Trace.WriteLine("GET /Schools/Details/" + id);
@@ -40,7 +42,7 @@ namespace AdminPortal.Controllers
         }
 
         // GET: Schools/Create
-
+        [System.Web.Mvc.Authorize]
         public ActionResult Create()
         {
             Trace.WriteLine("GET /Schools/Create");
@@ -50,23 +52,27 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Schools/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SchoolName")] School school)
+        [System.Web.Mvc.Authorize]
+        public ActionResult Create([Bind(Include = "SchoolName, Id, Country, ImageURL, PageURL")] School school)
         {
-            /*
-             * TODO: Allow new school creation to be saved upon AD Authentication
-             * 
+          
             Trace.WriteLine("POST /Schools/Create");
             if (ModelState.IsValid)
             {
+                school.Id = Guid.NewGuid().ToString();
+                school.Deleted = false;
+                school.CreatedAt = DateTimeOffset.Now;
+                school.UpdatedAt = DateTimeOffset.Now;
                 db.Schools.Add(school);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            */
+            
             return View(school);
         }
 
         // GET: Schools/Edit/5
+        [System.Web.Mvc.Authorize]
         public ActionResult Edit(string id)
         {
             Trace.WriteLine("GET /Schools/Edit/" + id);
@@ -85,23 +91,24 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Schools/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SchoolName")] School school)
+        [System.Web.Mvc.Authorize]
+        public ActionResult Edit([Bind(Include = "SchoolName, Id, Country, ImageURL, PageURL")] School school)
         {
-            /*
-             * TODO: Allow new school creation to be saved upon AD Authentication
-             * 
             Trace.WriteLine("POST /Schools/Edit/" + school);
             if (ModelState.IsValid)
             {
+                school.CreatedAt = DateTimeOffset.Now;
+                school.UpdatedAt = DateTimeOffset.Now;
                 db.Entry(school).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            */
+            
             return View(school);
         }
 
         // GET: Schools/Delete/5
+        [System.Web.Mvc.Authorize]
         public ActionResult Delete(string id)
         {
             Trace.WriteLine("GET /Schools/Delete/" + id);
@@ -120,16 +127,14 @@ namespace AdminPortal.Controllers
         // TODO -> POST: Schools/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [System.Web.Mvc.Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
-            /*
-             * TODO: Allow new school creation to be saved upon AD Authentication
-             * 
-             Trace.WriteLine("POST /Schools/Delete/" + id);
+            Trace.WriteLine("POST /Schools/Delete/" + id);
              School school = db.Schools.Find(id);
              db.Schools.Remove(school);
              db.SaveChanges();
-             */
+            
             return RedirectToAction("Index");
         }
 
