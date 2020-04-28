@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LaramieFacts"
-    android:background="#643327">
+    android:background="#492f24">
 
 
     <!-- TODO: Update blank fragment layout -->
@@ -29,7 +29,7 @@
         android:layout_height="125dp"
         android:text="WELCOME TO LARAMIE"
         android:gravity="left"
-        android:textColor="#FDC82F"
+        android:textColor="#ffc425"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/GemCity" />
@@ -40,7 +40,7 @@
         android:layout_height="50dp"
         android:text="THE GEM CITY OF WYOMING"
         android:gravity="left"
-        android:textColor="#FDC82F"
+        android:textColor="#ffc425"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/DescriptionOfLaramie" />
@@ -51,7 +51,7 @@
         android:layout_height="340dp"
         android:gravity="left"
         android:text="Nestled between mountain ranges at 7,200 feet, this 1860s railroad town is now home to nearly 32,000 residents, a number of respected museums and countless one-of-a-kind shops and restaurants. A dozen vibrant murals, painted by local artists, bring the historic Laramie downtown to life, while the rumble of trains reminds this Western town of its roots. Whether you’re heading to the Laramie River or lakes of the Snowy Range to fish, or utilizing the 2.9 million acres of nearby national forest to hike, bike, camp or ski, epic adventure awaits in all directions."
-        android:textColor="#FDC82F"
+        android:textColor="#ffc425"
         android:textSize="20dp"
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/Explore1"
@@ -68,7 +68,7 @@
         android:layout_height="60dp"
         android:gravity="left"
         android:text="EXPLORE OUR COMMUNITY"
-        android:textColor="#FDC82F"
+        android:textColor="#ffc425"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/Explore2"
@@ -83,7 +83,7 @@
         android:layout_height="60dp"
         android:gravity="left"
         android:text="[PLACEHOLDER] Hyperlinks here..."
-        android:textColor="#FDC82F"
+        android:textColor="#ffc425"
         android:textSize="17dp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"

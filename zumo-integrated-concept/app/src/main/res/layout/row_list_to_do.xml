@@ -19,12 +19,12 @@
         android:id="@+id/checkToDoItem"
         android:layout_width="match_parent"
         android:layout_height="108.5dp"
-        android:background="#643327"
+        android:background="#492f24"
         android:layout_centerInParent="true"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
-        android:textColor="#FDC82F"
+        android:textColor="#ffc425"
         android:textSize="25dp"
         android:padding="25dp" />
 
