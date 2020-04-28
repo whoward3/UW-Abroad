@@ -50,7 +50,7 @@ public class StartUpFragment extends Fragment {
         outgoing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OutgoingHomePage nextFrag= new OutgoingHomePage();
+                outgoingHomePageFragment nextFrag= new outgoingHomePageFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Incoming Home Page");

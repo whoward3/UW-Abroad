@@ -57,7 +57,7 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //CS: Connection to the Degree Fragment
-                MajorFragment nextFrag= new MajorFragment();
+                majorFragment nextFrag= new majorFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "Degree Fragment");

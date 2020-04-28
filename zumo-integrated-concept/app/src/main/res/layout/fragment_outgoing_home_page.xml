@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
 
 
-    tools:context=".OutgoingHomePage">
+    tools:context=".outgoingHomePageFragment">
 
     <Button
         android:id="@+id/virtualInfoButton"

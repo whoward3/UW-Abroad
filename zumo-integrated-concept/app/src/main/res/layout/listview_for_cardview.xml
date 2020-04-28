@@ -7,11 +7,11 @@
     android:background="#ffc425">
 
     <ListView
-        android:id="@+id/listViewToDo"
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="6dp"
-        tools:listitem="@layout/row_list_to_do"
+        tools:listitem="@layout/fragment_school_item"
         >
 
     </ListView>

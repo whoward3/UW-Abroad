@@ -15,8 +15,8 @@ import androidx.fragment.app.FragmentTransaction;
 /**
  * Adapter to bind a School List to a view
  */
-public class SchoolAdapter extends ArrayAdapter<School> {
-    SchoolFragment mTDA;
+public class schoolAdapter extends ArrayAdapter<School> {
+    schoolFragment mTDA;
 
     /**
      * Adapter context
@@ -28,7 +28,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
      */
     int mLayoutResourceId;
 
-    public SchoolAdapter(Context context, int layoutResourceId, SchoolFragment TDA) {
+    public schoolAdapter(Context context, int layoutResourceId, schoolFragment TDA) {
         super(context, layoutResourceId);
 
         mContext = context;

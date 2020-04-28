@@ -47,7 +47,7 @@ import okhttp3.OkHttpClient;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.*;
 
-public class SchoolFragment extends Fragment {
+public class schoolFragment extends Fragment {
 
     /**
      * Client reference
@@ -68,7 +68,7 @@ public class SchoolFragment extends Fragment {
     /**
      * Adapter to sync the items list with the view
      */
-    private SchoolAdapter mAdapter;
+    private schoolAdapter mAdapter;
 
     /**
      * EditText containing the "New To Do" text
@@ -88,7 +88,7 @@ public class SchoolFragment extends Fragment {
     @Override
     public View  onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_to_do, container, false);
+        View view = inflater.inflate(R.layout.listview_for_cardview, container, false);
 
         try {
             // Create the client instance, using the provided mobile app URL.
@@ -119,8 +119,8 @@ public class SchoolFragment extends Fragment {
             initLocalStore().get();
 
             // Create an adapter to bind the items with the view
-            mAdapter = new SchoolAdapter(getContext(), R.layout.row_list_to_do, this);
-            ListView listViewToDo = view.findViewById(R.id.listViewToDo);
+            mAdapter = new schoolAdapter(getContext(), R.layout.fragment_school_item, this);
+            ListView listViewToDo = view.findViewById(R.id.listView);
             listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the mobile app backend.
@@ -135,17 +135,6 @@ public class SchoolFragment extends Fragment {
 
     }
 
-    /**
-     * Select an option from the menu
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_refresh) {
-            refreshItemsFromTable();
-        }
-
-        return true;
-    }
 
     /**
      * Mark an item as completed in the Mobile Service Table

@@ -34,7 +34,7 @@ import okhttp3.OkHttpClient;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
 
-public class MajorFragment extends Fragment {
+public class majorFragment extends Fragment {
 
     /**
      * Client reference
@@ -55,7 +55,7 @@ public class MajorFragment extends Fragment {
     /**
      * Adapter to sync the items list with the view
      */
-    private MajorAdapter mAdapter;
+    private majorAdapter mAdapter;
 
     /**
      * Initializes the activity
@@ -63,7 +63,7 @@ public class MajorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_to_do, container, false);
+        View view = inflater.inflate(R.layout.listview_for_cardview, container, false);
 
 
         try {
@@ -96,8 +96,8 @@ public class MajorFragment extends Fragment {
            // initLocalStore().get();
 
             // Create an adapter to bind the items with the view
-            mAdapter = new MajorAdapter(getContext(), R.layout.fragment_major_item, this);
-            ListView listViewToDo = view.findViewById(R.id.listViewToDo);
+            mAdapter = new majorAdapter(getContext(), R.layout.fragment_major_item, this);
+            ListView listViewToDo = view.findViewById(R.id.listView);
             listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the mobile app backend.
@@ -112,17 +112,6 @@ public class MajorFragment extends Fragment {
 
     }
 
-    /**
-     * Select an option from the menu
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_refresh) {
-            refreshItemsFromTable();
-        }
-
-        return true;
-    }
 
     /**
      * Mark an item as completed in the Mobile Service Table

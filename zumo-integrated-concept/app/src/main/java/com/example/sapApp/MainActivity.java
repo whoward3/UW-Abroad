@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
         mStart= new StartUpFragment();
 
-
-
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .add(R.id.container, mStart)

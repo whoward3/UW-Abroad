@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class OutgoingHomePage extends Fragment {
+public class outgoingHomePageFragment extends Fragment {
 
     Button virtualInfoButton, exploreOptionButton, prepareButton, educationAbroadHandbookButton;
 
-    public OutgoingHomePage() {} // SB: Required empty public constructor
+    public outgoingHomePageFragment() {} // SB: Required empty public constructor
 
 
 
@@ -24,7 +24,8 @@ public class OutgoingHomePage extends Fragment {
                              Bundle savedInstanceState) {
 
         //SB: Set Up the View & Buttons
-        View view = inflater.inflate(R.layout.fragment_outgoing_home_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_outgoing_home_page,
+                container, false);
 
         virtualInfoButton = view.findViewById(R.id.virtualInfoButton);
         exploreOptionButton = view.findViewById(R.id.exploreButton);
@@ -35,7 +36,8 @@ public class OutgoingHomePage extends Fragment {
         virtualInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                htmlViewerFragment nextFrag= new htmlViewerFragment("https://vimeo.com/showcase/4410332");
+                htmlViewerFragment nextFrag= new htmlViewerFragment(
+                        String.valueOf(R.string.virtual_info_URL));
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag,
@@ -48,7 +50,7 @@ public class OutgoingHomePage extends Fragment {
         exploreOptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SchoolFragment nextFrag= new SchoolFragment();
+                schoolFragment nextFrag= new schoolFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag,
@@ -61,7 +63,7 @@ public class OutgoingHomePage extends Fragment {
         prepareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                htmlViewerFragment nextFrag= new htmlViewerFragment("http://www.uwyo.edu/uwyoabroad/application-process/index.html");
+                htmlViewerFragment nextFrag= new htmlViewerFragment("http://www.uwyo.edu/geo/eda/index.html");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag,
@@ -70,6 +72,7 @@ public class OutgoingHomePage extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
         educationAbroadHandbookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

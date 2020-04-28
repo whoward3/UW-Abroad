@@ -9,14 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-public class MajorAdapter extends ArrayAdapter<Major> {
+public class majorAdapter extends ArrayAdapter<Major> {
 
-    MajorFragment mMajorFragment;
+    majorFragment mMajorFragment;
     Context mContext;
     int mLayoutResourceId;
 
 
-    public MajorAdapter(Context context, int layoutResourceId, MajorFragment majorFragment) {
+    public majorAdapter(Context context, int layoutResourceId, majorFragment majorFragment) {
         super(context, layoutResourceId);
         mContext = context;
         mLayoutResourceId = layoutResourceId;
