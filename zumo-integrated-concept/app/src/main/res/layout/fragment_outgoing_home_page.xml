@@ -56,28 +56,11 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/return2UWButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prepareButton" />
-
-    <Button
-        android:id="@+id/return2UWButton"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_margin="1dp"
-        android:background="#FFC425"
-        android:text="Remove Dis"
-        android:textColor="#492F24"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whileAbroadButton" />
+        app:layout_constraintTop_toBottomOf="@+id/prepareButton" />
 
     <Button
         android:id="@+id/exploreButton"
