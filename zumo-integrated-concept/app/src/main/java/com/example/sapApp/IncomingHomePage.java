@@ -74,7 +74,7 @@ public class IncomingHomePage extends Fragment {
             @Override
             public void onClick(View v) {
                 //CS: Connection to the Laramie Map Fragment
-                laramieMapFragment nextFrag= new laramieMapFragment();
+                pdfViewerFragment nextFrag= new pdfViewerFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "UWYO Map Fragment");

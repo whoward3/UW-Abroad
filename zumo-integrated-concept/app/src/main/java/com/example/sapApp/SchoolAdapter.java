@@ -56,7 +56,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HTMLfrag nextFrag= new HTMLfrag(currentItem.getPageURL());
+                htmlViewerFragment nextFrag= new htmlViewerFragment(currentItem.getPageURL());
                 FragmentManager fragmentManager = ((AppCompatActivity)mContext).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, nextFrag, "HTML Fragment");
