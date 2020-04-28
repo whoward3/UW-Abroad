@@ -10,29 +10,48 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+/*
+    This class is used to view the outgoing homepage.
+    It has a small welcome message and 4 buttons.
+    Those buttons are:
+            - A Virtual Information page
+            - An Explore Options Page
+            - A Prepare Page
+            - An Education Abroad Handbook
+        -Alice Blair April 28, 2020
+ */
+
 public class outgoingHomePageFragment extends Fragment {
 
     Button virtualInfoButton, exploreOptionButton, prepareButton, educationAbroadHandbookButton;
 
-    public outgoingHomePageFragment() {} // SB: Required empty public constructor
-
-
+    // AB: Required empty public constructor
+    public outgoingHomePageFragment() {
+    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //SB: Set Up the View & Buttons
+        //AB: Set Up the View & Buttons
         View view = inflater.inflate(R.layout.fragment_outgoing_home_page,
                 container, false);
-
         virtualInfoButton = view.findViewById(R.id.virtualInfoButton);
         exploreOptionButton = view.findViewById(R.id.exploreButton);
         prepareButton = view.findViewById(R.id.prepareButton);
         educationAbroadHandbookButton = view.findViewById(R.id.educationAbroadHandbookButton);
 
+         /*
+            Below are the on click listeners for all of the buttons.
+            If we could condense and reuse the code that would be optimal,
+            but it broke when we tried to condense it.
+            Thus, for right now it is a big paragraph for each one.
+                - Alice Blair April 28, 2020
+         */
 
+        //AB: This creates and opens a html viewer fragment and passes it a link.
+        //AB: The link is for the virtual information provided by the Abroad Office.
         virtualInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +66,7 @@ public class outgoingHomePageFragment extends Fragment {
             }
         });
 
+        //AB: This creates and a school fragment and displays the most popular options.
         exploreOptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +80,8 @@ public class outgoingHomePageFragment extends Fragment {
             }
         });
 
+        //AB: This creates and opens a html viewer fragment and passes it a link.
+        //AB: The link is for the steps to apply provided by the Abroad Office.
         prepareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +96,8 @@ public class outgoingHomePageFragment extends Fragment {
             }
         });
 
+        //AB: This creates and opens a PDF viewer fragment and passes nothing.
+        //AB: Nothing = Education Abroad Handbook, aka the default case.
         educationAbroadHandbookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

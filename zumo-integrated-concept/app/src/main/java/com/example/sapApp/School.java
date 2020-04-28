@@ -1,8 +1,18 @@
 package com.example.sapApp;
 
-/**
- * Represents a School in a list
+/*
+    This is the School item which is called in the schoolFragment and schoolAdapter.
+    This is the item that is stored in the database.
+    It has the values of:
+            - id
+            - country
+            - schoolName
+            - imageURL
+            - pageURL
+    These align with what is on the list given by the UWYO Abroad People.
+        -Alice Blair April 28, 2020
  */
+
 public class School {
 
     /**

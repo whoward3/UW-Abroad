@@ -9,9 +9,7 @@ import android.webkit.WebView;
 import androidx.fragment.app.Fragment;
 
 /*
-    This class is used to view a HTML using 3rd party code.
-    The owner and source of that code is at:
-    https://square.github.io/okhttp/#get-a-url
+    This class is used to view a HTML.
 
     This class is opening various web-pages on the study abroad website.
     Most of the URLs are stored in the database and can be changed using the website.
