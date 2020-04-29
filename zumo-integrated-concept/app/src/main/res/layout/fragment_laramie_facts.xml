@@ -41,7 +41,7 @@
         <TextView
             android:id="@+id/ConnectedDescription"
             android:layout_width="match_parent"
-            android:layout_height="370dp"
+            android:layout_height="410dp"
             android:fontFamily="@font/montserratbold"
             android:gravity="left"
             android:text="Nestled between mountain ranges at 7,200 feet, this 1860s railroad town is now home to nearly 32,000 residents, a number of respected museums and countless one-of-a-kind shops and restaurants. A dozen vibrant murals, painted by local artists, bring the historic Laramie downtown to life, while the rumble of trains reminds this Western town of its roots. Whether you’re heading to the Laramie River or lakes of the Snowy Range to fish, or utilizing the 2.9 million acres of nearby national forest to hike, bike, camp or ski, epic adventure awaits in all directions."
