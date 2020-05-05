@@ -1,6 +1,6 @@
 ## Mobile Application for the University of Wyoming Study Abroad Office
   
-##### Sam Blair, Winston Howard, Emily Lukshin, Ethan McGarvey, Chance Sweetser 
+##### Sam "Alice" Blair, Winston Howard, Emily Lukshin, Ethan McGarvey, Chance Sweetser 
  
 ##### [<img src="https://azurecomcdn.azureedge.net/cvt-2d8e3a2e8172743a769eb2cecfbf2e0f1c2aa24b4a48b180b089c87bba51cf45/images/shared/services/devops/boards-icon-80.png">](https://dev.azure.com/uw-senior-design/SAP%20-The%20Study%20Abroad%20Project/_sprints/taskboard/SAP%20-The%20Study%20Abroad%20Project%20Team/SAP%20-The%20Study%20Abroad%20Project/Sprint%201)
  
