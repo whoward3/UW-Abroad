@@ -51,7 +51,7 @@ public class startUpFragment extends Fragment {
                 incomingHomePageFragment nextFrag= new incomingHomePageFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "e");
+                fragmentTransaction.replace(R.id.container, nextFrag, "Incoming Home Page");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -64,7 +64,7 @@ public class startUpFragment extends Fragment {
                 outgoingHomePageFragment nextFrag= new outgoingHomePageFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, nextFrag, "Incoming Home Page");
+                fragmentTransaction.replace(R.id.container, nextFrag, "Outgoing Home Page");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
