@@ -1,41 +1,31 @@
 ## Mobile Application for the University of Wyoming Study Abroad Office
   
-##### Sam "Alice" Blair, Winston Howard, Emily Lukshin, Ethan McGarvey, Chance Sweetser 
- 
-##### [<img src="https://azurecomcdn.azureedge.net/cvt-2d8e3a2e8172743a769eb2cecfbf2e0f1c2aa24b4a48b180b089c87bba51cf45/images/shared/services/devops/boards-icon-80.png">](https://dev.azure.com/uw-senior-design/SAP%20-The%20Study%20Abroad%20Project/_sprints/taskboard/SAP%20-The%20Study%20Abroad%20Project%20Team/SAP%20-The%20Study%20Abroad%20Project/Sprint%201)
+##### Sam "Alice" Blair, Winston Howard, Ethan McGarvey, Chance Sweetser 
  
 ### Project summary
-The objective of this project is to provide the University of Wyoming Study Abroad Office with a mobile application to help students with all stages of participation in education abroad. We hope to deliver an application that can be a central source of resources for those considering applying, already abroad, re-entering, as well as, incoming foreign students. A single application that can offer support to students will benefit the students so that they are able to find information they need and stay connected to both UW and their abroad location with ease. Participating in the University of Wyoming’s education abroad can be a fulfilling experience, but also intimidating so we hope to produce an application which will help guide the student through all stages of the process. 
+The objective of this project is to provide the University of Wyoming Study Abroad Office with a mobile application to help students with participation in education abroad. We hope to deliver an application that can be a central source of resources for those considering applying, currently abroad, and incoming foreign students. A single application that can offer support to students will benefit the students so that they are able to find information they need and stay connected to both UW and their abroad location with ease. Participating in the University of Wyoming’s education abroad can be a fulfilling experience, but also intimidating so we hope to produce an application which will help guide the student through all stages of the process. 
 
 ### Major tasks and plans
 **User interface**
 
 The application will have resources for students through all stages of going abroad. We want to ensure the application is well organized so it can be easily navigated, and the student can find the information that is most pertinent and helpful to them. We will have different tabs in the application, one for those deciding whether to go abroad, one for those who are preparing to go abroad, one for those who are currently abroad, another for who are returning from being abroad, and lastly, a tab for those who are coming to UW for their abroad experience.
   1. Deciding
-      *	A list of all available programs and universities with possible filtering by type (study abroad or exchange), location, classes offered, term, etc.
-      *	Quiz that ask questions about what ideas the student has in what they are looking for and suggests programs that match what they need
-      *	Resources on financial aid, scholarships and cost considerations
-      *	Posts from those who have studied abroad and what they recommend
+      *	A list of all available programs and universities 
+      * Virtual Information 
   2. Preparing
       * A list of what is needed to be completed for the chosen school
-      *	Notifications for upcoming deadlines
-      *	Contact information for those that have already studied there
       *	Information on what to expect
-  3. Studying
-      *	Notifications for UW deadlines, such as, advising or course registration
-      *	Details on course information that should be saved to help with credit transfer
-  4. Returning
-      *	Notifications for reconnecting events
-      *	Information on submitting credits to be transferred
-  5. Incoming
+  3. Incoming
       *	Information on Laramie
-      *	A list of campus clubs and events
-      *	Opt-in list of contact information for other incoming students to connect with
-      *	Orientation on campus
-      
+      *	UWYO information
+  4. Possible Future Additions
+      * Sorting/possible filtering by type (study abroad or exchange), location, classes offered, term, etc.
+      * Posts from those who have studied abroad and what they recommend
+      *	Notifications for upcoming deadlines
+      * Notifications for UW deadlines, such as, advising or course registration
 **Database**
 
-Synchronizing data and offline features will be essential to the success of the application. Because there will be updates and edits to the application, the database will need to flexible. The application will be supported by both Android and iOS, as well as, a website that will administer any changes which will need to be considered.
+Synchronizing data and offline features will be essential to the success of the application. Because there will be updates and edits to the application, the database will need to flexible. The application is supported by Android, as well as, a website that will administer any changes which will need to be considered.
 
 **Editing and updating** 
 
@@ -47,7 +37,6 @@ Protecting the information of the students and administrative rights will be fun
 
 ### Tools to be used
 *	Azure Web App Service
- 	Will require funding which may be available from the Honors program, the university, or cybersecurity department
 * Utilize Uwyo for login and authentication
 *	Google or Facebook
   Can be used for signing into app with an existing account such as OAuth 2.0 Integration
